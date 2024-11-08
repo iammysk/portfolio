@@ -1,0 +1,53 @@
+@charset "UFT-8";
+.home {
+    max-width: 1366px;
+
+}
+.home_title {
+    margin-top: 56px;
+    margin-left: 65px;
+}
+.home_title  p{
+    color: #687e8d;
+    margin-top: 10px;
+}
+
+.home_nav {
+    margin-top: 174px;
+    margin-left: 65px;
+}
+
+.home_nav li {
+    color: #687e8d;
+    margin-top: 36px;
+}
+
+.fv_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fv_wrap img {
+    max-width: 683px;
+}
+
+.fv_wrap2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fv_wrap2 p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.scroll {
+    display: flex;
+    justify-content: center;
+}
+
+.scroll p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+}
