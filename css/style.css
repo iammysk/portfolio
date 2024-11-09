@@ -1,16 +1,42 @@
 @charset "UFT-8";
-.home {
-    max-width: 1366px;
 
+/* common */
+
+h2 {
+    font-size: 21px;
+    font-weight: 600;
+    color: #3a5e73;
+    margin-bottom: 19px;
 }
-.home_title {
-    margin-top: 56px;
+
+span {
+    font-size: 36px;
+    color: rgb(104, 126, 141, 0.3);
+}
+
+/* FV */
+.fv {
+    max-width: 1366px;
+    height: 744px;
+    position: relative;
+}
+
+.fv_title {
     margin-left: 65px;
 }
-.home_title  p{
+
+.fv_title h1 {
+    font-size: 14px;
+    color: #687e8d;
+    margin-top: 56px;
+}
+
+.fv_title  p {
+    font-size: 9px;
     color: #687e8d;
     margin-top: 10px;
 }
+
 
 .home_nav {
     margin-top: 174px;
@@ -20,34 +46,119 @@
 .home_nav li {
     color: #687e8d;
     margin-top: 36px;
+    font-size: 14px;
 }
 
-.fv_wrap {
+.copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 36px;
+    color: #3a5e73;
+    z-index: 100;
+}
+
+.img_warp {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+.img_warp img {
+    width: 100%;
+}
+
+.human_warp {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    top: 0;
+    left: 50%;
+    transform: translateY(50%);
 }
 
-.fv_wrap img {
-    max-width: 683px;
+.human_warp img {
+    width: 100%;
 }
 
-.fv_wrap2 {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.fv_wrap2 p {
+.human_warp p {
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    text-align: end;
+    margin-left: 35px;
+    font-size: 16px;
+    color: #687e8d;
 }
 
 .scroll {
-    display: flex;
-    justify-content: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .scroll p {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     text-align: center;
+    color: #3a5e73;
+}
+
+/* main */
+
+.home_main {
+    max-width: 875px;
+    margin: 0 auto;
+}
+/* content */
+
+.content{
+    margin-top: 246px;
+    margin-left: 28%;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.top_space {
+    margin-top: 36px;
+}
+
+/* about */
+
+.about {
+    margin-top: 231px;
+    margin-left: 28%;
+}
+
+.about_img {
+    margin-top: 109px;
+}
+
+.about_lead {
+    margin-top: 52px;
+    width: 100%;
+}
+
+.btn {
+    margin-top: 109px;
+    width: 218px;
+    height: 45px;
+}
+.btn p {
+    color: #3a5e73 ;
+    border: #3a5e73 0.5px solid;
+    text-align: center;
+    padding: 16px auto;
+}
+/* works */
+
+.works {
+    margin-top: 231px;
+    margin-left: 28%;
 }

@@ -20,11 +20,11 @@ li {
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #6f6a67;
-
   font-family: "Noto Serif JP", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(216, 216, 204, 0.3);
   }
 
 a {
