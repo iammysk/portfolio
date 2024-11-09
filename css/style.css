@@ -22,7 +22,7 @@ span {
 }
 
 .fv_title {
-    margin-left: 65px;
+    margin-left: 5%;
 }
 
 .fv_title h1 {
@@ -40,7 +40,7 @@ span {
 
 .home_nav {
     margin-top: 174px;
-    margin-left: 65px;
+    margin-left: 5%;
 }
 
 .home_nav li {
@@ -59,7 +59,7 @@ span {
     z-index: 100;
 }
 
-.img_warp {
+.img_wrap {
     position: absolute;
     right: 0;
     top: 50%;
@@ -67,11 +67,11 @@ span {
     width: 50%;
 }
 
-.img_warp img {
+.img_wrap img {
     width: 100%;
 }
 
-.human_warp {
+.human_wrap {
     position: absolute;
     display: flex;
     top: 0;
@@ -79,11 +79,11 @@ span {
     transform: translateY(50%);
 }
 
-.human_warp img {
+.human_wrap img {
     width: 100%;
 }
 
-.human_warp p {
+.human_wrap p {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     text-align: end;
@@ -112,11 +112,13 @@ span {
 .home_main {
     max-width: 875px;
     margin: 0 auto;
+    background-color: #fff;
 }
 /* content */
 
 .content{
-    margin-top: 246px;
+    margin-top: 67px;
+    padding-top: 179px;
     margin-left: 28%;
 }
 
@@ -145,6 +147,11 @@ span {
     width: 100%;
 }
 
+.about_lead p {
+    font-size: 14px;
+    line-height: 2;
+}
+
 .btn {
     margin-top: 109px;
     width: 218px;
@@ -161,4 +168,10 @@ span {
 .works {
     margin-top: 231px;
     margin-left: 28%;
+}
+
+.works_content {
+    width: 293px;
+    height: 181px;
+    background-color: rgb(111, 106, 103 0.1);
 }
