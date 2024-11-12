@@ -78,18 +78,29 @@ span {
 
 .about_wrap {
     display: flex;
+    justify-content: space-between;
 }
 
-.about_wrap img {
+.about_wrap > img {
     object-fit: cover;
-    width: 50%;
+    width: 54%;
+    margin: 0 calc(50% - 50vw);
+}
+
+.about_wrap2 {
+    max-width: 33.5%;
 }
 
 .article {
     writing-mode: vertical-rl;
     column-count: 3;
-    column-rule: solid 1px #ccc;
+
 }
+
+.article p {
+    line-height: 2.3;
+}
+
 
 
 
