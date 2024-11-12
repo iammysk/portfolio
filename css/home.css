@@ -2,6 +2,10 @@
 
 /* common */
 
+body {
+    background-color: rgb(216, 216, 204, 0.3);
+}
+
 h2 {
     font-size: 21px;
     font-weight: 600;
@@ -13,27 +17,6 @@ span {
     font-size: 36px;
     color: rgb(104, 126, 141, 0.3);
 }
-
-/* btn */
-
-.btn3 {
-	position: relative;
-}
-.btn3::before {
-	content: "";
-	display: block;
-	width: 60px;
-	height: 1px;
-	background: #666;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: -30px;
-	margin: auto;
-}
-
-
-
 
 /* FV */
 .fv {
@@ -157,10 +140,15 @@ span {
 .about {
     margin-top: 231px;
     margin-left: 28%;
+    max-width: 340px;
 }
 
 .about_img {
     margin-top: 109px;
+}
+
+.about_img img {
+    width: 100%;
 }
 
 .about_lead {
@@ -173,17 +161,119 @@ span {
     line-height: 2;
 }
 
+
+.about_btn {
+    font-size: 14px;
+    border: 1px solid #666;
+    text-align: center;
+    width: 218px;
+    max-width: 80%;
+    margin-top: 109px;
+    margin-bottom: 174px;
+    font-family: 'Noto Serif JP', serif;
+    padding: 0;
+    position: relative;
+    text-align: center;
+
+}
+
+.about_btn a {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+
+.about_btn::before {
+	content: "";
+	display: block;
+	width: 76px;
+	height: 1px;
+	background: #666;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -38px;
+	margin: auto;
+}
+
 /* works */
 
 .works {
     margin-top: 231px;
+}
+
+.works h2 {
     margin-left: 28%;
+}
+
+.works span {
+    margin-left: 28%;
+}
+
+.bg {
+    background-color: rgb(111, 106, 103, 0.1);
+    width: 30%;
 }
 
 .works_img_wrap {
     margin: 0 calc(50% - 50vw);
     margin-top: 109px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 52px;
+    text-align: center;
 }
+
+.works_img_wrap a {
+    width: 30%;
+}
+
+.works_btn {
+    font-size: 14px;
+    border: 1px solid #666;
+    text-align: center;
+    width: 218px;
+    max-width: 80%;
+    margin-top: 109px;
+    margin-left: 28%;
+    font-family: 'Noto Serif JP', serif;
+    padding: 0;
+    position: relative;
+    text-align: center;
+
+}
+
+.works_btn a {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+
+.works_btn::before {
+	content: "";
+	display: block;
+	width: 76px;
+	height: 1px;
+	background: #666;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -38px;
+	margin: auto;
+}
+
+.bg_margin {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 174px;
+    margin-bottom: 231px;
+}
+
 
 
 /*footer*/
