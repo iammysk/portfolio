@@ -9,8 +9,14 @@ body {
 span {
     font-size: 56px;
     color: rgb(104, 126, 141, 0.1);
+    text-align: center;
 }
 
+h3 {
+    font-size: 36px;
+    color: #3a5e73;
+    text-align: center;
+}
 
 /* nav */
 .fv {
@@ -83,24 +89,26 @@ span {
 
 .about_wrap > img {
     object-fit: cover;
-    width: 54%;
+    width: 54vw;
     margin: 0 calc(50% - 50vw);
 }
 
 .about_wrap2 {
-    max-width: 33.5%;
+    max-width: 335px;
+    margin-right: calc((100% - 1000px) / 2);
 }
 
 .article {
+    width: 100%;
     writing-mode: vertical-rl;
     column-count: 3;
-
 }
 
 .article p {
     line-height: 2.3;
 }
 
+/* favorite thing */
 
 
 
