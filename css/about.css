@@ -71,6 +71,7 @@ h4 {
 .secondary {
     color: #3a5e73;
     font-size: 36px;
+    animation: fade 2s ease-in-out infinite alternate;
 }
 
 .about {
@@ -104,7 +105,7 @@ h4 {
 }
 
 .about_wrap2 {
-    max-width: 335px;
+    max-width: 355px;
     margin-right: calc((100% - 1000px) / 2);
 }
 
@@ -153,9 +154,30 @@ h4 {
 }
 
 .favoritething_img {
-    display: flex;
     margin-top: 174px;
+    display: flex;
 }
+
+
+.slideshow {
+    display: flex;
+    animation: loop-slide 20s infinite linear 1s both;
+    width: 67vw;
+}
+
+.slideshow img {
+    max-width: 293px;
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 .favoritething_article {
     margin: 109px calc((100% - 1000px) / 2) 0;

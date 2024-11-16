@@ -56,10 +56,6 @@ span {
     margin-top: 250px;
 }
 
-.secondary {
-    color: #3a5e73;
-    font-size: 36px;
-}
 
 .concept {
     margin-top: 52px;
@@ -82,6 +78,7 @@ span {
 .concept_wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #6c7d8c;
     padding: 120px 62.5px;
     max-width: 1000px;
@@ -93,7 +90,7 @@ span {
     color: #fff;
 }
 
-.secondary p {
+.secondary {
     font-size: 16px;
     color: #fff;
     margin-top: 21px;
