@@ -11,17 +11,6 @@ span {
     text-align: center;
 }
 
-h3 {
-    font-size: 36px;
-    color: #3a5e73;
-    text-align: center;
-    margin-top: 313px;
-}
-
-h4 {
-    color: #3a5e73;
-    font-size: 21px;
-}
 
 /* nav */
 .fv {
@@ -99,7 +88,7 @@ h4 {
     margin: 0 calc((100% - 1000px) / 2);
 }
 
-.concept_article h4 {
+.concept_article h3 {
     font-size: 36px;
     color: #fff;
 }
@@ -130,9 +119,22 @@ h4 {
     margin-top: 313px;
 }
 
+.concept2_wrap h3 {
+    font-size: 36px;
+    color: #3a5e73;
+    margin-top: 313px;
+    text-align: center;
+}
+
 .concept2_img {
     display: flex;
     width: 23%;
+    margin-top: 231px;
+}
+
+.concept2_text {
+    margin-top: 174px;
+    line-height: 2;
 }
 
 /*footer*/
@@ -211,3 +213,4 @@ h4 {
     color: #fff;
     font-size: 9px;
 }
+

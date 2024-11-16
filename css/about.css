@@ -119,6 +119,7 @@ h4 {
 .article p {
     font-size: 14px;
     line-height: 2.3;
+    text-indent: 1em;
 }
 
 .avatar {
