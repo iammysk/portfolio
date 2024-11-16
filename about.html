@@ -13,22 +13,24 @@
 <body>
     <!--FV-->
     <div class="fv">
-        <div class="title">
-            <h1>MIYANISHI SAKI</h1>
-            <p>DESIGNER</p>
+        <div class="nav_wrap">
+            <div class="title">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./home.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./concept.html">CONCEPT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="about_nav">
-            <ul>
-                <li><a href="./home.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./concept.html">CONCEPT</a></li>
-                <li><a href="./works.html">WORKS</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
         <div class="wrap">
-            <h2 class="about">わたしについて</h2>
-            <div>
+            <h2 class="secondary">わたしについて</h2>
+            <div class="about">
                 <span>ABOUT</span>
             </div>    
         </div>
@@ -51,7 +53,9 @@
                     <p>それは今も働く上で大切にしている想いです。</p>
                 </div>
                 <div class="avatar">
-                    <img src="./images/1x/pc_about_02.jpg" alt="">
+                    <div class="avatar_img">
+                        <img src="./images/1x/pc_about_02.jpg" alt="">
+                    </div>
                     <div class="about_wrap3">
                         <p>
                             宮西 早希（みやにし さき）
@@ -65,21 +69,24 @@
         </section>
 
         <!--favorite thing-->
-        <section class="favorite_thing">
+        <section class="favoritething_wrap">
             <h3>好きなこと</h3>
-            <span>FAVORITE THING</span>
-            <div>
+            <div class="favoritething">
+                <span>FAVORITE THING</span>
+            </div>
+            
+            <div class="favoritething_img">
                 <img src="./images/1x/pc_about_favorite_01.jpg" alt="">
                 <img src="./images/1x/pc_about_favorite_02.jpg" alt="">
                 <img src="./images/1x/pc_about_favorite_03.jpg" alt="">
                 <img src="./images/1x/pc_about_favorite_04.jpg" alt="">
             </div>
-            <div>
-                <div>
+            <div class="favoritething_article">
+                <div class="favoritething_text">
                     <h4>歩くこと</h4>
                     <p>今の家も、最寄駅から歩いて20分かかるところに住んでいます。歩くと、もやもやがすっきりしたり、新しいことを思いついたり、わくわくする想像が膨んだりします。歩くことはわたしにとって大切な時間です。</p>
                 </div>
-                <div>
+                <div class="favoritething_text">
                     <h4>バドミントン</h4>
                     <p>中学生から始めたバドミントン。高校はスポーツ特待生として、部活に打ち込んできました。あのとき叩き込まれた、「忍耐力」、「継続力」、「礼儀」は今のわたしが出来上がる土台となったと行っても過言ではありません。</p>
                 </div>
@@ -87,31 +94,28 @@
         </section>
 
         <!--values-->
-        <section class="values">
+        <section>
             <h3>大切にしていること</h3>
-            <span>VALUES</span>
-            <div>
+            <div class="values">
+                <span>VALUES</span>
+            </div>
+            
+            <div class="values_wrap">
                 <img src="./images/1x/pc_about_values.jpg" alt="">
-                <div>
-                    <div>
-                        <h4>気づき</h4>
-                        <p>周囲には常にアンテナを貼っています！言葉は大切だと発信していますが、言葉がなくても気づけるものは自らキャッチしに行けるように。</p>
-                    </div>
-                    <div>
-                        <h4>想像</h4>
-                        <p>仕事やプライベートでコミュニケーションを図る上で最も大切にしたいことです。「わたしから見えていないもの」が必ずあるのだという意識をもっています。</p>
-                    </div>
-                    <div>
-                        <h4>行動</h4>
-                        <p>やりたいことを一度は挑戦してみると決めています。やらなかった後悔はやるまで残り続けると思っています。</p>
-                    </div>
+                <div class="values_article">
+                    <h4>気づき</h4>
+                    <p>周囲には常にアンテナを貼っています！言葉は大切だと発信していますが、言葉がなくても気づけるものは自らキャッチしに行けるように。</p>
+                    <h4>想像</h4>
+                    <p>仕事やプライベートでコミュニケーションを図る上で最も大切にしたいことです。「わたしから見えていないもの」が必ずあるのだという意識をもっています。</p>
+                    <h4>行動</h4>
+                    <p>やりたいことを一度は挑戦してみると決めています。やらなかった後悔はやるまで残り続けると思っています。</p>
                 </div>
             </div>
         </section>
     </main>
     
-    <!--footer-->
-    <footer class="footer">
+     <!--footer-->
+    <footer class="hidden-area">
         <img src="./images/1x/pc_footer.jpg" alt="">
         <div class="footer_wrap">
             <h1>MIYANISHI SAKI</h1>
@@ -128,5 +132,37 @@
         </div>
         <p class="copyright">Copyright 2024 miyanishi saki </p>
     </footer>
+    <script>
+        const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
+        const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
+
+        // 固定要素の初期表示状態を設定
+        let isHidden = false;
+
+        // スクロールイベントを監視
+        window.addEventListener('scroll', () => {
+        // 固定要素と対象要素の位置を取得
+        const fixedElementRect = fixedElement.getBoundingClientRect();
+        const targetElementRect = targetElement.getBoundingClientRect();
+
+        // 固定要素が対象要素に差し掛かった場合、非表示にする
+        if (
+            fixedElementRect.bottom >= targetElementRect.top &&
+            fixedElementRect.top <= targetElementRect.bottom
+        ) {
+            if (!isHidden) {
+            fixedElement.classList.remove('visible'); // 固定要素を非表示にする
+            fixedElement.classList.add('hidden'); // 固定要素を非表示にする
+            isHidden = true; // 非表示フラグを設定
+            }
+        } else {
+            if (isHidden) {
+            fixedElement.classList.add('visible'); // 固定要素を非表示にする
+            fixedElement.classList.remove('hidden'); // 固定要素を再表示する
+            isHidden = false; // 非表示フラグを解除
+            }
+        }
+        });
+    </script>
 </body>
 </html>

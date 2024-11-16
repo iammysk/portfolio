@@ -14,12 +14,13 @@
 
     <!--FV-->
     <div class="fv">
-        <div class="fv_wrap">
-            <div class="fv_title">
+        <!--nav-->
+        <div class="nav_wrap">
+            <div class="title">
                 <h1>MIYANISHI SAKI</h1>
                 <p>DESIGNER</p>
             </div>
-            <nav class="home_nav">
+            <nav class="nav">
                 <ul>
                     <li><a href="./home.html">HOME</a></li>
                     <li><a href="./about.html">ABOUT</a></li>
@@ -44,6 +45,7 @@
             <p>scroll</p>
         </div>
     </div>
+    <!--↑nav-->
 
     <!--main-->
     <main class="home_main">
@@ -107,7 +109,6 @@
                 <a href="#">詳しく見る</a>
             </div>  
         </section>
-        <div class="bg_margin"></div>
     </main>
     
 
@@ -129,8 +130,9 @@
         </div>
         <p class="copyright">Copyright 2024 miyanishi saki </p>
     </footer>
+
     <script>
-        const fixedElement = document.querySelector('.fv_wrap'); // 非表示にしたい固定要素
+        const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
 
         // 固定要素の初期表示状態を設定

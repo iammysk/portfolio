@@ -4,8 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオに込めた想い</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/concept.css">
 </head>
 <body>
-    
+    <!--FV-->
+    <div class="fv">
+        <div class="nav_wrap">
+            <div class="title">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./home.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./concept.html">CONCEPT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrap">
+            <h2 class="secondary">ポートフォリオに込めた想い</h2>
+            <div class="concept">
+                <span>CONCEPT</span>
+            </div>    
+        </div>
+    </div>
+
+    <!--main-->
+    <main class="concept_main">
+        <div class="concept_wrap">
+            <div class="concept_article">
+                <h4>言葉を、カタチに</h4>
+                <div class="secondary">
+                    <p>Bringing words to life</p>
+                </div>
+                <p class="concept_text">
+                    About で少しだけわたしについてお話させていただきました。<br>
+                    その時の経験から言葉には大きな力があるのだと知りました。<br>
+                    
+                    想いを言葉にするとなぜだか<br>
+                    実現できるような気がしてきませんか？<br>
+                    
+                    わたしはみなさまとたくさんの言葉を交わし<br>
+                    デザインというカタチで実現へのお手伝いをしたい<br>
+                    と考えております。<br>
+                    
+                    どんな些細なことでも<br>
+                    言葉にすると大きなことに繋がるかもしれません。<br>
+                    みなさまの言葉（想い）を1mmも逃さず、<br>
+                    実現に向けてカタチにしていきます。<br>
+                </p>
+            </div>
+            <div class="concept_img">
+                <img src="./images/1x/pc_concept_00.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="concept2_wrap">
+            <h4>空を見る</h4>
+            <div class="concept2_img">
+                <img src="./images/1x/pc_concept_01.jpg" alt="">
+                <img src="./images/1x/pc_concept_02.jpg" alt="">
+                <img src="./images/1x/pc_concept_03.jpg" alt="">
+                <img src="./images/1x/pc_concept_04.jpg" alt="">
+            </div>
+            <p>
+                なんてことのない毎日に
+                少しだけ窮屈さを感じることがあるのですが、
+
+                空を見上げるだけで「あ、なんか気分がいいかも」
+                と悩んでいたことが少しだけ小さくなった気がします。
+
+
+                わたしにとっての空のような存在に、とまでは難しいですが
+                クライアント様が思い描く理想を「あ、なんかいいかも」
+                そんなふうに思っていただけるデザインがしたい。
+
+
+                そんな願いを込めて。
+            </p>
+        </div>
+    </main>
+
+     <!--footer-->
+    <footer class="hidden-area">
+        <img src="./images/1x/pc_footer.jpg" alt="">
+        <div class="footer_wrap">
+            <h1>MIYANISHI SAKI</h1>
+            <p>DESIGNER</p>
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="./home.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./concept.html">CONCEPT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">Copyright 2024 miyanishi saki </p>
+    </footer>
+    <script>
+        const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
+        const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
+
+        // 固定要素の初期表示状態を設定
+        let isHidden = false;
+
+        // スクロールイベントを監視
+        window.addEventListener('scroll', () => {
+        // 固定要素と対象要素の位置を取得
+        const fixedElementRect = fixedElement.getBoundingClientRect();
+        const targetElementRect = targetElement.getBoundingClientRect();
+
+        // 固定要素が対象要素に差し掛かった場合、非表示にする
+        if (
+            fixedElementRect.bottom >= targetElementRect.top &&
+            fixedElementRect.top <= targetElementRect.bottom
+        ) {
+            if (!isHidden) {
+            fixedElement.classList.remove('visible'); // 固定要素を非表示にする
+            fixedElement.classList.add('hidden'); // 固定要素を非表示にする
+            isHidden = true; // 非表示フラグを設定
+            }
+        } else {
+            if (isHidden) {
+            fixedElement.classList.add('visible'); // 固定要素を非表示にする
+            fixedElement.classList.remove('hidden'); // 固定要素を再表示する
+            isHidden = false; // 非表示フラグを解除
+            }
+        }
+        });
+    </script>
 </body>
 </html>

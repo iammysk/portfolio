@@ -5,7 +5,6 @@
 body {
     background-color: rgb(216, 216, 204, 0.3);
 }
-
 span {
     font-size: 56px;
     color: rgb(104, 126, 141, 0.1);
@@ -73,14 +72,15 @@ h4 {
     font-size: 36px;
 }
 
-.about {
+.concept {
     margin-top: 52px;
 }
 
-
 /* main */
 
-.about_main {
+/* concept */
+
+.concept_main {
     max-width: 875px;
     margin: 0 auto;
     background-color: #fff;
@@ -90,131 +90,50 @@ h4 {
     margin-bottom: 231px;
 }
 
-/* about_me */
-
-.about_wrap {
+.concept_wrap {
     display: flex;
     justify-content: space-between;
+    background-color: #6c7d8c;
+    padding: 120px 62.5px;
+    max-width: 1000px;
+    margin: 0 calc((100% - 1000px) / 2);
 }
 
-.about_wrap > img {
-    object-fit: cover;
-    width: 54vw;
-    margin: 0 calc(50% - 50vw);
+.concept_article h4 {
+    font-size: 36px;
+    color: #fff;
 }
 
-.about_wrap2 {
-    max-width: 335px;
-    margin-right: calc((100% - 1000px) / 2);
+.secondary p {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 21px;
+    text-align:right;
 }
-
-.article {
-    width: 100%;
-    height: 930px;
-    writing-mode: vertical-rl;
-    column-count: 3;
-    column-gap: 21px;
-}
-
-.article p {
+    
+.concept_text {
+    color: #fff;
+    line-height: 2;
+    margin-top: 70px;
     font-size: 14px;
-    line-height: 2.3;
 }
 
-.avatar {
-    max-width: 335px;
-    margin-top: 42px;
-    margin-right: calc((100% - 1000px) / 2);
-}
-
-.avatar_img {
-    text-align: right;
-}
-
-.about_wrap3 {
-    margin-top: 42px;
-    border-top: #6e6a66 0.5px solid;
-    border-bottom: #6e6a66 0.5px solid;
-    padding-top: 21px;
-    padding-bottom: 21px;
-}
-
-.about_wrap3 p {
-    line-height: 2;
+.concept_img {
+    margin-right: calc((100% - 1127px) / 2);
+    align-items: center;
 }
 
 
-/* favorite thing */
+/* concept2 */
 
-.favoritething {
-    margin-top: 21px;
-    text-align: center;
+.concept2_wrap {
+    margin-top: 313px;
 }
 
-.favoritething_img {
+.concept2_img {
     display: flex;
-    margin-top: 174px;
+    width: 23%;
 }
-
-.favoritething_article {
-    margin: 109px calc((100% - 1000px) / 2) 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.favoritething_text {
-    width: 42%;
-}
-
-.favoritething_article p {
-    margin-top: 21px;
-    line-height: 2;
-}
-
-
-/* values */
-
-.values {
-    margin-top: 21px;
-    text-align: center;
-}
-
-.values_wrap {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 174px;
-}
-
-.values_wrap > img {
-    object-fit: cover;
-    width: 65vw;
-    margin: 0 calc(50% - 50vw);
-}
-
-.values_article {
-    max-width: 250px;
-    margin-right: calc((100% - 1000px) / 2);
-}
-
-.values_article h4 {
-    margin-top: 91px;
-}
-
-.values_article h4:first-child {
-    margin-top: 34px;
-}
-
-.values_article p {
-    margin-top: 21px;
-    line-height: 2;
-}
-
-
-
-
-
-
-
 
 /*footer*/
 .hidden-area {
