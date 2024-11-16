@@ -5,16 +5,25 @@
 body {
     background-color: rgb(216, 216, 204, 0.3);
 }
+
 span {
     font-size: 56px;
     color: rgb(104, 126, 141, 0.1);
     text-align: center;
 }
 
-.bg {
-    margin: 20px 0;
+
+h3 {
+    font-size: 36px;
+    color: #3a5e73;
+    text-align: center;
+    margin-top: 313px;
 }
 
+h4 {
+    color: #3a5e73;
+    font-size: 21px;
+}
 
 /* nav */
 .fv {
@@ -60,16 +69,18 @@ span {
     margin-top: 250px;
 }
 
+.secondary {
+    color: #3a5e73;
+    font-size: 36px;
+}
 
-.concept {
+.works {
     margin-top: 52px;
 }
 
 /* main */
 
-/* concept */
-
-.concept_main {
+.works_main {
     max-width: 875px;
     margin: 0 auto;
     background-color: #fff;
@@ -79,91 +90,6 @@ span {
     margin-bottom: 231px;
 }
 
-.concept_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #6c7d8c;
-    padding: 120px 62.5px;
-    max-width: 1000px;
-    margin: 0 calc((100% - 1000px) / 2);
-}
-
-.concept_article h3 {
-    font-size: 36px;
-    color: #fff;
-    display: inline-block;
-}
-
-.concept_content {
-    display: inline-block;
-}
-
-.secondary {
-    font-size: 16px;
-    color: #fff;
-    margin-top: 21px;
-    text-align:right;
-}
-    
-.concept_text {
-    color: #fff;
-    line-height: 2;
-    margin-top: 70px;
-    font-size: 14px;
-}
-
-.concept_img {
-    margin-right: calc((100% - 1127px) / 2);
-    align-items: center;
-}
-
-
-/* concept2 */
-
-.concept2_wrap {
-    margin-top: 313px;
-}
-
-.concept2_wrap h3 {
-    font-size: 36px;
-    color: #3a5e73;
-    margin-top: 313px;
-    text-align: center;
-}
-
-.concept2_img {
-    margin-top: 174px;
-    display: flex;
-    overflow: hidden;
-    margin-left: 28%;
-    width: 64vw;
-}
-
-
-.slideshow {
-    display: flex;
-    animation: loop-slide 20s infinite linear 1s both;
-}
-
-.slideshow img {
-    max-width: 293px;
-}
-
-@keyframes loop-slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.concept2_text {
-    margin-top: 174px;
-    margin-left: 28%;
-    line-height: 2;
-}
 
 /*footer*/
 .hidden-area {
@@ -241,4 +167,3 @@ span {
     color: #fff;
     font-size: 9px;
 }
-

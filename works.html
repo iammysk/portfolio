@@ -4,8 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品一覧</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/works.css">
 </head>
 <body>
-    
+    <!--FV-->
+    <div class="fv">
+        <div class="nav_wrap">
+            <div class="title">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./concept.html">CONCEPT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrap">
+            <h2 class="secondary">作品一覧</h2>
+            <div class="works">
+                <span>WORKS</span>
+            </div>    
+        </div>
+    </div>
+
+    <!--main-->
+    <main class="works_main">
+        <section class="words_wrap">
+            <div class="words_content">
+                <img src="./images/1x/pc_works_01.jpg" alt="">
+                <p>web site</p>
+                <p>美容室「LIFE」 HP</p>
+            </div>
+            <div class="words_content">
+                <img src="./images/1x/pc_works_02.jpg" alt="">
+                <p>web site</p>
+                <p>デザインカフェ HP</p>
+            </div>
+            <div class="words_content">
+                <img src="./images/1x/pc_works_03.jpg" alt="">
+                <p>web banner</p>
+                <p>新バーガー告知バナー</p>
+            </div>
+            <div class="words_content">
+                <img src="./images/1x/pc_works_04.jpg" alt="">
+                <p>web banner</p>
+                <p>新バーガー告知バナー</p>
+            </div>
+            <div class="words_content">
+                <img src="./images/1x/pc_works_05.jpg" alt="">
+                <p>web site</p>
+                <p>コワーキングスペース「WORKERS」 HP</p>
+            </div>
+            <div class="words_content">
+                <img src="./images/1x/pc_works_06.jpg" alt="">
+                <p>web banner</p>
+                <p>トラベルメディア「TRRRRIP」 バナー</p>
+            </div>
+            <div class="words_content">
+                <img src="./images/1x/pc_works_07.jpg" alt="">
+                <p>web banner</p>
+                <p>デザスタmobile バナー</p>
+            </div>
+        </section>
+    </main>
+
+
+    <!--footer-->
+    <footer class="hidden-area">
+        <img src="./images/1x/pc_footer.jpg" alt="">
+        <div class="footer_wrap">
+            <h1>MIYANISHI SAKI</h1>
+            <p>DESIGNER</p>
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./concept.html">CONCEPT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">Copyright 2024 miyanishi saki </p>
+    </footer>
+    <script>
+        const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
+        const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
+
+        // 固定要素の初期表示状態を設定
+        let isHidden = false;
+
+        // スクロールイベントを監視
+        window.addEventListener('scroll', () => {
+        // 固定要素と対象要素の位置を取得
+        const fixedElementRect = fixedElement.getBoundingClientRect();
+        const targetElementRect = targetElement.getBoundingClientRect();
+
+        // 固定要素が対象要素に差し掛かった場合、非表示にする
+        if (
+            fixedElementRect.bottom >= targetElementRect.top &&
+            fixedElementRect.top <= targetElementRect.bottom
+        ) {
+            if (!isHidden) {
+            fixedElement.classList.remove('visible'); // 固定要素を非表示にする
+            fixedElement.classList.add('hidden'); // 固定要素を非表示にする
+            isHidden = true; // 非表示フラグを設定
+            }
+        } else {
+            if (isHidden) {
+            fixedElement.classList.add('visible'); // 固定要素を非表示にする
+            fixedElement.classList.remove('hidden'); // 固定要素を再表示する
+            isHidden = false; // 非表示フラグを解除
+            }
+        }
+        });
+    </script>
 </body>
 </html>
