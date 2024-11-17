@@ -90,6 +90,50 @@ h4 {
     margin-bottom: 231px;
 }
 
+.works_wrap {
+    width: 939px;
+    max-width: 939px;
+    margin: 0 calc((100% - 939px) / 2); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.works_content {
+    width: 44%;
+}
+
+.works_bg {
+    background-color: rgb(111, 106, 103, 0.1);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 174px;
+}
+
+.works_content p {
+    font-size: 16px;
+    color: #3a5e73;
+    margin-top: 10px;
+}
+
+.label {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 939px) {
+
+    .works_img_wrap {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+        
+    }
+    
+    .works_img_wrap a {
+        width: 44%;
+    }
+
 
 /*footer*/
 .hidden-area {
