@@ -84,7 +84,7 @@ h4 {
     max-width: 875px;
     margin: 0 auto;
     background-color: #fff;
-    padding-top: 264px;
+    padding-top: 90px;
     padding-bottom: 174px;
     margin-top: -20px;
     margin-bottom: 231px;
@@ -97,6 +97,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    text-align: center;
 }
 
 .works_content {
@@ -114,13 +115,21 @@ h4 {
     font-size: 16px;
     color: #3a5e73;
     margin-top: 10px;
+    text-align: left;
+}
+
+.label_wrap {
+    text-align: left;
 }
 
 .label {
+    display: inline-block;
     margin-top: 20px;
+    border-right: 1px solid #3a5e73;
+    padding-right: 14px;
 }
 
-@media screen and (max-width: 939px) {
+/* @media screen and (max-width: 939px) {
 
     .works_img_wrap {
         width: 100vw;
@@ -132,7 +141,7 @@ h4 {
     
     .works_img_wrap a {
         width: 44%;
-    }
+    } */
 
 
 /*footer*/
