@@ -143,9 +143,14 @@ span {
     margin-top: 20px;
 }
 
+/* ↓上手くいっていないところ
+.articleが右寄せにできないため、教えていただいたmargin_rightを入力しても親要素から
+テキストがはみ出てくれません。 */
+
 .article {
     max-width: 685px;
     margin-top: 109px; 
+    margin-right:  calc((100% - 1000px) / 2);
 }
 
 .item_wrap {
