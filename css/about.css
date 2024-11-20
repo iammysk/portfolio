@@ -146,15 +146,12 @@ h4 {
 }
 
 @media screen and (max-width: 1000px) {
-
+    
     .article {
-        
         margin-left: 0;
         margin-right: 0;
     }
 
-
-        
 }
 
 
@@ -261,6 +258,17 @@ h4 {
 .values_article p {
     margin-top: 21px;
     line-height: 2;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .values_article {
+        margin-right: 0;
+    }
+
+    
+        
 }
 
 

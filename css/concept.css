@@ -139,9 +139,8 @@ span {
         margin-right: 0;
     }
 
-/* ↓不明点です */
-    .concept_img {
-        margin: 0 auto;
+    .concept_wrap {
+        margin: 0;
     }
         
     }
