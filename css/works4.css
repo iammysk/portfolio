@@ -143,12 +143,23 @@ span {
     margin-top: 20px;
 }
 
+.lead {
+    width: 685px;
+    margin-top: 109px; 
+    margin-left: calc(315px - (1000px - 100%) / 2);
+    font-size: 14px;
+    text-align: left;
+}
+
+.lead p {
+    line-height: 2;
+}
+
 
 .article {
     width: 685px;
     margin-top: 109px; 
     margin-left: calc(315px - (1000px - 100%) / 2);
-    
 }
 
 
@@ -183,6 +194,11 @@ h4 {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .lead {
+        margin-left: calc((100vw - 685px) - (100vw - 100%) / 2);
+        text-wrap: balance;
+    }
 
     .article {
         margin-left: calc((100vw - 685px) - (100vw - 100%) / 2);

@@ -129,9 +129,9 @@ h4 {
     padding-right: 14px;
 }
 
-/* @media screen and (max-width: 939px) {
+@media screen and (max-width: 939px) {
 
-    .works_img_wrap {
+    .works_wrap {
         width: 100vw;
         margin-left: 0;
         margin-right: 0;
@@ -139,9 +139,9 @@ h4 {
         
     }
     
-    .works_img_wrap a {
+    .works_wrap a {
         width: 44%;
-    } */
+    }
 
 
 /*footer*/

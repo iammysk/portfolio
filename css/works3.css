@@ -81,7 +81,7 @@ span {
 
 /* btn */
 
-/* .works_btn {
+.works_btn {
     font-size: 14px;
     border: 1px solid #666;
     text-align: center;
@@ -89,6 +89,7 @@ span {
     max-width: 80%;
     margin-top: 109px;
     margin-bottom: 174px;
+    margin-left: 28%;
     font-family: 'Noto Serif JP', serif;
     padding: 0;
     position: relative;
@@ -113,7 +114,7 @@ span {
 	bottom: 0;
 	right: -38px;
 	margin: auto;
-} */
+}
 
 .works_img {
     display: inline-block;

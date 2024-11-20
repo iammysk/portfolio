@@ -118,11 +118,34 @@ span {
     font-size: 14px;
 }
 
+.line {
+    display: block;
+    margin-top: 22.5px;
+    margin-bottom: 22.5px;
+}
+
 .concept_img {
     margin-right: calc((100% - 1127px) / 2);
     align-items: center;
 }
 
+
+
+@media screen and (max-width: 1127px) {
+
+    .concept_article {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+/* ↓不明点です */
+    .concept_img {
+        margin: 0 auto;
+    }
+        
+    }
+    
 
 /* concept2 */
 
@@ -142,7 +165,7 @@ span {
     display: flex;
     overflow: hidden;
     margin-left: 28%;
-    width: 64vw;
+    width: calc(72% + (100vw - 100%) / 2);
 }
 
 
@@ -168,7 +191,9 @@ span {
     margin-top: 174px;
     margin-left: 28%;
     line-height: 2.3;
+    font-size: 14px;
 }
+
 
 /*footer*/
 .hidden-area {

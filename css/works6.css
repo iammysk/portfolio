@@ -81,7 +81,7 @@ span {
 
 /* btn */
 
-/* .works_btn {
+.works_btn {
     font-size: 14px;
     border: 1px solid #666;
     text-align: center;
@@ -89,6 +89,7 @@ span {
     max-width: 80%;
     margin-top: 109px;
     margin-bottom: 174px;
+    margin-left: 28%;
     font-family: 'Noto Serif JP', serif;
     padding: 0;
     position: relative;
@@ -113,7 +114,7 @@ span {
 	bottom: 0;
 	right: -38px;
 	margin: auto;
-} */
+}
 
 .works_img {
     display: inline-block;
@@ -141,6 +142,18 @@ span {
     font-size: 36px;
     color: #3a5e73;
     margin-top: 20px;
+}
+
+.lead {
+    width: 685px;
+    margin-top: 109px; 
+    margin-left: calc(315px - (1000px - 100%) / 2);
+    font-size: 14px;
+    text-align: left;
+}
+
+.lead p {
+    line-height: 2;
 }
 
 
@@ -183,6 +196,11 @@ h4 {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .lead {
+        margin-left: calc((100vw - 685px) - (100vw - 100%) / 2);
+        text-wrap: balance;
+    }
 
     .article {
         margin-left: calc((100vw - 685px) - (100vw - 100%) / 2);

@@ -145,6 +145,18 @@ h4 {
     line-height: 2;
 }
 
+@media screen and (max-width: 1000px) {
+
+    .article {
+        
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+        
+}
+
 
 /* favorite thing */
 
@@ -157,9 +169,8 @@ h4 {
     margin-top: 174px;
     display: flex;
     overflow: hidden;
-    /* margin_rightだと上手く実装できなかった vwで幅を決めていたから？ */
     margin-left: 23%;
-    width: 67vw;
+    width: calc(77% + (100vw + 100%) / 2);
 }
 
 
@@ -195,6 +206,23 @@ h4 {
 .favoritething_article p {
     margin-top: 21px;
     line-height: 2;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .favoritething_article{
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .favoritething_article h4 {
+        margin-top: 109px;
+    }
+
+    
+        
 }
 
 
