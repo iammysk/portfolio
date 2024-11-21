@@ -1,0 +1,154 @@
+@charset "UFT-8";
+
+/* common */
+
+body {
+    background-color: rgb(216, 216, 204, 0.3);
+}
+span {
+    font-size: 56px;
+    color: rgb(104, 126, 141, 0.1);
+    text-align: center;
+}
+
+.bg {
+    margin: 20px 0;
+}
+
+
+/* nav */
+.fv {
+    max-width: 1366px;
+    position: relative;
+}
+
+.nav_wrap {
+    position: fixed;
+    top: 0;
+    left: 5%;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.title h1 {
+    font-size: 14px;
+    color: #687e8d;
+    margin-top: 56px;
+}
+
+.title  p {
+    font-size: 9px;
+    color: #687e8d;
+    margin-top: 10px;
+}
+
+
+.nav {
+    margin-top: 174px;
+}
+
+.nav li {
+    color: #687e8d;
+    margin-top: 36px;
+    font-size: 14px;
+}
+
+/*↑nav*/
+
+.wrap {
+    text-align: center;
+    margin-top: 250px;
+}
+
+.secondary {
+    color: #3a5e73;
+    font-size: 36px;
+}
+
+
+.concept {
+    margin-top: 52px;
+}
+
+
+/* main */
+
+/* contact */
+
+.contact_main {
+    max-width: 875px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 174px;
+    padding-bottom: 174px;
+    margin-top: -20px;
+    margin-bottom: 231px;
+}
+
+.contact_main p {
+    margin-left: 28%;
+    line-height: 2;
+}
+
+h3 {
+    font-size: 36px;
+    color: #3a5e73;
+    margin-top: 174px;
+}
+
+.form_wrap {
+    max-width: 640px;
+}
+
+form {
+    margin-top: 52px;
+}
+
+.c-form_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-form_item input {
+    background-color: #6f6a67;
+}
+
+/* btn */
+ .c-form__submit{
+    font-size: 14px;
+    color: #fff;
+    width: 218px;
+    max-width: 80%;
+    margin-top: 109px;
+    margin-bottom: 174px;
+    font-family: 'Noto Serif JP', serif;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    background-color: #3a5e73;
+}
+
+.c-form__submit button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+
+/* .c-form__submit::before {
+	content: "";
+	display: block;
+	width: 76px;
+	height: 1px;
+	background: #666;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -38px;
+	margin: auto;
+} */
+
+button {
+    color: #fff;
+}
