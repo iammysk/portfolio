@@ -15,7 +15,10 @@ dl,
 dt,
 dd,
 ul,
-li {
+li,
+input::placeholder,
+textarea::placeholder,
+button {
   margin: 0;
   padding: 0;
   line-height: 1;
