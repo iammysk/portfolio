@@ -104,10 +104,13 @@ form {
     margin-top: 52px;
 }
 
+/* 縦並びにしたいのですがこの記載は違うのでしょうか？ */
 .c-form_item {
     display: flex;
     flex-direction: column;
 }
+
+/* ↓入力画面の色を変えられません */
 
 .c-form_item input {
     background-color: #6f6a67;
