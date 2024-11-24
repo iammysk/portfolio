@@ -42,7 +42,8 @@
     
     <!--about_me-->
         <section class="about_wrap">
-            <img src="./images/1x/pc_about_01.jpg" alt="">
+            <img src="./images/1x/pc_about_01.jpg" alt="" class="desktop_img">
+            <img src="./images/2x/sp_about_01@2x-80.jpg" alt="" class="mobile_img">
             <div class="about_wrap2">
                 <div class="article">
                     <p>社会人１年目の話です。</p>
@@ -53,9 +54,13 @@
                     <p>それは今も働く上で大切にしている想いです。</p>
                 </div>
                 <div class="avatar">
-                    <div class="avatar_img">
-                        <img src="./images/1x/pc_about_02.jpg" alt="">
-                    </div>
+                    <picture>
+                        <div class="avatar_img">
+                            <source srcset="./images/2x/sp_about_02@2x-80.jpg" media="(max-width:1000px)">
+                            <img src="./images/1x/pc_about_02.jpg" alt="">
+                        </div> 
+                    </picture>
+                    
                     <div class="about_wrap3">
                         <p>
                             宮西 早希（みやにし さき）
@@ -118,7 +123,8 @@
             </div>
             
             <div class="values_wrap">
-                <img src="./images/1x/pc_about_values.jpg" alt="">
+                <img src="./images/1x/pc_about_values.jpg" alt="" class="desktop_img">
+                <img src="./images/2x/sp_about_values@2x-80.jpg" alt="" class="mobile_img">
                 <div class="values_article">
                     <h4>気づき</h4>
                     <p>周囲には常にアンテナを貼っています！言葉は大切だと発信していますが、言葉がなくても気づけるものは自らキャッチしに行けるように。</p>

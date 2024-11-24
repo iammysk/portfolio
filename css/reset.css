@@ -67,6 +67,7 @@ input {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+  font-family:inherit
 }
 
 textarea {
@@ -77,4 +78,5 @@ textarea {
   padding: 0;
   border: 0;
   background: transparent;
+  font-family:inherit
 }

@@ -70,6 +70,47 @@ span {
     margin-top: 52px;
 }
 
+/* sp */
+
+@media screen and (max-width: 767px) {
+
+    .title {
+        display: flex;
+    }
+
+    .title h1 {
+        margin-top: 26px;
+        padding-right: 19px;
+        border-right: 1px solid #687e8d;
+    }
+    
+    .title  p {
+        font-size: 14px;
+        margin-top: 26px;
+        margin-left: 19px;
+    }
+
+    .wrap {
+        margin-top: 117px;
+    }
+
+    .secondary {
+        font-size: 21px;
+    }
+
+    span {
+        font-size: 36px;
+    }
+
+    .about {
+        margin-top: 26px;
+    }
+
+        
+    }
+
+
+
 /* main */
 
 /* concept */
@@ -133,17 +174,77 @@ span {
 
 @media screen and (max-width: 1127px) {
 
+
+
     .concept_article {
         width: 100vw;
         margin-left: 0;
         margin-right: 0;
+        text-align: center;
     }
 
     .concept_wrap {
         margin: 0;
     }
-        
+
+    .concept_wrap {
+        flex-direction: column;
     }
+
+    .concept_content {
+        justify-content: center;
+        margin-top: 117px;
+    }
+
+    .center_box {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .concept_img {
+        order: -1;
+    }
+
+    .concept_text  {
+        text-align: left;
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .concept_main {
+        padding-top: 26px;
+        margin-top: 109px;
+    }
+
+    .concept_wrap {
+        margin-top: 85px;
+    }
+
+    .concept_article h3 {
+        font-size: 21px;
+    }
+    
+    .secondary2 {
+        font-size: 12px;
+        margin-top: 15px;
+        text-align:right;
+    }
+
+    .center_box {
+        width: 92%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktop_break {
+        display: none;
+    }
+} 
+    
     
 
 /* concept2 */
@@ -155,7 +256,6 @@ span {
 .concept2_wrap h3 {
     font-size: 36px;
     color: #3a5e73;
-    margin-top: 313px;
     text-align: center;
 }
 
@@ -192,6 +292,29 @@ span {
     line-height: 2.3;
     font-size: 14px;
 }
+
+@media screen and (max-width: 767px) {
+
+    .concept2_wrap {
+        margin-top: 143px;
+    }
+    
+    .concept2_wrap h3 {
+        font-size: 21px;
+    }
+
+    .concept2_img {
+        margin-top: 117px;
+    }
+
+    .concept2_text {
+        margin: 0 auto;
+        margin-top: 70px;
+        width: 92%;
+    }
+
+
+} 
 
 
 /*footer*/
