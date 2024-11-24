@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/works7.css">
-    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/micromodal/0.4.10/micromodal.min.js" integrity="sha512-qcwcAul7d7yUcoz3MmQABiaGDa+gVkaDWgZX6wEd/z3I6z62nQCDW3EqioQG+O+QlGCpxmJLdH5snh4IaDPiPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script> -->
 </head>
 <body>
     <!--FV-->
@@ -50,11 +51,22 @@
 
         <!-- モーダル -->
 
-        <div class="works_btn">
-            <a href="#">詳しく見る</a>
-        </div>
+        <button data-micromodal-trigger="modal-1" class="works_btn">
+            詳しく見る
+        </button>
 
-        
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+            <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+                <div
+                    class="modal-container"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="modal-1-title">
+                    <h1>aaa</h1>
+                </div>
+
+            </div>
+        </div>
 
         <div class="lead">
             <p>
@@ -140,6 +152,7 @@
             isHidden = false; // 非表示フラグを解除
             }
         }
+        MicroModal.init()
         });
     </script>
 </body>
