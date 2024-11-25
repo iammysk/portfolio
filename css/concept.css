@@ -170,21 +170,30 @@ span {
     align-items: center;
 }
 
+.mobile_img {
+    display: none;
+}
 
 
 @media screen and (max-width: 1127px) {
 
-
+    .concept_main {
+        padding-top: 26px;
+        margin: 0 12%;
+        margin-top: 109px;
+        margin-bottom: 209px;
+    }
 
     .concept_article {
-        width: 100vw;
         margin-left: 0;
         margin-right: 0;
         text-align: center;
     }
 
     .concept_wrap {
-        margin: 0;
+        margin: 0 calc((100% - 100vw) / 4);
+        margin-top: 85px;
+        padding: 66px 10%;
     }
 
     .concept_wrap {
@@ -200,10 +209,28 @@ span {
         display: flex;
         justify-content: center;
         text-align: center;
+        
     }
 
     .concept_img {
         order: -1;
+    }
+
+    .desktop_img {
+        display: none;
+    }
+
+    .mobile_img {
+        display: block;
+        width: 100%;
+    }
+
+    /* imgサイズ苦戦している箇所 */
+    .concept_img img {
+        object-fit: cover;
+        margin-right: calc(50% - 50vw);
+        margin-top: -120px;
+        min-width: 293px;
     }
 
     .concept_text  {

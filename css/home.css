@@ -60,8 +60,6 @@ span {
 
 /*↑nav*/
 
-
-
 .copy {
     position: absolute;
     top: 50%;
@@ -120,100 +118,122 @@ span {
     color: #3a5e73;
 }
 
-
-
 /* sp_nav */
 
-.sp_nav , .sp_btn {
+.sp_nav  {
+    display: none;
+}
+
+.sp_btn  {
     display: none;
 }
 
 @media screen and (max-width: 767px) {
-   
 
-/* ハンバーガーボタン */
+    .nav {
+        display: none;
+    }
+
     .sp_btn {
-        display: none; /* デフォルトでは非表示 */
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 30px;
-        height: 30px;
+        display: block;
+        height: 23px;
         cursor: pointer;
-        z-index: 1001;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        z-index: 2;
     }
 
     .sp_btn span {
         display: block;
-        width: 100%;
+        width: 33px;
         height: 1px;
         background-color: #687e8d;
-        margin-bottom: 10px;
-        transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: relative;
+        top: 10px;
+        /* ボタンの変化 */
+        transition: 0.3s;
+    } 
+    
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 1px;
+        background-color: #687e8d;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: absolute;
+        /* ボタンの変化 */
+        transition: 0.3s;
     }
 
-    /* スマホ用ナビゲーション */
-    .sp_nav {
-        display: none; /* デフォルトでは非表示 */
-        position: fixed;
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    .sp_btn.open span {
+        background-color: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .sp_btn.open span::after {
         top: 0;
-        right: -100%; /* 初期状態で画面外 */
-        width: 250px;
+        transform: rotate(-45deg);
+    }
+
+    /* navの位置 */
+
+    .nav_text a {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
         height: 100vh;
-        background-color: #fff;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease;
-        z-index: 1000;
+        background-color: rgba(104, 126, 141, 0.8);
+        z-index: 1;
     }
 
     .sp_nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 20px;
     }
 
     .sp_nav ul li {
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
+        width: 100%;
+        color: #fff;
+        font-size: 12px;
+        border-bottom: 1px #fff solid;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        padding-left: 20px;
     }
 
-    .sp_nav ul li a {
-        text-decoration: none;
-        color: #333;
-        font-size: 18px;
+    .nav_text2 {
+        font-size: 16px;
     }
 
-/* スマホ版専用のスタイル */
-
-@media (max-width: 768px) {
-    .sp_btn {
-        display: block; /* スマホサイズでボタンを表示 */
-    }
-
-    .sp_nav {
-        display: block; /* スマホサイズでナビゲーションを有効化 */
-    }
 }
-
-/* ハンバーガーボタンの開閉状態 */
-.sp_nav.open {
-    right: 0; /* ナビゲーションを画面内に表示 */
-}
-
-.sp_btn.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.sp_btn.open span:nth-child(2) {
-    opacity: 0; /* 中央の線を非表示 */
-}
-
-.sp_btn.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-}
-
 
 /* fv_sp */
 
@@ -462,11 +482,11 @@ span {
 
 .works_img_wrap {
     /* widthが上手く広がってくれない気がしています */
-    width: calc( 100% + ((100vw - 100%) / 4));
+    width: calc( 100% + ((100vw - 100%) / 2));
     /* 下の式を入れるとleftにはイメージしている幅分だけはみ出してくれました */
     margin: 0 calc((100% - 100vw) / 4);
     margin-top: 109px;
-}
+    }
     
 }
 

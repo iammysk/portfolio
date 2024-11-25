@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -17,10 +18,12 @@
     <div class="fv">
         <!--nav-->
         <div class="nav_wrap">
+
             <div class="title">
                 <h1>MIYANISHI SAKI</h1>
                 <p>DESIGNER</p>
             </div>
+
             <nav class="nav">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
@@ -30,21 +33,46 @@
                     <li><a href="./contact.html">CONTACT</a></li>
                 </ul>
             </nav>
-            <!-- sp_nav -->
+
             <div class="sp_btn">
                 <span></span>
-                <span></span>
-                <span></span>
-             </div>
-             <nav class="sp_nav">
+            </div>
+
+            <nav class="sp_nav">
                 <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li class="nav_text">
+                        <a href="./index.html">
+                            <div class="nav_text2">ホーム</div>
+                            <div>HOME</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./about.html">
+                            <div class="nav_text2">わたしについて</div>
+                            <div>ABOUT</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./concept.html">
+                            <div class="nav_text2">ポートフォリオに込めた想い</div>
+                            <div>CONCEPT</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./works.html">
+                            <div class="nav_text2">作品一覧</div>
+                            <div>WORKS</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./contact.html">
+                            <div class="nav_text2">お問い合わせ</div>
+                            <div>CONTACT</div>
+                        </a>
+                    </li>
                 </ul>
-             </nav>
+            </nav>
+
         </div>
         
         <p class="copy">言葉を、カタチに</p>
@@ -250,17 +278,6 @@
             })
         })
 
-        // ハンバーガーメニュー
-        
-        document.addEventListener('DOMContentLoaded', function () {
-        const spBtn = document.querySelector('.sp_btn');
-        const spNav = document.querySelector('.sp_nav');
-
-        spBtn.addEventListener('click', function () {
-        spBtn.classList.toggle('open');
-        spNav.classList.toggle('open');
-    });
-});
     </script>
     
 </body>
