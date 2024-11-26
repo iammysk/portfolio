@@ -250,14 +250,31 @@ h4 {
     text-align: center;
 }
 
-.favoritething_img {
-    margin-top: 174px;
-    display: flex;
-    overflow: hidden;
-    margin-left: 23%;
-    width: calc(77% + (100vw - 100%) / 2);
+/* スクロールバー分はみ出るのを防ぐ */
+
+body {
+    container-type: inline-size;
 }
 
+.slide_container {
+    position: relative;
+    height: 181px;
+    width: 100vw;
+    width: 100cqw;
+    margin: 0 calc(50% - 50vw);
+    margin: 0 calc(50% - 50cqw);
+    margin-top: 117px;
+}
+
+.favoritething_img {
+    display: flex;
+    overflow: hidden;
+    width: calc(77% + (100vw - 100%) / 2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 700px;
+}
 
 .slideshow {
     display: flex;
