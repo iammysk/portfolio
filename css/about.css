@@ -139,7 +139,7 @@ h4 {
 
 .about_wrap > img {
     object-fit: cover;
-    /* width: 54vw; */
+    width: 54vw;
     margin-left: calc(50% - 50vw);
 }
 
@@ -213,7 +213,9 @@ h4 {
     .mobile_img {
         display: block;
         width: 100%;
+        min-width: 293px;
     }
+
 
     .about_wrap img {
         text-align: end;
@@ -240,6 +242,50 @@ h4 {
         line-height: 2.3;
     }
 
+}
+
+/* 縦組切り替え */
+@media screen and (max-width: 1000px) {
+
+    .about_wrap2 {
+        max-width: 1000px;
+        width: 100%;
+        margin-right: 0;
+        width: calc( 100% + ((100vw - 100%) / 2));
+        margin: 0 calc((100% - 100vw) / 4);
+    }
+
+    .article {
+        height: 450px;
+        writing-mode: vertical-rl;
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .about_wrap2 {
+        max-width: 650px;
+    }
+
+    .article {
+        height: 600px;
+        writing-mode: vertical-rl;
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 516px) {
+
+    .about_wrap2 {
+        max-width: 516px;
+    }
+
+    .article {
+        height: 1010px;
+        writing-mode: vertical-rl;
+        column-count: 3;
+    }
 }
 
 
@@ -308,6 +354,7 @@ body {
 .favoritething_article p {
     margin-top: 21px;
     line-height: 2;
+    text-align: justify;
 }
 
 @media screen and (max-width: 1000px) {
@@ -326,7 +373,6 @@ body {
         width: calc( 100% + ((100vw - 100%) / 2));
         flex-direction: column;
         align-items: center;
-        /* margin: 0 auto; */
         margin: 0 calc((100% - 100vw) / 4);
         
     }
@@ -336,8 +382,7 @@ body {
     }
 
     .favoritething_text {
-        width: 90%;
-        margin: 0 calc((100% - 100vw) / 2) ;
+        width: 100%;
     }
 
         
@@ -407,13 +452,10 @@ body {
 
     /* margin苦戦している箇所 */
     .values_article {
-        max-width: 100%;
+        max-width: initial;
         width: calc( 100% + ((100vw - 100%) / 2));
         margin-right: 0;
-        margin: 0 calc((100% - 100vw) / 2);
-
-            /* margin-right: 0;
-            max-width: 90%; */
+        margin: 0 calc((100% - 100vw) / 4);
     }
 
     .values_img img {

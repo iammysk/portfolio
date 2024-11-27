@@ -80,6 +80,7 @@ span {
 
 .img_wrap img {
     width: 100%;
+    /* min-width: 293px; */
 }
 
 .human_wrap {
@@ -134,6 +135,11 @@ span {
         display: none;
     }
 
+    .nav_wrap {
+        left: 0;
+        width: 100%;
+    }
+
     .sp_btn {
         display: block;
         height: 23px;
@@ -186,11 +192,13 @@ span {
     .sp_btn.open span::before {
         bottom: 0;
         transform: rotate(45deg);
+        background-color: #fff;
     }
 
     .sp_btn.open span::after {
         top: 0;
         transform: rotate(-45deg);
+        background-color: #fff;
     }
 
     /* navの位置 */
@@ -204,7 +212,7 @@ span {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background-color: rgba(104, 126, 141, 0.8);
         z-index: 1;
@@ -224,9 +232,8 @@ span {
         color: #fff;
         font-size: 12px;
         border-bottom: 1px #fff solid;
-        padding-top: 22px;
-        padding-bottom: 22px;
-        padding-left: 20px;
+        box-sizing: border-box;
+        padding: 22px 20px;
     }
 
     .nav_text2 {
@@ -241,6 +248,7 @@ span {
 
     .title {
         display: flex;
+        margin-left: 5%;
     }
 
     .title h1 {

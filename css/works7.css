@@ -189,6 +189,9 @@ span {
     text-align: left;
 }
 
+.remodal-close {
+    left: 100%;
+}
 /* ------- */
 
 .lead {
@@ -295,8 +298,6 @@ h4 {
     }
 
     .works_btn {
-        width: 218px;
-        max-width: 80%;
         margin: 0 auto;
         margin-top: 52px;
     }

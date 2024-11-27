@@ -138,6 +138,7 @@ h4 {
 
 .works_content {
     width: 44%;
+    min-width: 240px;
 }
 
 .works_bg {

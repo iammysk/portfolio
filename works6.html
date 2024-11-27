@@ -7,8 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- RemodalのCDN（CSS） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css" integrity="sha512-nF9G9AnUEVv+zx285OqwGE8c1gmkys3qV6iuDK5rVG/UuZLWRgGBy/tN5WzSXXuZDZ1YvwhJ9+a/DTj71L8Lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.css" integrity="sha512-LVOzFPLcBUppn3NOx8FXJkh2TawWu/jk9ynbntKID6cjynQsfqmHlUbH72mjAwZXsu0LOLw26JoiC0qHJde70Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!------------------------->
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/works6.css">
+
+    <!-- ハンバーガーメニューのCDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/micromodal/0.4.10/micromodal.min.js" integrity="sha512-qcwcAul7d7yUcoz3MmQABiaGDa+gVkaDWgZX6wEd/z3I6z62nQCDW3EqioQG+O+QlGCpxmJLdH5snh4IaDPiPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- jQueryのCDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- RemodalのCDN（JS） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <!--FV-->
@@ -47,9 +62,33 @@
             <h3>デザインカフェ HP</h3>
         </div>
         
-        <div class="works_btn">
-            <a href="#">詳しく見る</a>
+        <!--------- モーダル --------->
+        <div class="modal_btn">
+            <button class="works_btn">
+                <a href="#modal">
+                    詳しく見る
+                </a>
+            </button>
         </div>
+        
+        <!-- モーダルのコンテナー -->
+        <div class="remodal" data-remodal-id="modal">
+            <!-- 閉じるボタン -->
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <!-- モーダル内に画像を配置 -->
+            <div class="modal_img">
+                <div class="desktop_img">
+                    <img src="images/1x/pc_worksup_02_all.jpg" class="modal_img_pc">
+                    <img src="images/1x/pc_worksup_02_all2.jpg" alt="" class="modal_img_sp">
+                </div>
+                <div class="mobile_img">
+                    <img src="images/2x/sp_works_02_all@2x-80.jpg" alt="" class="modal_img_pc">
+                    <img src="images/2x/sp_works_02_all2@2x-80.jpg" alt="" class="modal_img_sp">
+                </div>
+            </div>
+        </div>
+        <!--------------------------->
+
 
         <div class="lead">
             <p>
@@ -135,6 +174,7 @@
             isHidden = false; // 非表示フラグを解除
             }
         }
+        MicroModal.init()
         });
     </script>
 </body>

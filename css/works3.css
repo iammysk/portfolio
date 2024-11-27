@@ -171,6 +171,57 @@ span {
 }
 
 
+/* モーダル */
+.remodal {
+    height: 80vh;
+    overflow-y: scroll;
+    background: lightgray;
+    padding: 0;
+}
+.remodal-close {
+    position: sticky;
+}
+
+.modal_img {
+    padding: 0 35px 35px;
+}
+
+.desktop_img {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.modal_img_pc {
+    width: 68%;
+}
+
+.modal_img_sp {
+    width: 13%;
+}
+
+
+.modal_btn {
+    text-align: left;
+}
+
+.remodal-close {
+    left: 100%;
+}
+
+@media screen and (max-width: 767px) {
+
+    .mobile_img {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    
+    
+}
+
+/* ------- */
+
 .article {
     width: 685px;
     margin-top: 109px; 
@@ -241,6 +292,14 @@ h4 {
         display: none;
     }
 
+    .modal_img_pc {
+        width: 100%;
+    }
+
+    .modal_img_sp {
+        width: 50%;
+    }
+    
     .works_main {
         padding-top: 26px;
         margin-top: 109px;
@@ -293,6 +352,9 @@ h4 {
         margin-top: 52px;
     }
        
+    .modal_btn {
+        text-align: center;
+    }
     
 }
 

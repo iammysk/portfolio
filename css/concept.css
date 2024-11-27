@@ -214,6 +214,11 @@ span {
 
     .concept_img {
         order: -1;
+        width: 100vw;
+        width: 100cqw;
+        margin: 0 calc(50% - 50vw);
+        margin: 0 calc(50% - 50cqw);
+        position: relative;
     }
 
     .desktop_img {
@@ -228,8 +233,11 @@ span {
     /* imgサイズ苦戦している箇所 */
     .concept_img img {
         object-fit: cover;
-        margin-right: calc(50% - 50vw);
-        margin-top: -120px;
+        width: 60%;
+        min-width: 293px;
+        position: absolute;
+        top: -120px;
+        right: 0;
         min-width: 293px;
     }
 
