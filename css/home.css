@@ -33,6 +33,7 @@ span {
     left: 5%;
     transition: 0.5s;
     z-index: 999;
+    mix-blend-mode: difference;
 }
 
 .title h1 {
@@ -532,6 +533,8 @@ span {
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .mobile-version {
