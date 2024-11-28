@@ -75,6 +75,7 @@ span {
     color: #687e8d;
     margin-top: 36px;
     font-size: 14px;
+    transition: all 0.5s;
 }
 
 /* ボタンのテキスト(デフォルトのテキスト) */
@@ -177,6 +178,7 @@ span {
     .nav_wrap {
         left: 0;
         width: 100%;
+        mix-blend-mode: normal;
     }
 
     .sp_btn {

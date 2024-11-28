@@ -329,6 +329,8 @@ span {
 
 .slideshow img {
     max-width: 293px;
+    margin: 10px;
+    filter: drop-shadow(3px 3px 3px #aaa);
 }
 
 @keyframes loop-slide {

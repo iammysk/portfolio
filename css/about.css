@@ -335,6 +335,8 @@ body {
 
 .slideshow img {
     max-width: 293px;
+    margin: 10px;
+    filter: drop-shadow(3px 3px 3px #aaa);
 }
 
 @keyframes loop-slide {
@@ -348,13 +350,16 @@ body {
 
 
 .favoritething_article {
-    margin: 109px calc((100% - 1000px) / 2) 0;
+    margin: 50px calc((100% - 1000px) / 2) 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    
 }
 
 .favoritething_text {
-    width: 42%;
+    width: 60%;
+    margin-top: 109px;
 }
 
 .favoritething_article p {
@@ -372,30 +377,47 @@ body {
         margin-top: 109px;
         }
         
+    .favoritething_article {
+        width: 100vw;
+        width: 100cqw;
+        margin: 109px calc(50% - 50vw);
+        margin: 109px calc(50% - 50cqw);
     }
+
+}
 
 @media screen and (max-width: 1000px) {
 
-    .favoritething_article{
+    /* .favoritething_article{
         width: calc( 100% + ((100vw - 100%) / 2));
         flex-direction: column;
-        align-items: center;
         margin: 0 calc((100% - 100vw) / 4);
         
     }
 
     .favoritething_article h4 {
         margin-top: 109px;
+    } */
+
+        
+}
+
+@media screen and (max-width: 767px) {
+
+    .favoritething_article{
+        width: calc( 100% + ((100vw - 100%) / 2));
+        flex-direction: column;
+        margin: calc((100% - 100vw) / 4);
+        align-items: center;
     }
 
     .favoritething_text {
         width: 100%;
     }
 
-        
-}
-
-@media screen and (max-width: 767px) {
+    .favoritething_article h4 {
+        margin-top: 109px;
+    }
 
     span {
         font-size: 36px;

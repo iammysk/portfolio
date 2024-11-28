@@ -196,7 +196,7 @@ span {
 
 .lead {
     width: 685px;
-    margin-top: 109px; 
+    /* margin-top: 109px;  */
     margin-left: calc(315px - (1000px - 100%) / 2);
     font-size: 14px;
     text-align: left;
@@ -307,7 +307,7 @@ h4 {
         display: flex;
         justify-content: center; 
         margin: 0 auto;
-        margin-top: 173px;
+        margin-top: 73px;
     }
 
     .lead p {
