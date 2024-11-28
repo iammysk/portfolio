@@ -218,7 +218,9 @@ span {
 
     .mobile_img {
         flex-direction: column;
-        row-gap: 50px;
+        text-align: center;
+        gap: 50px;
+        align-items: center;
     }
     
     
@@ -303,7 +305,7 @@ h4 {
 @media screen and (max-width: 767px) {
 
     .mobile_img {
-        display: block;
+        display: flex;
     }
 
     .desktop_img {

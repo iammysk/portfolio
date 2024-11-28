@@ -37,6 +37,7 @@ h4 {
     left: 5%;
     transition: 0.5s;
     z-index: 999;
+    mix-blend-mode: difference;
 }
 
 .title h1 {
@@ -182,6 +183,7 @@ h4 {
 
 .about_wrap3 p {
     line-height: 2;
+    font-size: 12px;
 }
 
 .mobile_img {
@@ -286,6 +288,10 @@ h4 {
         writing-mode: vertical-rl;
         column-count: 3;
     }
+
+    .avatar {
+        max-width: 100%;
+    }
 }
 
 
@@ -353,6 +359,7 @@ body {
 
 .favoritething_article p {
     margin-top: 21px;
+    font-size: 14px;
     line-height: 2;
     text-align: justify;
 }
@@ -438,6 +445,7 @@ body {
 
 .values_article p {
     margin-top: 21px;
+    font-size: 14px;
     line-height: 2;
 }
 
