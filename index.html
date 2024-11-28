@@ -26,11 +26,36 @@
 
             <nav class="nav">
                 <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li>
+                        <a href="./index.html" class="pc_nav">
+                            <span class="nav_item">HOME</span>
+                            <span class="nav_item">ホーム</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html" class="pc_nav">
+                            <span class="nav_item">ABOUT</span>
+                            <span class="nav_item">わたしについて</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./concept.html" class="pc_nav">
+                            <span class="nav_item">CONCEPT</span>
+                            <span class="nav_item">ポートフォリオに込めた想い</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./works.html" class="pc_nav">
+                            <span class="nav_item">WORKS</span>
+                            <span class="nav_item">作品一覧</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="pc_nav">
+                            <span class="nav_item">CONTACT</span>
+                            <span class="nav_item">お問い合わせ</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -42,32 +67,32 @@
                 <ul>
                     <li class="nav_text">
                         <a href="./index.html">
-                            <div class="nav_text2">ホーム</div>
-                            <div>HOME</div>
+                            <div class="nav_text2">HOME</div>
+                            <div>ホーム</div>
                         </a>
                     </li>
                     <li class="nav_text">
                         <a href="./about.html">
-                            <div class="nav_text2">わたしについて</div>
-                            <div>ABOUT</div>
+                            <div class="nav_text2">ABOUT</div>
+                            <div>わたしについて</div>
                         </a>
                     </li>
                     <li class="nav_text">
                         <a href="./concept.html">
-                            <div class="nav_text2">ポートフォリオに込めた想い</div>
-                            <div>CONCEPT</div>
+                            <div class="nav_text2">CONCEPT</div>
+                            <div>ポートフォリオに込めた想い</div>
                         </a>
                     </li>
                     <li class="nav_text">
                         <a href="./works.html">
-                            <div class="nav_text2">作品一覧</div>
-                            <div>WORKS</div>
+                            <div class="nav_text2">WORKS</div>
+                            <div>作品一覧</div>
                         </a>
                     </li>
                     <li class="nav_text">
                         <a href="./contact.html">
-                            <div class="nav_text2">お問い合わせ</div>
-                            <div>CONTACT</div>
+                            <div class="nav_text2">CONTACT</div>
+                            <div>お問い合わせ</div>
                         </a>
                     </li>
                 </ul>
@@ -79,8 +104,10 @@
         <div class="img_wrap">
             <div class="img_container">
                 <picture>
-                    <source srcset="./images/2x/sp_home_fv@2x-80.jpg" media="(max-width:767px)">
-                    <img src="./images/1x/pc_home_fv.jpg" alt="">   
+                    <source srcset="./images/2x/sp_home_fv@2x-80.jpg" media="(max-width:767px)" class="fv_img">
+                     <!-- css 248行目から効かない -->
+                    <img src="./images/1x/pc_home_fv.jpg" alt="" class="desktop_img">   
+                    <!-- <img src="./images/2x/sp_home_fv@2x-80.jpg" alt="" class="mobile_img"> -->
                 </picture>
                 
                 <div class="human_wrap">

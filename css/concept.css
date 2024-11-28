@@ -188,6 +188,7 @@ span {
         margin-left: 0;
         margin-right: 0;
         text-align: center;
+        margin-top: 380px;
     }
 
     .concept_wrap {
@@ -228,6 +229,7 @@ span {
     .mobile_img {
         display: block;
         width: 100%;
+        min-width: 293px;
     }
 
     /* imgサイズ苦戦している箇所 */
@@ -248,6 +250,13 @@ span {
     
 }
 
+@media screen and (max-width: 930px) {
+
+    .concept_article {
+        margin-top: 300px;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     .concept_main {
@@ -257,6 +266,10 @@ span {
 
     .concept_wrap {
         margin-top: 85px;
+    }
+
+    .concept_article {
+        margin-top: 200px;
     }
 
     .concept_article h3 {
@@ -279,7 +292,13 @@ span {
         display: none;
     }
 } 
-    
+
+@media screen and (max-width: 560px) {
+
+    .concept_article {
+        margin-top: 100px;
+    }
+}
     
 
 /* concept2 */
