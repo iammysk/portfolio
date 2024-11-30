@@ -33,7 +33,6 @@ span {
     left: 5%;
     transition: 0.5s;
     z-index: 999;
-    mix-blend-mode: difference;
 }
 
 .title h1 {
@@ -48,53 +47,61 @@ span {
     margin-top: 10px;
 }
 
-
-.nav {
-    margin-top: 100px;
-}
-
-
-
 /* nav hovar */
 
+.nav {
+    margin-top: 138px;
+}
+
 .pc_nav {
-    position: relative;
-    display: inline-block;
-    width: 190px;
-    height: 90px;
-    line-height: 90px;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1.5em;
+     /* 高さをline-heightと一緒に */
+    height: 1.5em;
+    /* 縦並び */
+    display: flex;
+    flex-direction: column;
+    /* はみ出たところを隠す */
     overflow: hidden;
 }
 
-.nav_item {
-    position: absolute;
-    left: 0;
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: #687e8d;
-    margin-top: 36px;
+/* ホバー時の変化をゆっくりに */
+span {
     font-size: 14px;
-    transition: all 0.5s;
+    color: #687e8d;
+    transition: 0.5s;
 }
 
-/* ボタンのテキスト(デフォルトのテキスト) */
-.nav_item:nth-child(1) {
-    top: 0;
-  }
-  
-  /* ボタンのテキスト(隠れているテキスト) */
-  .nav_item:nth-child(2) {
-    top: -100%;
-  }
-  
-  /* ボタンホバーアクション */
-  .pc_nav:hover .nav_item:nth-child(1) {
-    top: 100%;
-  }
-  
-  .pc_nav:hover .nav_item:nth-child(2) {
-    top: 0;
+/* ホバーした時に、テキストを上に1行分ずつずらす */
+.pc_nav:hover span {
+    transform: translateY(-100%);
+}
+
+/* beforeで丸を作成 */
+.nav li::before {
+    content: "";
+    display: block;
+    background-color: #687e8d;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    /* 初期状態は透明に */
+    opacity: 0;
+    /* ホバー時ゆっくり表示されるように */
+    transition: 0.5s;
+}
+
+/* 丸とリンクを横並びに */
+.nav li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 36px;
+}
+
+.nav li:has(a:hover)::before {
+    opacity: 1;
   }
 
 /*↑nav*/
@@ -156,8 +163,6 @@ span {
     text-align: center;
     color: #3a5e73;
 }
-
-
 
 /* sp_nav */
 
@@ -426,6 +431,7 @@ span {
 }
 
 /* btn */
+
 .about_btn {
     font-size: 14px;
     border: 1px solid #666;
@@ -445,6 +451,8 @@ span {
     width: 100%;
     padding: 16px;
     box-sizing: border-box;
+    /* navで指定した設定をリセットしたい */
+    line-height: inherit;
 }
 
 

@@ -6,28 +6,101 @@
     <title>ポートフォリオに込めた想い</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/concept.css">
+    <!-- スクロール時背景に合わせて色が反転 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <!--FV-->
     <div class="fv">
+        <!--nav-->
         <div class="nav_wrap">
+
             <div class="title">
                 <h1>MIYANISHI SAKI</h1>
                 <p>DESIGNER</p>
             </div>
+
             <nav class="nav">
                 <ul>
-                    <li><a href="./home.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li>
+                        <a href="./index.html" class="pc_nav">
+                            <span class="nav_item">HOME</span>
+                            <span class="nav_item">ホーム</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html" class="pc_nav">
+                            <span class="nav_item">ABOUT</span>
+                            <span class="nav_item">わたしについて</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./concept.html" class="pc_nav">
+                            <span class="nav_item">CONCEPT</span>
+                            <span class="nav_item">ポートフォリオに込めた想い</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./works.html" class="pc_nav">
+                            <span class="nav_item">WORKS</span>
+                            <span class="nav_item">作品一覧</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="pc_nav">
+                            <span class="nav_item">CONTACT</span>
+                            <span class="nav_item">お問い合わせ</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+
+            <nav class="sp_nav">
+                <ul>
+                    <li class="nav_text">
+                        <a href="./index.html">
+                            <div class="nav_text2">HOME</div>
+                            <div>ホーム</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./about.html">
+                            <div class="nav_text2">ABOUT</div>
+                            <div>わたしについて</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./concept.html">
+                            <div class="nav_text2">CONCEPT</div>
+                            <div>ポートフォリオに込めた想い</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./works.html">
+                            <div class="nav_text2">WORKS</div>
+                            <div>作品一覧</div>
+                        </a>
+                    </li>
+                    <li class="nav_text">
+                        <a href="./contact.html">
+                            <div class="nav_text2">CONTACT</div>
+                            <div>お問い合わせ</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
+        
         <div class="wrap">
             <h2 class="secondary">ポートフォリオに込めた想い</h2>
             <div class="concept">
@@ -162,6 +235,34 @@
             }
         }
         });
+
+        // sp_nav
+
+        $(function(){
+            $('.sp_btn').on('click',function(){
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
+
+        // スクロール時背景に合わせて文字色が反転
+        $(function () {
+            $(window).on('scroll', function () {
+                $('.nav_wrap li').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.concept_content').offset().top && menuY < $('.concept_content').offset().top + $('.concept_content').height()) {
+                    // .blueと重なっている時
+                    $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                } else {
+                    // 重なっていない時は色を戻す
+                    $(this).css('color', 'gray')
+                }
+                })
+            })
+            })
     </script>
 </body>
 </html>

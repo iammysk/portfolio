@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- スクロール時背景に合わせて色が反転 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
 </head>
 <body>
 
@@ -305,6 +309,24 @@
             })
         })
 
+        // スクロールイベントに応じて文字色が反転
+        $(function () {
+      $(window).on('scroll', function () {
+        $('.nav_wrap').each(function () {
+          let menuY = $(this).offset().top + $(this).height()
+          if (menuY > $('.desktop-version').offset().top && menuY < $('.desktop-version').offset().top + $('.desktop-version').height()) {
+            // .blueと重なっている時
+            $(this).css('color', 'white');
+          } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+            // .yellowと重なっている時
+            $(this).css('color', 'blue');
+          } else {
+            // 重なっていない時は色を戻す
+            $(this).css('color', 'gray')
+          }
+        })
+      })
+    })
     </script>
     
 </body>

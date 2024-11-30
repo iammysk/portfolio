@@ -42,19 +42,189 @@ span {
     margin-top: 10px;
 }
 
+/* nav hovar */
 
 .nav {
-    margin-top: 174px;
+    margin-top: 138px;
 }
 
-.nav li {
-    color: #687e8d;
-    margin-top: 36px;
-    font-size: 14px;
+.pc_nav {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1.5em;
+     /* 高さをline-heightと一緒に */
+    height: 1.5em;
+    /* 縦並び */
+    display: flex;
+    flex-direction: column;
+    /* はみ出たところを隠す */
+    overflow: hidden;
 }
+
+/* ホバー時の変化をゆっくりに */
+.pc_nav span {
+    font-size: 14px;
+    color: #687e8d;
+    transition: 0.5s;
+    text-align: left;
+}
+
+/* ホバーした時に、テキストを上に1行分ずつずらす */
+.pc_nav:hover span {
+    transform: translateY(-100%);
+}
+
+/* beforeで丸を作成 */
+.nav li::before {
+    content: "";
+    display: block;
+    background-color: #687e8d;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    /* 初期状態は透明に */
+    opacity: 0;
+    /* ホバー時ゆっくり表示されるように */
+    transition: 0.5s;
+}
+
+/* 丸とリンクを横並びに */
+.nav li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 36px;
+}
+
+.nav li:has(a:hover)::before {
+    opacity: 1;
+  }
 
 /*↑nav*/
 
+/* sp_nav */
+
+.sp_nav  {
+    display: none;
+}
+
+.sp_btn  {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    .nav {
+        display: none;
+    }
+
+    .nav_wrap {
+        left: 0;
+        width: 100%;
+        mix-blend-mode: normal;
+    }
+
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        display: block;
+        width: 33px;
+        height: 1px;
+        background-color: #687e8d;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: relative;
+        top: 10px;
+        /* ボタンの変化 */
+        transition: 0.3s;
+    } 
+    
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 1px;
+        background-color: #687e8d;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: absolute;
+        /* ボタンの変化 */
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    .sp_btn.open span {
+        background-color: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background-color: #fff;
+    }
+
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        background-color: #fff;
+    }
+
+    /* navの位置 */
+
+    .nav_text a {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(104, 126, 141, 0.8);
+        z-index: 1;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .sp_nav ul li {
+        width: 100%;
+        color: #fff;
+        font-size: 12px;
+        border-bottom: 1px #fff solid;
+        box-sizing: border-box;
+        padding: 22px 20px;
+    }
+
+    .nav_text2 {
+        font-size: 16px;
+    }
+
+}
 .wrap {
     text-align: center;
     margin-top: 250px;
@@ -76,6 +246,7 @@ span {
 
     .title {
         display: flex;
+        margin-left: 5%;
     }
 
     .title h1 {
@@ -104,12 +275,8 @@ span {
 
     .about {
         margin-top: 26px;
-    }
-
-        
-    }
-
-
+    }        
+}
 
 /* main */
 
