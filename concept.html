@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+    <div id="cursor"></div>
     <!--FV-->
     <div class="fv">
         <!--nav-->
@@ -253,13 +254,13 @@
                 let menuY = $(this).offset().top + $(this).height()
                 if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
                     // .blueと重なっている時
-                    $(this).css('color', 'white');
+                    $(this).addClass('change_color');
                 // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
                     // .yellowと重なっている時
                     // $(this).css('color', 'blue');
                 } else {
                     // 重なっていない時は色を戻す
-                    $(this).css('color', '#687e8d')
+                    $(this).removeClass('change_color');
                 }
                 })
             })
@@ -280,7 +281,7 @@
                 }
                 })
             })
-            })
+        })
         $(function () {
             $(window).on('scroll', function () {
                 $('.title p').each(function () {
@@ -297,7 +298,37 @@
                 }
                 })
             })
-            })
+        })
+        // カーソル
+        $(function(){
+        
+            // カーソル要素の指定
+            var cursor=$("#cursor");
+            
+            // mousemoveイベントでカーソル要素を移動させる
+            $(document).on("mousemove",function(e){
+                        // カーソルの座標位置を取得
+                var x=e.clientX;
+                var y=e.clientY;
+                // カーソル要素のcssを書き換える用
+                cursor.css({
+                "opacity":"1",
+                "top":y+"px",
+                "left":x+"px"
+                });
+            });
+            });
+
+            // aタグホバー
+            $("a").on({
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
     </script>
 </body>
 </html>

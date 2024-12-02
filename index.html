@@ -141,7 +141,7 @@
     <main class="home_main">
 
     <!--content-->
-        <div class="content">
+        <div class="content grayscale">
             <p>言葉には大きな力がある<br class="mobile-break">とわたしは思います。<br>
                 それは言葉に想いが映るからです。<br>
                 たくさんの言葉を聴かせてください。</p>
@@ -152,7 +152,7 @@
         </div>
             
     <!--about-->
-        <section class="about">
+        <section class="about grayscale">
             <div>
                 <span>ABOUT</span>
             </div>
@@ -366,143 +366,21 @@
         }
     });
 
-    //カーソルについて
-
-// カーソル用のdivタグを取得してcursorに格納
-// var cursor = document.getElementById('#cursor');
-// var mouseX = 0;
-// var mouseY = 0;
-// var posX = 0;
-// var posY = 0;
-
-// カーソル用のdivタグをマウスに追従させる
-// document.addEventListener('#cersor', function (e) {
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
-// });
-
-// アニメーションフレームを使用してスムーズに追従
-// function updateCursor() {
-//     posX += (mouseX - posX) * 0.5;
-//     posY += (mouseY - posY) * 0.5;
-//     cursor.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
-//     requestAnimationFrame(updateCursor);
-// }
-// updateCursor();
-
-// リンクにホバーした時にクラス追加、離れたらクラス削除
-// var link = document.querySelectorAll('a');
-// for (var i = 0; i < link.length; i++) {
-//     link[i].addEventListener('#cursor', function (e) {
-//         cursor.classList.add('#cursor:hover');
-//     });
-//     link[i].addEventListener('#cursor', function (e) {
-//         cursor.classList.remove('#cursor:hover');
-//     });
-// }
-
-// svg円アニメーション
-
-// $(window).on('load resize', function () {
-//     jQuery(function($) {
-//         function circle() {
-//             var css, rules, value;
-
-//             // styleタグを作成する
-//             css = document.createElement('style');
-//             css.media = 'screen';
-//             css.type = 'text/css';
-
-            // サイズの設定
-            // var e_width = $('.js_piechart').width();
-            // var e_width_half = e_width / 2;
-            // var e_circle_width = e_width * Math.PI;
-
-            // $('.pie_chart').attr({
-            //     width: e_width,
-            //     height: e_width,
-            // });
-
-            // $('circle').attr({
-            //     cx: e_width_half,
-            //     cy: e_width_half,
-            //     r: e_width_half - 1,
-            // });
-
-            // var i = 1;
-            // const list = document.querySelectorAll('.js_piechart');
-            // var arrayList = [].slice.call(list);
-
-            // arrayList.forEach(function(val, index) {
-                // パーセントの計算
-                // var num = val.dataset.chartval * (e_circle_width / 100);
-                // value = '@keyframes circle' + i + '{' + [
-                //     '0% {stroke-dasharray: 0 ' + e_circle_width + '; stroke: #84B5C5}',
-                //     '100% {stroke-dasharray: ' + num + ' ' + e_circle_width + '; stroke: #84B5C5}'
-                // ].join(' ') + '}';
-
-                // ルールをstyleタグに追加
-            //     rules = document.createTextNode(value);
-            //     css.appendChild(rules);
-            //     i++;
-            // });
-
-            // head内に作成したstyleを追加
-            // document.getElementsByTagName('head')[0].appendChild(css);
-
-            // ホバー時にアニメーションを追加
-//             $('.js_piechart').hover(
-//                 function() {
-//                     var index = $(this).index('.js_piechart') + 1;
-//                     $(this).addClass('hovered');
-//                     $(this).find('.pie_chart.fg circle').css('animation', 'circle' + index + ' 1s ease forwards');
-//                 },
-//                 function() {
-//                     $(this).removeClass('hovered');
-//                     $(this).find('.pie_chart.fg circle').css('animation', 'none'); // アニメーションをリセット
-//                 }
-//             );
-//         }
-//         circle();
-//     });
-// });
-
-
-//カーソルについて
-
-// カーソル用のdivタグを取得してcursorに格納
-// var cursor = document.getElementById('cursor');
-// var mouseX = 0;
-// var mouseY = 0;
-// var posX = 0;
-// var posY = 0;
-
-// カーソル用のdivタグをマウスに追従させる
-// document.addEventListener('mousemove', function (e) {
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
-// });
-
-// アニメーションフレームを使用してスムーズに追従
-// function updateCursor() {
-//     posX += (mouseX - posX) * 0.5;
-//     posY += (mouseY - posY) * 0.5;
-//     cursor.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
-//     requestAnimationFrame(updateCursor);
-// }
-// updateCursor();
-
-// リンクにホバーした時にクラス追加、離れたらクラス削除
-// var link = document.querySelectorAll('a');
-// for (var i = 0; i < link.length; i++) {
-//     link[i].addEventListener('mouseover', function (e) {
-//         cursor.classList.add('cursor--hover');
-//     });
-//     link[i].addEventListener('mouseout', function (e) {
-//         cursor.classList.remove('cursor--hover');
-//     });
-// }
-
+    // スクロールにより画面中央でカラーに変化
+    $(function () {
+        $(window).scroll(function () {
+            $('.grayscale').each(function () {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+            });
+        });
+        });
 
 
 // ボタンの線が動く

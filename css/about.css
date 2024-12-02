@@ -1,4 +1,39 @@
 @charset "UFT-8";
+/* cursor */
+body{
+    position: relative;
+    cursor: none;  /*もともとあるカーソルは見えなくなるようにする*/
+  }
+
+#cursor{
+    position: fixed;
+    /*丸の大きさと色の指定*/
+    background: rgba(104, 126, 141, 0.3);
+    border-radius:50%;
+    width: 20px;
+    height: 20px;
+    margin: -20px 0 0 -20px;/*真ん中にくるようにマイナスマージンで調整*/
+    z-index: 1000;/*一番手前に来るように*/
+    pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+    opacity: 0;
+    transition: transform 0.5s;
+}
+
+#cursor:hover {
+    position: fixed;
+    /*丸の大きさと色の指定*/
+    background: rgba(104, 126, 141, 0.3);
+    border-radius:20px;
+    width: 100px;
+    height: 100px;
+    margin: -20px 0 0 -20px;/*真ん中にくるようにマイナスマージンで調整*/
+    z-index: 1000;/*一番手前に来るように*/
+    pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+    opacity: 0;
+}
+#cursor.active {
+    transform: scale(3,3);
+}
 
 /* common */
 
@@ -546,7 +581,7 @@ body {
     font-size: 14px;
     line-height: 2;
     text-align: justify;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -605,7 +640,7 @@ body {
     margin-top: 174px;
 }
 
-.values_wrap > img {
+.values_img {
     object-fit: cover;
     width: 65vw;
     margin: 0 calc(50% - 50vw);
@@ -659,7 +694,7 @@ body {
     }
 
     .values_text p {
-        padding-right: 10px;
+        padding-right: 20px;
     }
 
 }
@@ -673,9 +708,9 @@ body {
         margin: 0 calc((100% - 100vw) / 4);
     }
 
-    .values_img img {
+    /* .values_img img {
         width: 100vw;
-    }
+    } */
 
     .values_text {
         width: 100%;

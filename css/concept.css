@@ -1,5 +1,42 @@
 @charset "UFT-8";
 
+/* cursor */
+body{
+    position: relative;
+    cursor: none;  /*もともとあるカーソルは見えなくなるようにする*/
+  }
+
+#cursor{
+    position: fixed;
+    /*丸の大きさと色の指定*/
+    background: rgba(104, 126, 141, 0.3);
+    border-radius:50%;
+    width: 20px;
+    height: 20px;
+    margin: -20px 0 0 -20px;/*真ん中にくるようにマイナスマージンで調整*/
+    z-index: 1000;/*一番手前に来るように*/
+    pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+    opacity: 0;
+    transition: transform 0.5s;
+}
+
+#cursor:hover {
+    position: fixed;
+    /*丸の大きさと色の指定*/
+    background: rgba(104, 126, 141, 0.3);
+    border-radius:20px;
+    width: 100px;
+    height: 100px;
+    margin: -20px 0 0 -20px;/*真ん中にくるようにマイナスマージンで調整*/
+    z-index: 1000;/*一番手前に来るように*/
+    pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+    opacity: 0;
+}
+#cursor.active {
+    transform: scale(3,3);
+}
+
+
 /* common */
 
 body {
@@ -615,5 +652,13 @@ body {
     transform: translate(-50%,-50%);
     color: #fff;
     font-size: 9px;
+}
+
+@media screen and (max-width: 1232px) {
+   .change_color {
+    mix-blend-mode: difference;
+    color: #fff;
+   }
+    
 }
 

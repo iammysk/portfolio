@@ -25,8 +25,8 @@ body{
     /*丸の大きさと色の指定*/
     background: rgba(104, 126, 141, 0.3);
     border-radius:20px;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     margin: -20px 0 0 -20px;/*真ん中にくるようにマイナスマージンで調整*/
     z-index: 1000;/*一番手前に来るように*/
     pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
@@ -144,17 +144,17 @@ span {
  
 .copy_sub {
     position: absolute;
-    /* top: 40%; */
-    left: 38%;
+    top: 45%;
+    left: 35%;
     font-size: 16px;
     color: #687e8d;
+    z-index: 99;
 }
 
 .copy {
     position: absolute;
     top: 50%;
-    left: 38%;
-    transform: translate(-50%,-50%);
+    left: 35%;
     font-size: 21px;
     color: #fff;
     z-index: 100;
@@ -207,6 +207,32 @@ span {
 
 .scroll span {
     animation: updown 3s both infinite;
+    display: inline-block;
+}
+
+.scroll span:nth-of-type(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.scroll span:nth-of-type(3) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+.scroll span:nth-of-type(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.scroll span:nth-of-type(5) {
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
+}
+
+.scroll span:nth-of-type(6) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 @keyframes updown {
@@ -533,7 +559,7 @@ span {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	right: -38px;
+	left: 85%;
 	margin: auto;
     animation: stretchAndFade 2s infinite; /* アニメーションを適用 */
 }
@@ -688,7 +714,7 @@ span {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	right: -38px;
+	left: 85%;
 	margin: auto;
     animation: stretchAndFade 2s infinite; /* アニメーションを適用 */
 }
@@ -844,3 +870,35 @@ span {
     color: #fff;
     font-size: 9px;
 }
+
+/* スクロールにより画面中央でカラーに変化 */
+
+/* img { */
+    /* -webkit-filter: grayscale(1); Webkit */
+    /* filter: gray; IE6-9 */
+    /* filter: grayscale(1); W3C */
+/* } */
+
+/* img:hover {
+    filter: none;
+} */
+
+.grayscale {
+    opacity: 0;
+}
+
+.grayscale.active {
+    animation: 2s fadeup ease-in-out forwards;
+  }
+  
+  @keyframes fadeup {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
