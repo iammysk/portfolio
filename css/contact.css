@@ -365,7 +365,7 @@ textarea:focus {
 /* btn */
  .c-form__submit{
     font-size: 14px;
-    color: #fff;
+    color: #3a5e73;
     width: 218px;
     max-width: 80%;
     margin: 0 auto;
@@ -374,7 +374,23 @@ textarea:focus {
     padding: 0;
     position: relative;
     text-align: center;
+    border: 1px solid #3a5e73;
+    transition: 0.5s;
+}
+
+button {
+    color: #3a5e73;
+    transition: 0.5s;
+}
+
+.c-form__submit:hover{
     background-color: #3a5e73;
+    transition: 0.5s;
+}
+
+.c-form__submit button:hover {
+    color: #fff;
+    transition: 0.5s;
 }
 
 .c-form__submit button {
@@ -383,6 +399,7 @@ textarea:focus {
     padding: 16px;
     box-sizing: border-box;
 }
+
 
 
 /* .c-form__submit::before {
@@ -398,9 +415,7 @@ textarea:focus {
 	margin: auto;
 } */
 
-button {
-    color: #fff;
-}
+
 
 @media screen and (max-width: 1000px) {
 

@@ -349,7 +349,26 @@ span {
 	bottom: 0;
 	right: -38px;
 	margin: auto;
+    animation: stretchAndFade 2s infinite; /* アニメーションを適用 */
 }
+
+@keyframes stretchAndFade{
+    0% {
+        width: 0px;
+        opacity: 0; /* 透明 */
+    }
+
+    30% {
+        width: 76px;
+        opacity: 1; /* 完全に表示 */
+    }
+
+    100% {
+        width: 76px; /* 幅を維持しながら */
+        opacity: 0; /* 再び透明にする */
+      }
+}
+
 
 .works_img {
     display: inline-block;
@@ -369,13 +388,17 @@ span {
     margin-left: 10%;
 }
 
-.works_tittle p {
-    font-size: 36px;
-    color: #3a5e73;
+.label {
+    display: inline-block;
+    margin-top: 20px;
+    border-right: 1px solid rgba(58, 94, 115, 0.5);
+    padding-right: 14px;
+    font-size: 12px;
+    color: rgba(58, 94, 115, 0.5);
 }
 
 .works_tittle h3 {
-    font-size: 36px;
+    font-size: 21px;
     color: #3a5e73;
     margin-top: 20px;
 }

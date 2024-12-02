@@ -6,7 +6,7 @@ body {
     background-color: rgb(216, 216, 204, 0.3);
 }
 
-span {
+.about span {
     font-size: 56px;
     color: rgb(104, 126, 141, 0.1);
     text-align: center;
@@ -74,7 +74,7 @@ h4 {
 /* ホバー時の変化をゆっくりに */
 .pc_nav span {
     font-size: 14px;
-    color: #687e8d;
+    /* color: #687e8d; */
     transition: 0.5s;
     text-align: left;
 }
@@ -201,6 +201,7 @@ h4 {
     .nav_text a {
         display: flex;
         justify-content: space-between;
+        color: #fff;
     }
 
     .sp_nav {
@@ -245,12 +246,17 @@ h4 {
 .secondary {
     color: #3a5e73;
     font-size: 36px;
-}
-
-.about {
     margin-top: 52px;
 }
 
+/* .about {
+    margin-top: 52px;
+} */
+
+.about span {
+    font-size: 14px;
+    color: #687e8d;
+}
 /* sp */
 
 @media screen and (max-width: 767px) {
@@ -540,16 +546,11 @@ body {
     font-size: 14px;
     line-height: 2;
     text-align: justify;
+    padding-right: 10px;
 }
 
 @media screen and (max-width: 1000px) {
 
-    .works_img_wrap {
-        width: calc( 100% + ((100vw - 100%) / 2));
-        margin: 0 calc((100% - 100vw) / 4);
-        margin-top: 109px;
-        }
-        
     .favoritething_article {
         width: 100vw;
         width: 100cqw;
@@ -557,22 +558,6 @@ body {
         margin: 109px calc(50% - 50cqw);
     }
 
-}
-
-@media screen and (max-width: 1000px) {
-
-    /* .favoritething_article{
-        width: calc( 100% + ((100vw - 100%) / 2));
-        flex-direction: column;
-        margin: 0 calc((100% - 100vw) / 4);
-        
-    }
-
-    .favoritething_article h4 {
-        margin-top: 109px;
-    } */
-
-        
 }
 
 @media screen and (max-width: 767px) {
@@ -592,8 +577,9 @@ body {
         margin-top: 109px;
     }
 
-    span {
+    .favoritething span {
         font-size: 36px;
+        color: rgb(104, 126, 141, 0.1);
     }
     
     
@@ -621,7 +607,7 @@ body {
 
 .values_wrap > img {
     object-fit: cover;
-    /* width: 65vw; */
+    width: 65vw;
     margin: 0 calc(50% - 50vw);
 }
 
@@ -630,6 +616,11 @@ body {
     margin-right: calc((100% - 1000px) / 2);
 }
 
+.values span {
+    font-size: 36px;
+    color: rgb(104, 126, 141, 0.1);
+    
+}
 .values_article h4 {
     margin-top: 91px;
 }
@@ -644,14 +635,35 @@ body {
     line-height: 2;
 }
 
-
 @media screen and (max-width: 1000px) {
 
     .values_wrap {
         flex-direction: column;
         margin-top: 117px;
     }
-    
+
+
+    .values_article {
+        max-width: 1000px;
+        width: 100vw;
+        width: 100cqw;
+        margin: 109px calc(50% - 50vw);
+        margin: 109px calc(50% - 50cqw);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .values_text {
+        width: 60%;
+    }
+
+    .values_text p {
+        padding-right: 10px;
+    }
+
+}
+@media screen and (max-width: 767px) {
 
     /* margin苦戦している箇所 */
     .values_article {
@@ -663,6 +675,10 @@ body {
 
     .values_img img {
         width: 100vw;
+    }
+
+    .values_text {
+        width: 100%;
     }
 
     .values_article h4 {

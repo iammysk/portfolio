@@ -51,7 +51,7 @@ img {
 button{
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  cursor: none;
   outline: none;
   padding: 0;
   appearance: none;

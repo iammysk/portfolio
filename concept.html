@@ -114,7 +114,7 @@
         <div class="concept_wrap">
             <div class="concept_article">
                 <div class="concept_content">
-                    <h3>言葉を、カタチに</h3>
+                    <h3>ことばを、カタチに</h3>
                     <p class="secondary2">Bringing words to life</p>
                 </div>
                 <div class="center_box">
@@ -144,7 +144,7 @@
         </div>
 
         <div class="concept2_wrap">
-            <h3>空を見る</h3>
+            <h3>空を見るということ</h3>
             <!--slideshow-->
             <div class="concept2_img">
                 <ul class="slideshow">
@@ -246,11 +246,12 @@
         })
 
         // スクロール時背景に合わせて文字色が反転
+
         $(function () {
             $(window).on('scroll', function () {
                 $('.nav_wrap li').each(function () {
                 let menuY = $(this).offset().top + $(this).height()
-                if (menuY > $('.concept_content').offset().top && menuY < $('.concept_content').offset().top + $('.concept_content').height()) {
+                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
                     // .blueと重なっている時
                     $(this).css('color', 'white');
                 // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
@@ -258,7 +259,41 @@
                     // $(this).css('color', 'blue');
                 } else {
                     // 重なっていない時は色を戻す
-                    $(this).css('color', 'gray')
+                    $(this).css('color', '#687e8d')
+                }
+                })
+            })
+            })
+        $(function () {
+            $(window).on('scroll', function () {
+                $('.title h1').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
+                    // .blueと重なっている時
+                    $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                } else {
+                    // 重なっていない時は色を戻す
+                    $(this).css('color', '#687e8d')
+                }
+                })
+            })
+            })
+        $(function () {
+            $(window).on('scroll', function () {
+                $('.title p').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
+                    // .blueと重なっている時
+                    $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                } else {
+                    // 重なっていない時は色を戻す
+                    $(this).css('color', '#687e8d')
                 }
                 })
             })

@@ -102,10 +102,11 @@
         </div>
         
         <div class="wrap">
-            <h2 class="secondary">わたしについて</h2>
             <div class="about">
                 <span>ABOUT</span>
             </div>    
+            <h2 class="secondary">わたしについて</h2>
+            
         </div>
         
     </div>
@@ -203,12 +204,15 @@
                 <img src="./images/1x/pc_about_values.jpg" alt="" class="desktop_img">
                 <img src="./images/2x/sp_about_values@2x-80.jpg" alt="" class="mobile_img">
                 <div class="values_article">
-                    <h4>気づき</h4>
-                    <p>周囲には常にアンテナを貼っています！言葉は大切だと発信していますが、言葉がなくても気づけるものは自らキャッチしに行けるように。</p>
-                    <h4>想像</h4>
-                    <p>仕事やプライベートでコミュニケーションを図る上で最も大切にしたいことです。「わたしから見えていないもの」が必ずあるのだという意識をもっています。</p>
-                    <h4>行動</h4>
-                    <p>やりたいことを一度は挑戦してみると決めています。やらなかった後悔はやるまで残り続けると思っています。</p>
+                    <div class="values_text">
+                        <h4>気づき</h4>
+                        <p>周囲には常にアンテナを貼っています！言葉は大切だと発信していますが、言葉がなくても気づけるものは自らキャッチしに行けるように。</p>
+                        <h4>想像</h4>
+                        <p>仕事やプライベートでコミュニケーションを図る上で最も大切にしたいことです。「わたしから見えていないもの」が必ずあるのだという意識をもっています。</p>
+                        <h4>行動</h4>
+                        <p>やりたいことを一度は挑戦してみると決めています。やらなかった後悔はやるまで残り続けると思っています。</p>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -272,6 +276,60 @@
                 $('.sp_nav').fadeToggle();
             })
         })
+
+        // スクロール時背景に合わせて文字色が反転
+
+        $(function () {
+            $(window).on('scroll', function () {
+                $('.nav_wrap li').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.values_wrap').offset().top && menuY < $('.values_wrap').offset().top + $('.values_wrap').height()) {
+                    // .blueと重なっている時
+                    $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                } else {
+                    // 重なっていない時は色を戻す
+                    $(this).css('color', '#687e8d')
+                }
+                })
+            })
+            })
+        $(function () {
+            $(window).on('scroll', function () {
+                $('.title h1').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.values_wrap').offset().top && menuY < $('.values_wrap').offset().top + $('.values_wrap').height()) {
+                    // .blueと重なっている時
+                    $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                } else {
+                    // 重なっていない時は色を戻す
+                    $(this).css('color', '#687e8d')
+                }
+                })
+            })
+            })
+        $(function () {
+            $(window).on('scroll', function () {
+                $('.title p').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.values_wrap').offset().top && menuY < $('.values_wrap').offset().top + $('.values_wrap').height()) {
+                    // .blueと重なっている時
+                    $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                } else {
+                    // 重なっていない時は色を戻す
+                    $(this).css('color', '#687e8d')
+                }
+                })
+            })
+            })
 
     </script>
 </body>

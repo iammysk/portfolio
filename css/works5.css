@@ -338,13 +338,17 @@ span {
     margin-left: 10%;
 }
 
-.works_tittle p {
-    font-size: 36px;
-    color: #3a5e73;
+.label {
+    display: inline-block;
+    margin-top: 20px;
+    border-right: 1px solid rgba(58, 94, 115, 0.5);
+    padding-right: 14px;
+    font-size: 12px;
+    color: rgba(58, 94, 115, 0.5);
 }
 
 .works_tittle h3 {
-    font-size: 36px;
+    font-size: 21px;
     color: #3a5e73;
     margin-top: 20px;
 }

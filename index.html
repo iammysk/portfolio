@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>言葉を、カタチに</title>
+    <title>ことばが、カタチに</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -14,9 +14,13 @@
     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Microsoft社のjQueryのCDN -->
+    <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script>
 </head>
 </head>
 <body>
+    <div id="cursor"></div>
 
     <!--FV-->
     <div class="fv">
@@ -104,7 +108,7 @@
 
         </div>
         
-        <p class="copy">言葉を、カタチに</p>
+        <p class="copy">ことばが、カタチに</p>
         <div class="img_wrap">
             <div class="img_container">
                 <picture>
@@ -125,7 +129,12 @@
             </div> 
         </div>
         <div class="scroll">
-            <p>scroll</p>
+            <span>s</span>
+            <span>c</span>
+            <span>r</span>
+            <span>o</span>
+            <span>l</span>
+            <span>l</span>
         </div>
     </div>
     <!--↑nav-->
@@ -146,10 +155,10 @@
             
     <!--about-->
         <section class="about">
-            <h2>わたしについて</h2>
             <div>
                 <span>ABOUT</span>
             </div>
+            <h2>わたしについて</h2>
             <div class="about_img">
                 <picture>
                     <source srcset="./images/2x/sp_home_about@2x-80.jpg" media="(max-width:767px)">
@@ -168,11 +177,11 @@
 
     <!--works-->
         <section class="works">
-            <div class="works_tittle">
-                <h2>作品一覧</h2>
+            <div class="works_tittle">                
                 <div>
                     <span>WORKS</span>
                 </div>
+                <h2>作品一覧</h2>
             </div>
             
             <div class="works_img_wrap desktop-version">
@@ -327,6 +336,208 @@
         })
       })
     })
+
+    // カーソル
+    $(function(){
+  
+        // カーソル要素の指定
+        var cursor=$("#cursor");
+        
+        // mousemoveイベントでカーソル要素を移動させる
+        $(document).on("mousemove",function(e){
+                    // カーソルの座標位置を取得
+            var x=e.clientX;
+            var y=e.clientY;
+            // カーソル要素のcssを書き換える用
+            cursor.css({
+            "opacity":"1",
+            "top":y+"px",
+            "left":x+"px"
+            });
+        });
+        });
+
+    // aタグホバー
+    $("a").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        cursor.addClass("active");
+        },
+        "mouseleave": function() {
+        cursor.removeClass("active");
+        }
+    });
+
+    //カーソルについて
+
+// カーソル用のdivタグを取得してcursorに格納
+// var cursor = document.getElementById('#cursor');
+// var mouseX = 0;
+// var mouseY = 0;
+// var posX = 0;
+// var posY = 0;
+
+// カーソル用のdivタグをマウスに追従させる
+// document.addEventListener('#cersor', function (e) {
+//     mouseX = e.clientX;
+//     mouseY = e.clientY;
+// });
+
+// アニメーションフレームを使用してスムーズに追従
+// function updateCursor() {
+//     posX += (mouseX - posX) * 0.5;
+//     posY += (mouseY - posY) * 0.5;
+//     cursor.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
+//     requestAnimationFrame(updateCursor);
+// }
+// updateCursor();
+
+// リンクにホバーした時にクラス追加、離れたらクラス削除
+// var link = document.querySelectorAll('a');
+// for (var i = 0; i < link.length; i++) {
+//     link[i].addEventListener('#cursor', function (e) {
+//         cursor.classList.add('#cursor:hover');
+//     });
+//     link[i].addEventListener('#cursor', function (e) {
+//         cursor.classList.remove('#cursor:hover');
+//     });
+// }
+
+// svg円アニメーション
+
+// $(window).on('load resize', function () {
+//     jQuery(function($) {
+//         function circle() {
+//             var css, rules, value;
+
+//             // styleタグを作成する
+//             css = document.createElement('style');
+//             css.media = 'screen';
+//             css.type = 'text/css';
+
+            // サイズの設定
+            // var e_width = $('.js_piechart').width();
+            // var e_width_half = e_width / 2;
+            // var e_circle_width = e_width * Math.PI;
+
+            // $('.pie_chart').attr({
+            //     width: e_width,
+            //     height: e_width,
+            // });
+
+            // $('circle').attr({
+            //     cx: e_width_half,
+            //     cy: e_width_half,
+            //     r: e_width_half - 1,
+            // });
+
+            // var i = 1;
+            // const list = document.querySelectorAll('.js_piechart');
+            // var arrayList = [].slice.call(list);
+
+            // arrayList.forEach(function(val, index) {
+                // パーセントの計算
+                // var num = val.dataset.chartval * (e_circle_width / 100);
+                // value = '@keyframes circle' + i + '{' + [
+                //     '0% {stroke-dasharray: 0 ' + e_circle_width + '; stroke: #84B5C5}',
+                //     '100% {stroke-dasharray: ' + num + ' ' + e_circle_width + '; stroke: #84B5C5}'
+                // ].join(' ') + '}';
+
+                // ルールをstyleタグに追加
+            //     rules = document.createTextNode(value);
+            //     css.appendChild(rules);
+            //     i++;
+            // });
+
+            // head内に作成したstyleを追加
+            // document.getElementsByTagName('head')[0].appendChild(css);
+
+            // ホバー時にアニメーションを追加
+//             $('.js_piechart').hover(
+//                 function() {
+//                     var index = $(this).index('.js_piechart') + 1;
+//                     $(this).addClass('hovered');
+//                     $(this).find('.pie_chart.fg circle').css('animation', 'circle' + index + ' 1s ease forwards');
+//                 },
+//                 function() {
+//                     $(this).removeClass('hovered');
+//                     $(this).find('.pie_chart.fg circle').css('animation', 'none'); // アニメーションをリセット
+//                 }
+//             );
+//         }
+//         circle();
+//     });
+// });
+
+
+//カーソルについて
+
+// カーソル用のdivタグを取得してcursorに格納
+// var cursor = document.getElementById('cursor');
+// var mouseX = 0;
+// var mouseY = 0;
+// var posX = 0;
+// var posY = 0;
+
+// カーソル用のdivタグをマウスに追従させる
+// document.addEventListener('mousemove', function (e) {
+//     mouseX = e.clientX;
+//     mouseY = e.clientY;
+// });
+
+// アニメーションフレームを使用してスムーズに追従
+// function updateCursor() {
+//     posX += (mouseX - posX) * 0.5;
+//     posY += (mouseY - posY) * 0.5;
+//     cursor.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
+//     requestAnimationFrame(updateCursor);
+// }
+// updateCursor();
+
+// リンクにホバーした時にクラス追加、離れたらクラス削除
+// var link = document.querySelectorAll('a');
+// for (var i = 0; i < link.length; i++) {
+//     link[i].addEventListener('mouseover', function (e) {
+//         cursor.classList.add('cursor--hover');
+//     });
+//     link[i].addEventListener('mouseout', function (e) {
+//         cursor.classList.remove('cursor--hover');
+//     });
+// }
+
+
+
+// ボタンの線が動く
+// intersection observer apiを使ったjavascriptの記述は下記のとおりになります。
+
+//着火点になる要素
+  const fadeInLine = document.querySelectorAll(".works_btn");
+
+  //オプションの設定
+  const options = {
+      rootMargin: '0px',//着火点になる要素の余白を設定できる
+      threshold: 0, //着火点になる要素がどのくらいの表示割合で、表示されるかの割合を設定できる
+  };
+
+  //intersection observer apiを呼び出す
+  const observer = new IntersectionObserver(showElement, options);
+
+
+
+  //.fadeIn_lineクラスに到達したらintersection observer apiを実行する
+  fadeInLine.forEach((fadeInLine) => {
+      observer.observe(fadeInLine);
+  });
+
+  //要素が表示した後の処理
+  function showElement(entries) {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+
+              entry.target.classList.add("active");
+          }
+      });
+  }
     </script>
     
 </body>

@@ -5,7 +5,7 @@
 body {
     background-color: rgb(216, 216, 204, 0.3);
 }
-span {
+.concept span {
     font-size: 56px;
     color: rgb(104, 126, 141, 0.1);
     text-align: center;
@@ -64,7 +64,7 @@ span {
 /* ホバー時の変化をゆっくりに */
 .pc_nav span {
     font-size: 14px;
-    color: #687e8d;
+    /* color: #687e8d; */
     transition: 0.5s;
     text-align: left;
 }
