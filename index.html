@@ -105,9 +105,9 @@
                     </li>
                 </ul>
             </nav>
-
         </div>
-        
+
+        <p class="copy_sub">Bringing words to life</p>
         <p class="copy">ことばが、カタチに</p>
         <div class="img_wrap">
             <div class="img_container">
@@ -123,8 +123,6 @@
                         <source srcset="./images/2x/sp_home_fv2.png" media="(max-width:767px)">
                         <img src="./images/1x/pc_home_fv2.png" alt="">
                     </picture>
-                    
-                    <p>Bringing words to life</p>
                 </div>
             </div> 
         </div>
@@ -361,10 +359,10 @@
     $("a").on({
         "mouseenter": function() {
         //activeクラス付与
-        cursor.addClass("active");
+        $(cursor).addClass("active");
         },
         "mouseleave": function() {
-        cursor.removeClass("active");
+        $(cursor).removeClass("active");
         }
     });
 

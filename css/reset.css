@@ -18,7 +18,8 @@ ul,
 li,
 input::placeholder,
 textarea::placeholder,
-button {
+button,
+a {
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -28,6 +29,7 @@ button {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  cursor: none;
   }
 
 a {

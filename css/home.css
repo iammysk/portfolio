@@ -17,6 +17,7 @@ body{
     z-index: 1000;/*一番手前に来るように*/
     pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
     opacity: 0;
+    transition: transform 0.5s;
 }
 
 #cursor:hover {
@@ -32,7 +33,7 @@ body{
     opacity: 0;
 }
 #cursor.active {
-  transform: scale(3,3);
+    transform: scale(3,3);
 }
 
 /* common */
@@ -140,11 +141,19 @@ span {
   }
 
 /*↑nav*/
+ 
+.copy_sub {
+    position: absolute;
+    /* top: 40%; */
+    left: 38%;
+    font-size: 16px;
+    color: #687e8d;
+}
 
 .copy {
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 38%;
     transform: translate(-50%,-50%);
     font-size: 21px;
     color: #fff;
@@ -166,20 +175,13 @@ span {
 .human_wrap {
     position: absolute;
     display: flex;
-    top: 0;
+    top: 20%;
     left: 50%;
     transform: translateY(50%);
 }
 
 .human_wrap img {
     width: 100%;
-}
-
-.human_wrap p {
-    text-align: end;
-    margin-left: 35px;
-    font-size: 16px;
-    color: #687e8d;
 }
 
 /* scroll */
@@ -575,7 +577,7 @@ span {
     }
 
     span {
-        font-size: 21px;
+        font-size: 14px;
     }
 
     .about_lead {
