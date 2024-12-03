@@ -1,10 +1,133 @@
 @charset "UFT-8";
 
+/* Loading背景画面設定*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #687e8d;
+    text-align:center;
+    color:#fff;
+}
+    
+    /* Loading画像中央配置*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash_logo p {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#splash_logo span {
+    color: #fff;
+    font-size: 21px;
+    animation: lawding 3s both infinite;
+    display: inline-block;
+}
+
+#splash_logo span:nth-of-type(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+#splash_logo span:nth-of-type(3) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+#splash_logo span:nth-of-type(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+#splash_logo span:nth-of-type(5) {
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
+}
+
+#splash_logo span:nth-of-type(6) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+#splash_logo span:nth-of-type(7) {
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
+}
+
+#splash_logo span:nth-of-type(8) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@keyframes lawding {
+    0% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+    
+    /* Loading アイコンの大きさ設定*/
+/* #splash_logo img {
+    width:260px;
+} */
+    
+    /* fadeUpをするアイコンの動き */
+.fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+    
+@keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #splash_logo p {
+        font-size: 8px;
+    }
+    
+    #splash_logo span {
+        font-size: 12px;
+    }
+}
+
 /* cursor */
 body{
     position: relative;
     cursor: none;  /*もともとあるカーソルは見えなくなるようにする*/
-  }
+}
 
 #cursor{
     position: fixed;
@@ -146,9 +269,10 @@ span {
     position: absolute;
     top: 45%;
     left: 35%;
-    font-size: 16px;
+    font-size: 12px;
     color: #687e8d;
     z-index: 99;
+    letter-spacing: 1px;
 }
 
 .copy {
@@ -158,6 +282,7 @@ span {
     font-size: 21px;
     color: #fff;
     z-index: 100;
+    letter-spacing: 3px;
 }
 
 .img_wrap {
@@ -380,19 +505,7 @@ span {
 
 /* fv_sp */
 
-/* .mobile-img {
-    display: none;
-} */
-
 @media screen and (max-width: 767px) {
-
-    /* .desktop-img {
-        display: none;
-    }
-
-    .mobile-img {
-        display: block;
-    } */
 
     .title {
         display: flex;
@@ -411,14 +524,37 @@ span {
         margin-left: 19px;
     }
 
-    .copy {
-        top: 23%;
-        left: 50%;
-        font-size: 21px;
+    /* .fv_img {
+        min-width: 293px;
+    } */
+
+    .img_wrap {
+        right: 0;
+        top: 48%;
+        transform: translateY(-50%);
+        max-width: 1120.5px;
     }
 
-    .fv_img {
-        min-width: 293px;
+    .copy_sub {
+        top: 45%;
+        left: 30%;
+        font-size: 12px;
+    }
+    
+    .copy {
+        top: 50%;
+        left: 30%;
+        font-size: 16px;
+    }
+
+    .human_wrap {
+        top: 25%;
+        left: 70%;
+        transform: translateY(50%);
+    }
+    
+    .human_wrap img {
+        width: 60%;
     }
 
     .human_wrap p {
@@ -443,7 +579,6 @@ span {
 /* content */
 
 .content{
-    margin-top: 67px;
     padding-top: 179px;
     margin-left: 28%;
 }
@@ -476,7 +611,7 @@ span {
     .content {
         text-align: center;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 20px;
         padding-top: 350px;
         
     }
@@ -883,7 +1018,7 @@ span {
     filter: none;
 } */
 
-.grayscale {
+/* .grayscale {
     opacity: 0;
 }
 
@@ -901,4 +1036,4 @@ span {
       opacity: 1;
       transform: translateX(0);
     }
-  }
+  } */

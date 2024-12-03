@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ことばが、カタチに</title>
+    <title>ことばが、かたちに</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -16,12 +16,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Microsoft社のjQueryのCDN -->
-    <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script>
+    <!-- <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script> -->
+
+    <!-- 慣性スクロール -->
+     <script src="./js/luxy.min.js"></script>
 </head>
 </head>
 <body>
+    <!-- ローディング -->
+    <div id="splash">
+        <div id="splash_logo">
+            <p>Bringing words to life</p>
+            <span>こ</span>
+            <span>と</span>
+            <span>ば</span>
+            <span>が</span>
+            <span>、</span>
+            <span>か</span>
+            <span>た</span>
+            <span>ち</span>
+            <span>に</span>
+        </div>
+        <!--/splash-->
+    </div>
+
     <div id="cursor"></div>
 
+    <div id="luxy">
     <!--FV-->
     <div class="fv">
         <!--nav-->
@@ -108,7 +129,7 @@
         </div>
 
         <p class="copy_sub">Bringing words to life</p>
-        <p class="copy">ことばが、カタチに</p>
+        <p class="copy">ことばが、かたちに</p>
         <div class="img_wrap">
             <div class="img_container">
                 <picture>
@@ -126,14 +147,17 @@
                 </div>
             </div> 
         </div>
-        <div class="scroll">
-            <span>s</span>
-            <span>c</span>
-            <span>r</span>
-            <span>o</span>
-            <span>l</span>
-            <span>l</span>
-        </div>
+        <a href="#content">
+            <div class="scroll">
+                <span>s</span>
+                <span>c</span>
+                <span>r</span>
+                <span>o</span>
+                <span>l</span>
+                <span>l</span>
+            </div>
+        </a>
+        
     </div>
     <!--↑nav-->
 
@@ -141,7 +165,7 @@
     <main class="home_main">
 
     <!--content-->
-        <div class="content grayscale">
+        <div id="content" class="content grayscale">
             <p>言葉には大きな力がある<br class="mobile-break">とわたしは思います。<br>
                 それは言葉に想いが映るからです。<br>
                 たくさんの言葉を聴かせてください。</p>
@@ -220,10 +244,10 @@
                         <img src="./images/2x/sp_works_04@2x-80.jpg" alt="" class="works_content">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./images/2x/sp_works_05@2x-80.jpg" alt="" class="works_content">
+                        <img src="./images/2x/sp_works_05@2x.png" alt="" class="works_content">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./images/2x/sp_works_06@2x.png" alt="" class="works_content">
+                        <img src="./images/2x/sp_works_06@2x-80.jpg" alt="" class="works_content">
                     </div>    
                 </div>
                 
@@ -237,7 +261,7 @@
             </div>  
         </section>
     </main>
-    
+
 
     <!--footer-->
     <footer class="hidden-area">
@@ -257,7 +281,7 @@
         </div>
         <p class="copyright">Copyright 2024 miyanishi saki </p>
     </footer>
-
+</div>
     <!-- Swiper.js の JavaScript -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -324,7 +348,7 @@
           if (menuY > $('.desktop-version').offset().top && menuY < $('.desktop-version').offset().top + $('.desktop-version').height()) {
             // .blueと重なっている時
             $(this).css('color', 'white');
-          } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+        //   } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
             // .yellowと重なっている時
             $(this).css('color', 'blue');
           } else {
@@ -367,19 +391,25 @@
     });
 
     // スクロールにより画面中央でカラーに変化
-    $(function () {
-        $(window).scroll(function () {
-            $('.grayscale').each(function () {
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight) {
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
-            });
-        });
+    // $(function () {
+    //     $(window).scroll(function () {
+    //         $('.grayscale').each(function () {
+    //         var elemPos = $(this).offset().top;
+    //         var scroll = $(window).scrollTop();
+    //         var windowHeight = $(window).height();
+    //         if (scroll > elemPos - windowHeight/2) {
+    //             $(this).addClass('active');
+    //         } else {
+    //             $(this).removeClass('active');
+    //         }
+    //         });
+    //     });
+    //     });
+    
+    //loading画面
+        $(window).on('load',function(){
+        $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+        $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
         });
 
 
@@ -414,6 +444,12 @@
           }
       });
   }
+
+    //慣性スクロール
+    luxy.init({
+        wrapper:'#luxy',
+        wapperSpeed: 10,
+    });
     </script>
     
 </body>

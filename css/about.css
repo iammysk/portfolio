@@ -657,7 +657,7 @@ body {
     
 }
 .values_article h4 {
-    margin-top: 91px;
+    margin-top: 50px;
 }
 
 .values_article h4:first-child {
@@ -665,9 +665,13 @@ body {
 }
 
 .values_article p {
-    margin-top: 21px;
+    margin-top: 10px;
     font-size: 14px;
-    line-height: 2;
+    line-height: 2.3;
+}
+
+.values_text {
+    width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -699,8 +703,7 @@ body {
 
 }
 @media screen and (max-width: 767px) {
-
-    /* margin苦戦している箇所 */
+    
     .values_article {
         max-width: initial;
         width: calc( 100% + ((100vw - 100%) / 2));
@@ -708,32 +711,12 @@ body {
         margin: 0 calc((100% - 100vw) / 4);
     }
 
-    /* .values_img img {
+    .values_img img {
         width: 100vw;
-    } */
-
-    .values_text {
-        width: 100%;
-    }
-
-    .values_article h4 {
-        margin-top: 117px;
-    }
-
-    .values_article h4:first-child {
-        margin-top: 117px;
-    }
-
-    .values_article p {
-        margin-top: 26px;
-        line-height: 2.3;
-    }
+        min-width: 293px;
+        }
     
-}
-
-
-
-
+    }
 
 /*footer*/
 .hidden-area {
