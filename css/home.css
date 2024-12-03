@@ -1018,12 +1018,16 @@ span {
     filter: none;
 } */
 
-/* .grayscale {
-    opacity: 0;
+.grayscale {
+    /* opacity: 0; */
+    -webkit-filter: grayscale(1); 
+    filter: gray; 
+    filter: grayscale(1); 
 }
 
 .grayscale.active {
-    animation: 2s fadeup ease-in-out forwards;
+    /* animation: 2s fadeup ease-in-out forwards; */
+    filter: none;
   }
   
   @keyframes fadeup {
@@ -1036,15 +1040,16 @@ span {
       opacity: 1;
       transform: translateX(0);
     }
-  } */
+  }
+
 
   /* 「スクロールと連動したアニメーション」 */
 
-  [data-aos="sample_amine2"] {
+  /* [data-aos="sample_amine2"] {
     background: #ff99cc;
     transition-property: background;
   }
   
   [data-aos="sample_amine2"].aos-animate {
     background: #6699ff;
-  }
+  } */

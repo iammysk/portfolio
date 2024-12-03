@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -23,9 +24,9 @@
 
     <!-- AOS.js（Animation On Scroll library）とは、「スクロールと連動したアニメーション」 -->
     <!-- CSS読み込み -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- js読み込み -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
 </head>
 </head>
@@ -206,7 +207,7 @@
                 </section>
 
             <!--works-->
-                <section class="works">
+                <section class="works grayscale">
                     <div class="works_tittle">                
                         <div>
                             <span>WORKS</span>
@@ -269,7 +270,7 @@
 
 
             <!--footer-->
-            <footer class="hidden-area">
+            <footer class="hidden-area grayscale">
                 <img src="./images/1x/pc_footer.jpg" alt="">
                 <div class="footer_wrap">
                     <h1>MIYANISHI SAKI</h1>
@@ -288,7 +289,7 @@
             </footer>
         </div>
     </div>
-    
+
     <!-- Swiper.js の JavaScript -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -386,7 +387,7 @@
         });
         });
 
-    // aタグホバー
+    // カーソル aタグホバー
     $("a").on({
         "mouseenter": function() {
         //activeクラス付与
@@ -398,20 +399,20 @@
     });
 
     // スクロールにより画面中央でカラーに変化
-    // $(function () {
-    //     $(window).scroll(function () {
-    //         $('.grayscale').each(function () {
-    //         var elemPos = $(this).offset().top;
-    //         var scroll = $(window).scrollTop();
-    //         var windowHeight = $(window).height();
-    //         if (scroll > elemPos - windowHeight/2) {
-    //             $(this).addClass('active');
-    //         } else {
-    //             $(this).removeClass('active');
-    //         }
-    //         });
-    //     });
-    //     });
+    $(function () {
+        $(window).scroll(function () {
+            $('.grayscale').each(function () {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight+400) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+            });
+        });
+        });
     
     //loading画面
         $(window).on('load',function(){
@@ -460,7 +461,7 @@
 
     // AOS.js（Animation On Scroll library）
     // 「スクロールと連動したアニメーション」
-    AOS.init();
+    // AOS.init();
     </script>
     
 </body>
