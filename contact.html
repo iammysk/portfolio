@@ -18,10 +18,12 @@
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
 </head>
+
 <body>
     <div id="cursor"></div>
+
     <!--FV-->
-    <div class="fv">
+    <div>
          <!--nav-->
          <div class="nav_wrap">
 
@@ -104,105 +106,112 @@
                 </ul>
             </nav>
         </div>
-        
-        <div class="wrap">
-            <h2 class="secondary">お問い合わせ</h2>
-            <div class="concept">
-                <span>CONTACT</span>
-            </div>    
-        </div>
     </div>
-
-    <main class="contact_main">
-        <p>
-            本サイトにお越しいただきありがとうございます。
-            ご依頼やご相談は以下のフォームから承っております。
-            お気軽にお問い合わせください。
-        </p>
-
-        <!-- <p>★は必須項目です</p> -->
-         
-        <div class="form_wrap">
-            <!-- <h3>
-            お問い合わせフォーム
-            </h3> -->
-            <form 
-                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeLQ-8tCiafypVbq9btdppJYYMYvz05A160HCEnwxdBcfwVqA/formResponse" 
-                method="POST"
-                target="hidden_iframe"
-                onsubmit="submitted=true;"
-                class="c-form"
-                class="c-form">
-                    
-                <div class="c-form__item">
-                    <label class="c-form__label" for="field-name">
-                        お名前
-                        <!-- <span class="c-form__required">必須</span> -->
-                    </label>
-                    <div class="input_wrap">
-                        <input
-                            name="entry.1788065037"
-                            class="c-form__input"
-                            id="field-name"
-                            placeholder="山田 太朗"
-                            type="text"
-                            required="required"/>
-                    </div>
-                    
-                </div>
-
-                <div class="c-form__item">
-                    <label class="c-form__label" for="tel">
-                        電話番号
-                        <!-- <span class="c-form__required">必須</span></label> -->
-                    <div class="input_wrap">
-                        <input
-                            name="entry.352393226"
-                            class="c-form__input"
-                            id="tel"
-                            type="tel"
-                            required="required"/>
-                    </div>
-                    
-                </div>
-
-                <div class="c-form__item">
-                    <label class="c-form__label" for="field-mail">
-                        メールアドレス
-                        <!-- <span class="c-form__required">必須</span></label> -->
-                    <div class="input_wrap">
-                        <input
-                            name="entry.2051902616"
-                            class="c-form__input"
-                            id="field-mail"
-                            placeholder="sample@gmail.com"
-                            type="email"
-                            required="required"/>
-                    </div>
-                    
-                </div>
-
-                <div class="c-form__item">
-                    <label class="c-form__label" for="field-message">お問い合わせ内容</label>
-                    <div class="textarea_wrap">
-                        <textarea
-                            name="entry.491133105"
-                            class="c-form__input"
-                            id="field-message"
-                            placeholder="お問い合わせ内容"></textarea>
-                    </div>
-                    
-                </div>
-            
-
-                <div class="c-form__submit">
-                    <button type="submit">送信する</button>
-                </div>
-
-            </form>    
+    
+    <div id="luxy">
+        <div  class="fv">
+            <div class="wrap">
+                <h2 class="secondary">お問い合わせ</h2>
+                <div class="concept">
+                    <span>CONTACT</span>
+                </div>    
+            </div>
         </div>
             
-    </main>
+        
+
+        <main class="contact_main">
+            <p>
+                本サイトにお越しいただきありがとうございます。
+                ご依頼やご相談は以下のフォームから承っております。
+                お気軽にお問い合わせください。
+            </p>
+
+            <!-- <p>★は必須項目です</p> -->
+            
+            <div class="form_wrap">
+                <!-- <h3>
+                お問い合わせフォーム
+                </h3> -->
+                <form 
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeLQ-8tCiafypVbq9btdppJYYMYvz05A160HCEnwxdBcfwVqA/formResponse" 
+                    method="POST"
+                    target="hidden_iframe"
+                    onsubmit="submitted=true;"
+                    class="c-form"
+                    class="c-form">
+                        
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-name">
+                            お名前
+                            <!-- <span class="c-form__required">必須</span> -->
+                        </label>
+                        <div class="input_wrap">
+                            <input
+                                name="entry.1788065037"
+                                class="c-form__input"
+                                id="field-name"
+                                placeholder="山田 太朗"
+                                type="text"
+                                required="required"/>
+                        </div>
+                        
+                    </div>
+
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="tel">
+                            電話番号
+                            <!-- <span class="c-form__required">必須</span></label> -->
+                        <div class="input_wrap">
+                            <input
+                                name="entry.352393226"
+                                class="c-form__input"
+                                id="tel"
+                                type="tel"
+                                required="required"/>
+                        </div>
+                        
+                    </div>
+
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-mail">
+                            メールアドレス
+                            <!-- <span class="c-form__required">必須</span></label> -->
+                        <div class="input_wrap">
+                            <input
+                                name="entry.2051902616"
+                                class="c-form__input"
+                                id="field-mail"
+                                placeholder="sample@gmail.com"
+                                type="email"
+                                required="required"/>
+                        </div>
+                        
+                    </div>
+
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-message">お問い合わせ内容</label>
+                        <div class="textarea_wrap">
+                            <textarea
+                                name="entry.491133105"
+                                class="c-form__input"
+                                id="field-message"
+                                placeholder="お問い合わせ内容"></textarea>
+                        </div>
+                        
+                    </div>
+                
+
+                    <div class="c-form__submit">
+                        <button type="submit">送信する</button>
+                    </div>
+
+                </form>    
+            </div>
+                
+        </main>
+    </div>
+    
 
     <script type="text/javascript">
         let submitted = false;
