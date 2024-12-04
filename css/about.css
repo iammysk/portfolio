@@ -173,7 +173,7 @@ h4 {
     .sp_btn {
         display: block;
         height: 23px;
-        cursor: pointer;
+        /* cursor: pointer; */
         position: absolute;
         top: 20px;
         right: 25px;
@@ -704,17 +704,24 @@ body {
 }
 @media screen and (max-width: 767px) {
     
-    .values_article {
+    /* .values_article {
         max-width: initial;
         width: calc( 100% + ((100vw - 100%) / 2));
         margin-right: 0;
         margin: 0 calc((100% - 100vw) / 4);
+    } */
+
+    .values_article{
+        width: calc( 100% + ((100vw - 100%) / 2));
+        flex-direction: column;
+        margin: calc((100% - 100vw) / 4);
+        align-items: center;
     }
 
     .values_img img {
         width: 100vw;
         min-width: 293px;
-        }
+    }
     
     }
 

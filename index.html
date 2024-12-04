@@ -400,6 +400,17 @@
         }
     });
 
+    // カーソル aタグホバー
+    $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
     // スクロールにより画面中央でカラーに変化
     $(function () {
         $(window).scroll(function () {
@@ -421,39 +432,6 @@
         $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
         $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
         });
-
-
-// ボタンの線が動く
-// intersection observer apiを使ったjavascriptの記述は下記のとおりになります。
-
-//着火点になる要素
-  const fadeInLine = document.querySelectorAll(".works_btn");
-
-  //オプションの設定
-  const options = {
-      rootMargin: '0px',//着火点になる要素の余白を設定できる
-      threshold: 0, //着火点になる要素がどのくらいの表示割合で、表示されるかの割合を設定できる
-  };
-
-  //intersection observer apiを呼び出す
-  const observer = new IntersectionObserver(showElement, options);
-
-
-
-  //.fadeIn_lineクラスに到達したらintersection observer apiを実行する
-  fadeInLine.forEach((fadeInLine) => {
-      observer.observe(fadeInLine);
-  });
-
-  //要素が表示した後の処理
-  function showElement(entries) {
-      entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-
-              entry.target.classList.add("active");
-          }
-      });
-  }
 
     //慣性スクロール
     luxy.init({

@@ -109,8 +109,8 @@
             </div>
         </div>  
         
-        <div  id="luxy">
-            <div  class="fv">
+        <div id="luxy">
+            <div class="fv">
                 <div class="wrap">
                     <div class="about">
                         <span>ABOUT</span>
@@ -365,6 +365,17 @@
 
         // aタグホバー
         $("a").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
+    // sp_btnタグホバー
+    $(".sp_btn").on({
         "mouseenter": function() {
         //activeクラス付与
         $(cursor).addClass("active");

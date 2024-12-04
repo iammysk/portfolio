@@ -169,7 +169,7 @@ span {
     .sp_btn {
         display: block;
         height: 23px;
-        cursor: pointer;
+        /* cursor: pointer; */
         position: absolute;
         top: 20px;
         right: 25px;

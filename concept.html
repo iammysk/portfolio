@@ -338,6 +338,17 @@
             }
         });
 
+        // sp_btnタグホバー
+    $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
     //慣性スクロール
     luxy.init({
         wrapper:'#luxy',

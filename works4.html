@@ -10,15 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/works4.css">
+
     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 慣性スクロール -->
+    <script src="./js/luxy.min.js"></script>
+
 </head>
 <body>
 
     <div id="cursor"></div>
+
     <!--FV-->
-    <div class="fv">
+    <div>
         <!--nav-->
         <div class="nav_wrap">
 
@@ -101,87 +107,91 @@
                 </ul>
             </nav>
         </div>
-        
+    </div>  
+    
+    <div  id="luxy">
         <div class="wrap">
             <h2 class="secondary">作品一覧</h2>
             <div class="works">
                 <span>WORKS</span>
             </div>    
         </div>
+    
+
+        <!-- main -->
+        <main class="works_main">
+            <div class="works_img">
+                <img src="./images/1x/pc_worksup_04.jpg" alt="" class="desktop_img">
+                <img src="./images/2x/sp_works_04@2x-80.jpg" alt="" class="mobile_img">
+                <div>
+                    <p>著作権:Vectonaut / 出典:Freepik</p>
+                </div>
+            </div>
+            <div class="works_tittle">
+                <p class="label">web banner</p>
+                <h3>新バーガー告知バナー</h3>
+            </div>
+            
+            <!-- <div class="works_btn">
+                <a href="./about.html">詳しく見る</a>
+            </div> -->
+
+            <div class="lead">
+                <p class="lead_text">
+                    高級感を出すためにデザインはシンプルかつ余白を大きく取ることを意識しました。またモメインカラーでモノトーンを使用することで素材にこだわった本格派バーガーだと感じてもらえるよう表現いたしました。
+                </p>
+            </div>
+            <div class="article">
+                <ul class="item_wrap">
+                    <li class="item">
+                        <h4>概要</h4>
+                        <p>春限定の学割モバイルプランを広告するSMS用の仮想バナー
+                            スクール課題でトレースいたしました。</p>
+                    </li>
+                    <li class="item">
+                        <h4>ターゲット</h4>
+                        <p>高校生、大学生</p>
+                    </li>
+                    <li class="item">
+                        <h4>目的</h4>
+                        <p>新生活と同時に、スマホを新しくしたい学生にお得情報を知っていただき契約数増加に繋げること。</p>
+                    </li>
+                    <li class="item">
+                        <h4>使用ソフト</h4>
+                        <p>Adobe Illustrator / Photoshop</p>
+                    </li>
+                    <li class="item">
+                        <h4>制作範囲</h4>
+                        <p>デザイン</p>
+                    </li>
+                    <li class="item">
+                        <h4>制作期間</h4>
+                        <p>1週間</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </main>
+        <!--footer-->
+        <footer class="hidden-area">
+            <img src="./images/1x/pc_footer.jpg" alt="">
+            <div class="footer_wrap">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+                <nav class="footer_nav">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="./concept.html">CONCEPT</a></li>
+                        <li><a href="./works.html">WORKS</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">Copyright 2024 miyanishi saki </p>
+        </footer>
     </div>
 
-    <!-- main -->
-    <main class="works_main">
-        <div class="works_img">
-            <img src="./images/1x/pc_worksup_04.jpg" alt="" class="desktop_img">
-            <img src="./images/2x/sp_works_04@2x-80.jpg" alt="" class="mobile_img">
-            <div>
-                <p>著作権:Vectonaut / 出典:Freepik</p>
-            </div>
-        </div>
-        <div class="works_tittle">
-            <p class="label">web banner</p>
-            <h3>新バーガー告知バナー</h3>
-        </div>
-        
-        <!-- <div class="works_btn">
-            <a href="./about.html">詳しく見る</a>
-        </div> -->
-
-        <div class="lead">
-            <p class="lead_text">
-                高級感を出すためにデザインはシンプルかつ余白を大きく取ることを意識しました。またモメインカラーでモノトーンを使用することで素材にこだわった本格派バーガーだと感じてもらえるよう表現いたしました。
-            </p>
-        </div>
-        <div class="article">
-            <ul class="item_wrap">
-                <li class="item">
-                    <h4>概要</h4>
-                    <p>春限定の学割モバイルプランを広告するSMS用の仮想バナー
-                        スクール課題でトレースいたしました。</p>
-                </li>
-                <li class="item">
-                    <h4>ターゲット</h4>
-                    <p>高校生、大学生</p>
-                </li>
-                <li class="item">
-                    <h4>目的</h4>
-                    <p>新生活と同時に、スマホを新しくしたい学生にお得情報を知っていただき契約数増加に繋げること。</p>
-                </li>
-                <li class="item">
-                    <h4>使用ソフト</h4>
-                    <p>Adobe Illustrator / Photoshop</p>
-                </li>
-                <li class="item">
-                    <h4>制作範囲</h4>
-                    <p>デザイン</p>
-                </li>
-                <li class="item">
-                    <h4>制作期間</h4>
-                    <p>1週間</p>
-                </li>
-            </ul>
-        </div>
-        
-    </main>
-    <!--footer-->
-    <footer class="hidden-area">
-        <img src="./images/1x/pc_footer.jpg" alt="">
-        <div class="footer_wrap">
-            <h1>MIYANISHI SAKI</h1>
-            <p>DESIGNER</p>
-            <nav class="footer_nav">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p class="copyright">Copyright 2024 miyanishi saki </p>
-    </footer>
     <script>
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
@@ -253,6 +263,23 @@
         $(cursor).removeClass("active");
         }
         });
+
+        // sp_btnタグホバー
+    $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
+        //慣性スクロール
+    luxy.init({
+        wrapper:'#luxy',
+        wapperSpeed: 10,
+    });
     </script>
 </body>
 </html>

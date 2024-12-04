@@ -10,14 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/works.css">
+
     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 慣性スクロール -->
+    <script src="./js/luxy.min.js"></script>
+
 </head>
 <body>
+
     <div id="cursor"></div>
+
     <!--FV-->
-    <div class="fv">
+    <div>
         <!--nav-->
         <div class="nav_wrap">
 
@@ -100,124 +107,127 @@
                 </ul>
             </nav>
         </div>
-        
+    </div>   
+       
+    <div  id="luxy">
         <div class="wrap">
             <h2 class="secondary">作品一覧</h2>
             <div class="works">
                 <span>WORKS</span>
             </div>    
         </div>
+    
+        <!--main-->
+        <main class="works_main">
+            <section class="works_wrap">
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works7.html">
+                            <img src="./images/1x/pc_works_01.png" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_01@2x.png" alt="" class="mobile_img">
+                        </a>
+                    </div>
+                    <div class="label_wrap">
+                        <p class="label">web site</p>
+                        <p class="label_title">美容室「LIFE」 HP</p>
+                    </div>
+                </div>
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works6.html">
+                            <img src="./images/1x/pc_works_02.png" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_02@2x.png" alt="" class="mobile_img">
+                        </a>
+                    </div>
+                    <div class="label_wrap">
+                        <p class="label">web site</p>
+                        <p class="label_title">デザインカフェ HP</p>
+                    </div>
+                </div>
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works5.html">
+                            <img src="./images/1x/pc_works_03.jpg" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_03@2x-80.jpg" alt="" class="mobile_img">
+                        </a>
+                    </div> 
+                    <div class="label_wrap luxy-el">
+                        <p class="label">web banner</p>
+                        <p class="label_title">新バーガー告知バナー</p>
+                    </div>                             
+                </div>
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works4.html">
+                            <img src="./images/1x/pc_works_04.jpg" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_04@2x-80.jpg" alt="" class="mobile_img">
+                        </a>
+                    </div>   
+                    <div class="label_wrap">           
+                        <p class="label">web banner</p>
+                        <p class="label_title">新バーガー告知バナー</p>
+                    </div>
+                </div>
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works3.html">
+                            <img src="./images/1x/pc_works_05.png" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_05@2x.png" alt="" class="mobile_img">
+                        </a>
+                    </div> 
+                    <div class="label_wrap">               
+                        <p class="label">web site</p>
+                        <p class="label_title">コワーキングスペース「WORKERS」 HP</p>
+                    </div>
+                </div>
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works2.html">
+                            <img src="./images/1x/pc_works_06.jpg" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_06@2x-80.jpg" alt="" class="mobile_img">
+                        </a>
+                    </div>     
+                    <div class="label_wrap">         
+                        <p class="label">web banner</p>
+                        <p class="label_title">トラベルメディア「TRRRRIP」 バナー</p>
+                    </div>
+                </div>
+                <div class="works_content luxy-el">
+                    <div class="works_bg">
+                        <a href="./works1.html">
+                            <img src="./images/1x/pc_works_07.jpg" alt="" class="desktop_img">
+                            <img src="./images/2x/sp_works_07@2x-80.jpg" alt="" class="mobile_img">
+                        </a>
+                    </div>    
+                    <div class="label_wrap">         
+                        <p class="label">web banner</p>
+                        <p class="label_title">デザスタmobile バナー</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!--footer-->
+        <footer class="hidden-area">
+            <img src="./images/1x/pc_footer.jpg" alt="">
+            <div class="footer_wrap">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+                <nav class="footer_nav">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="./concept.html">CONCEPT</a></li>
+                        <li><a href="./works.html">WORKS</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">Copyright 2024 miyanishi saki </p>
+        </footer>
     </div>
 
-    <!--main-->
-    <main class="works_main">
-        <section class="works_wrap">
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works7.html">
-                        <img src="./images/1x/pc_works_01.png" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_01@2x.png" alt="" class="mobile_img">
-                    </a>
-                </div>
-                <div class="label_wrap">
-                    <p class="label">web site</p>
-                    <p class="label_title">美容室「LIFE」 HP</p>
-                </div>
-            </div>
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works6.html">
-                        <img src="./images/1x/pc_works_02.png" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_02@2x.png" alt="" class="mobile_img">
-                    </a>
-                </div>
-                <div class="label_wrap">
-                    <p class="label">web site</p>
-                    <p class="label_title">デザインカフェ HP</p>
-                </div>
-            </div>
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works5.html">
-                        <img src="./images/1x/pc_works_03.jpg" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_03@2x-80.jpg" alt="" class="mobile_img">
-                    </a>
-                </div> 
-                <div class="label_wrap">
-                    <p class="label">web banner</p>
-                    <p class="label_title">新バーガー告知バナー</p>
-                </div>                             
-            </div>
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works4.html">
-                        <img src="./images/1x/pc_works_04.jpg" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_04@2x-80.jpg" alt="" class="mobile_img">
-                    </a>
-                </div>   
-                <div class="label_wrap">           
-                    <p class="label">web banner</p>
-                    <p class="label_title">新バーガー告知バナー</p>
-                </div>
-            </div>
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works3.html">
-                        <img src="./images/1x/pc_works_05.png" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_05@2x.png" alt="" class="mobile_img">
-                    </a>
-                </div> 
-                <div class="label_wrap">               
-                    <p class="label">web site</p>
-                    <p class="label_title">コワーキングスペース「WORKERS」 HP</p>
-                </div>
-            </div>
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works2.html">
-                        <img src="./images/1x/pc_works_06.jpg" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_06@2x-80.jpg" alt="" class="mobile_img">
-                    </a>
-                </div>     
-                <div class="label_wrap">         
-                    <p class="label">web banner</p>
-                    <p class="label_title">トラベルメディア「TRRRRIP」 バナー</p>
-                </div>
-            </div>
-            <div class="works_content">
-                <div class="works_bg">
-                    <a href="./works1.html">
-                        <img src="./images/1x/pc_works_07.jpg" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_works_07@2x-80.jpg" alt="" class="mobile_img">
-                    </a>
-                </div>    
-                <div class="label_wrap">         
-                    <p class="label">web banner</p>
-                    <p class="label_title">デザスタmobile バナー</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <!--footer-->
-    <footer class="hidden-area">
-        <img src="./images/1x/pc_footer.jpg" alt="">
-        <div class="footer_wrap">
-            <h1>MIYANISHI SAKI</h1>
-            <p>DESIGNER</p>
-            <nav class="footer_nav">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p class="copyright">Copyright 2024 miyanishi saki </p>
-    </footer>
     <script>
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
@@ -288,6 +298,23 @@
         "mouseleave": function() {
         $(cursor).removeClass("active");
         }
+    });
+
+    // sp_btnタグホバー
+    $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
+    //慣性スクロール
+    luxy.init({
+        wrapper:'#luxy',
+        wapperSpeed: 10,
     });
     </script>
 </body>

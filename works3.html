@@ -29,11 +29,17 @@
     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 慣性スクロール -->
+    <script src="./js/luxy.min.js"></script>
 </head>
+
 <body>
+
     <div id="cursor"></div>
+
     <!--FV-->
-    <div class="fv">
+    <div>
 
         <!--nav-->
         <div class="nav_wrap">
@@ -117,107 +123,108 @@
                 </ul>
             </nav>
         </div>
-        
+    </div>    
+
+    <div id="luxy">
         <div class="wrap">
             <h2 class="secondary">作品一覧</h2>
             <div class="works">
                 <span>WORKS</span>
             </div>    
         </div>
-    </div>
-        
 
-    <!-- main -->
-    <main class="works_main">
-        <div class="works_img">
-            <img src="./images/1x/pc_worksup_05.png" alt="" class="desktop_img">
-            <img src="./images/2x/sp_works_05@2x.png" alt="" class="mobile_img">
-            <div>
-                <p>著作権:Vectonaut / 出典:Freepik</p>
-            </div>
-        </div>
-        <div class="works_tittle">
-            <p class="label">web site</p>
-            <h3>コワーキングスペース「WORKERS」 HP</h3>
-        </div>
-        
-        <!--------- モーダル --------->
-        <div class="modal_btn">
-            <button class="works_btn">
-                <a href="#modal">
-                    詳しく見る
-                </a>
-            </button>
-        </div>
-        
-        <!-- モーダルのコンテナー -->
-        <div class="remodal" data-remodal-id="modal">
-            <!-- 閉じるボタン -->
-            <button data-remodal-action="close" class="remodal-close"></button>
-            <!-- モーダル内に画像を配置 -->
-            <div class="modal_img">
-                <div class="desktop_img">
-                    <img src="images/1x/pc_worksup_05_all.jpg" class="modal_img_pc">
-                    <img src="images/1x/pc_worksup_05_all2.jpg" alt="" class="modal_img_sp">
+        <!-- main -->
+        <main class="works_main">
+            <div class="works_img">
+                <img src="./images/1x/pc_worksup_05.png" alt="" class="desktop_img">
+                <img src="./images/2x/sp_works_05@2x.png" alt="" class="mobile_img">
+                <div>
+                    <p>著作権:Vectonaut / 出典:Freepik</p>
                 </div>
-                <div class="mobile_img">
-                    <img src="images/2x/sp_works_05_all@2x-80.jpg" alt="" class="modal_img_pc">
-                    <img src="images/2x/sp_works_05_all2@2x-80.jpg" alt="" class="modal_img_sp">
-                </div>
-                
             </div>
+            <div class="works_tittle">
+                <p class="label">web site</p>
+                <h3>コワーキングスペース「WORKERS」 HP</h3>
+            </div>
+            
+            <!--------- モーダル --------->
+            <div class="modal_btn">
+                <button class="works_btn">
+                    <a href="#modal">
+                        詳しく見る
+                    </a>
+                </button>
+            </div>
+            
+            <!-- モーダルのコンテナー -->
+            <div class="remodal" data-remodal-id="modal">
+                <!-- 閉じるボタン -->
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <!-- モーダル内に画像を配置 -->
+                <div class="modal_img">
+                    <div class="desktop_img">
+                        <img src="images/1x/pc_worksup_05_all.jpg" class="modal_img_pc">
+                        <img src="images/1x/pc_worksup_05_all2.jpg" alt="" class="modal_img_sp">
+                    </div>
+                    <div class="mobile_img">
+                        <img src="images/2x/sp_works_05_all@2x-80.jpg" alt="" class="modal_img_pc">
+                        <img src="images/2x/sp_works_05_all2@2x-80.jpg" alt="" class="modal_img_sp">
+                    </div>
+                    
+                </div>
 
-        </div>
-        <!--------------------------->
+            </div>
+            <!--------------------------->
 
-        <div class="article">
-            <ul class="item_wrap">
-                <li class="item">
-                    <h4>概要</h4>
-                    <p>デザイン学習のために作成した架空コワーキングスペースのHP。スクール課題でトレースいたしました。</p>
-                </li>
-                <li class="item">
-                    <h4>ターゲット</h4>
-                    <p>全国を回って仕事をされる方</p>
-                </li>
-                <li class="item">
-                    <h4>コンセプト</h4>
-                    <p>情報はわかりやすくまとめ、魅力のひとつである「明るく親しみやすい雰囲気」をカラーやイラストで表現いたしました。</p>
-                </li>
-                <li class="item">
-                    <h4>使用ソフト</h4>
-                    <p>Adobe Illustrator</p>
-                </li>
-                <li class="item">
-                    <h4>制作範囲</h4>
-                    <p>デザイン</p>
-                </li>
-                <li class="item">
-                    <h4>制作期間</h4>
-                    <p>1週間</p>
-                </li>
-            </ul>
-        </div>
-        
-    </main>
-    <!--footer-->
-    <footer class="hidden-area">
-        <img src="./images/1x/pc_footer.jpg" alt="">
-        <div class="footer_wrap">
-            <h1>MIYANISHI SAKI</h1>
-            <p>DESIGNER</p>
-            <nav class="footer_nav">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+            <div class="article">
+                <ul class="item_wrap">
+                    <li class="item">
+                        <h4>概要</h4>
+                        <p>デザイン学習のために作成した架空コワーキングスペースのHP。スクール課題でトレースいたしました。</p>
+                    </li>
+                    <li class="item">
+                        <h4>ターゲット</h4>
+                        <p>全国を回って仕事をされる方</p>
+                    </li>
+                    <li class="item">
+                        <h4>コンセプト</h4>
+                        <p>情報はわかりやすくまとめ、魅力のひとつである「明るく親しみやすい雰囲気」をカラーやイラストで表現いたしました。</p>
+                    </li>
+                    <li class="item">
+                        <h4>使用ソフト</h4>
+                        <p>Adobe Illustrator</p>
+                    </li>
+                    <li class="item">
+                        <h4>制作範囲</h4>
+                        <p>デザイン</p>
+                    </li>
+                    <li class="item">
+                        <h4>制作期間</h4>
+                        <p>1週間</p>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-        <p class="copyright">Copyright 2024 miyanishi saki </p>
-    </footer>
+            </div>
+            
+        </main>
+        <!--footer-->
+        <footer class="hidden-area">
+            <img src="./images/1x/pc_footer.jpg" alt="">
+            <div class="footer_wrap">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+                <nav class="footer_nav">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="./concept.html">CONCEPT</a></li>
+                        <li><a href="./works.html">WORKS</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">Copyright 2024 miyanishi saki </p>
+        </footer>
+    </div>
     <script>
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
@@ -289,6 +296,24 @@
         $(cursor).removeClass("active");
         }
     });
+
+    // sp_btnタグホバー
+    $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
+    //慣性スクロール
+    luxy.init({
+        wrapper:'#luxy',
+        wapperSpeed: 10,
+    });
+
     </script>
 </body>
 </html>

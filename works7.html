@@ -30,11 +30,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- 慣性スクロール -->
+    <script src="./js/luxy.min.js"></script>
+
 </head>
 <body>
+
     <div id="cursor"></div>
+
     <!--FV-->
-    <div class="fv">
+    <div>
         <!--nav-->
         <div class="nav_wrap">
 
@@ -117,102 +122,106 @@
                 </ul>
             </nav>
         </div>
-        
+    </div>   
+
+    <div  id="luxy">
         <div class="wrap">
             <h2 class="secondary">作品一覧</h2>
             <div class="works">
                 <span>WORKS</span>
             </div>    
         </div>
-    </div>
-    <main class="works_main">
-        <div class="works_img">
-            <img src="./images/1x/pc_worksup_01.png" alt="">
-            <div>
-                <p>著作権:Vectonaut / 出典:Freepik</p>
+    
+        <!--main-->
+        <main class="works_main">
+            <div class="works_img">
+                <img src="./images/1x/pc_worksup_01.png" alt="">
+                <div>
+                    <p>著作権:Vectonaut / 出典:Freepik</p>
+                </div>
             </div>
-        </div>
-        <div class="works_tittle">
-            <p class="label">web site</p>
-            <h3>美容室「LIFE」 HP</h3>
-        </div>
-
-        <!--------- モーダル --------->
-        <div class="modal_btn">
-            <button class="works_btn">
-                <a href="#modal">
-                    詳しく見る
-                </a>
-            </button>
-        </div>
-        
-        <!-- モーダルのコンテナー -->
-        <div class="remodal" data-remodal-id="modal">
-            <!-- 閉じるボタン -->
-            <button data-remodal-action="close" class="remodal-close"></button>
-            <!-- モーダル内に画像を配置 -->
-            <div class="modal_img">
-                <img src="images/1x/pc_worksup_01_all.jpg">
+            <div class="works_tittle">
+                <p class="label">web site</p>
+                <h3>美容室「LIFE」 HP</h3>
             </div>
-        </div>
-        <!--------------------------->
 
-        
+            <!--------- モーダル --------->
+            <div class="modal_btn">
+                <button class="works_btn">
+                    <a href="#modal">
+                        詳しく見る
+                    </a>
+                </button>
+            </div>
+            
+            <!-- モーダルのコンテナー -->
+            <div class="remodal" data-remodal-id="modal">
+                <!-- 閉じるボタン -->
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <!-- モーダル内に画像を配置 -->
+                <div class="modal_img">
+                    <img src="images/1x/pc_worksup_01_all.jpg">
+                </div>
+            </div>
+            <!--------------------------->
 
-        <div class="lead">
-            <p>
-                コーポレートカラーのピンクを使用し女性らしい柔らかい雰囲気に仕上げました。また日常でも再現性の高いヘアーということでターゲットの日常に美容室をイメージしてもらいやすいよう写真を多く使用しています。幅広い年代の方が使用しやすいLPになるようデザイン自体はシンプルを意識しております。
-            </p>
-        </div>
+            
 
-        <div class="article">
-            <ul class="item_wrap">
-                <li class="item">
-                    <h4>概要</h4>
-                    <p>デザイン学習のために作成した架空美容室PC版LP</p>
-                </li>
-                <li class="item">
-                    <h4>ターゲット</h4>
-                    <p>20代〜50代の女性</p>
-                </li>
-                <li class="item">
-                    <h4>コンセプト</h4>
-                    <p>単なる可愛いや流行をただ追うだけでなく、あなたのライフスタイルにフィットするスタイルをご提唱します。日常でも再現性の高いヘアーを体感してほしい。</p>
-                </li>
-                <li class="item">
-                    <h4>使用ソフト</h4>
-                    <p>Adobe Illustrator / Photoshop</p>
-                </li>
-                <li class="item">
-                    <h4>制作範囲</h4>
-                    <p>LPデザイン</p>
-                </li>
-                <li class="item">
-                    <h4>制作期間</h4>
-                    <p>2週間</p>
-                </li>
-            </ul>
-        </div>
-        
-    </main>
-    <!--footer-->
-    <footer class="hidden-area">
-        <img src="./images/1x/pc_footer.jpg" alt="">
-        <div class="footer_wrap">
-            <h1>MIYANISHI SAKI</h1>
-            <p>DESIGNER</p>
-            <nav class="footer_nav">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./concept.html">CONCEPT</a></li>
-                    <li><a href="./works.html">WORKS</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+            <div class="lead">
+                <p>
+                    コーポレートカラーのピンクを使用し女性らしい柔らかい雰囲気に仕上げました。また日常でも再現性の高いヘアーということでターゲットの日常に美容室をイメージしてもらいやすいよう写真を多く使用しています。幅広い年代の方が使用しやすいLPになるようデザイン自体はシンプルを意識しております。
+                </p>
+            </div>
+
+            <div class="article">
+                <ul class="item_wrap">
+                    <li class="item">
+                        <h4>概要</h4>
+                        <p>デザイン学習のために作成した架空美容室PC版LP</p>
+                    </li>
+                    <li class="item">
+                        <h4>ターゲット</h4>
+                        <p>20代〜50代の女性</p>
+                    </li>
+                    <li class="item">
+                        <h4>コンセプト</h4>
+                        <p>単なる可愛いや流行をただ追うだけでなく、あなたのライフスタイルにフィットするスタイルをご提唱します。日常でも再現性の高いヘアーを体感してほしい。</p>
+                    </li>
+                    <li class="item">
+                        <h4>使用ソフト</h4>
+                        <p>Adobe Illustrator / Photoshop</p>
+                    </li>
+                    <li class="item">
+                        <h4>制作範囲</h4>
+                        <p>LPデザイン</p>
+                    </li>
+                    <li class="item">
+                        <h4>制作期間</h4>
+                        <p>2週間</p>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-        <p class="copyright">Copyright 2024 miyanishi saki </p>
-    </footer>
+            </div>
+            
+        </main>
+        <!--footer-->
+        <footer class="hidden-area">
+            <img src="./images/1x/pc_footer.jpg" alt="">
+            <div class="footer_wrap">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+                <nav class="footer_nav">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="./concept.html">CONCEPT</a></li>
+                        <li><a href="./works.html">WORKS</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">Copyright 2024 miyanishi saki </p>
+        </footer>
+    </div>
     <script>
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
@@ -284,6 +293,23 @@
         "mouseleave": function() {
         $(cursor).removeClass("active");
         }
+        });
+
+        // sp_btnタグホバー
+    $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
+        //慣性スクロール
+        luxy.init({
+            wrapper:'#luxy',
+            wapperSpeed: 10,
         });
 
     </script>
