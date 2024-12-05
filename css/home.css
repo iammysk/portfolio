@@ -1041,15 +1041,3 @@ span {
       transform: translateX(0);
     }
   }
-
-
-  /* 「スクロールと連動したアニメーション」 */
-
-  /* [data-aos="sample_amine2"] {
-    background: #ff99cc;
-    transition-property: background;
-  }
-  
-  [data-aos="sample_amine2"].aos-animate {
-    background: #6699ff;
-  } */

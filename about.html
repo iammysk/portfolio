@@ -20,6 +20,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Microsoft社のjQueryのCDN -->
+    <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script>
+
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
 </head>
@@ -128,10 +131,10 @@
             
             <!--about_me-->
                 <section class="about_wrap">
-                    <img src="./images/1x/pc_about_01.jpg" alt="" class="desktop_img luxy-el" data-speed-y="5" data-offset="-50">
-                    <img src="./images/2x/sp_about_01@2x-80.jpg" alt="" class="mobile_img luxy-el" data-speed-y="5" data-offset="-50">
+                    <img src="./images/1x/pc_about_01.jpg" alt="" class="desktop_img luxy-el grayscale" data-speed-y="5" data-offset="-50">
+                    <img src="./images/2x/sp_about_01@2x-80.jpg" alt="" class="mobile_img luxy-el grayscale" data-speed-y="5" data-offset="-50">
                     <div class="about_wrap2">
-                        <div class="article">
+                        <div class="article grayscale">
                             <p>社会人１年目の話です。</p>
                             <p>2019年、クレジットカード会社へ就職。簡潔に仕事内容をまとめると、商業施設内にある各ショップのみなさまへ「来店されるお客様へハウスカードの入会と利用の案内をしてくださいね」とハウスカードシェア率を増やすための営業でした。</p>
                             <p>押し売りが苦手な私は「たまにくるハウスカード担当の人」、ではなく「いつも顔を出してくれる宮西さん」を目指し、毎日各ショップへ挨拶に伺いました。「最近急に寒くなりましたね」なんて何気ない会話を繰り返していくとある日突然悩み事を打ち明けてくれたのです。</p>
@@ -143,7 +146,7 @@
                             <picture>
                                 <div class="avatar_img">
                                     <source srcset="./images/2x/sp_about_02@2x-80.jpg" media="(max-width:1000px)">
-                                    <img src="./images/1x/pc_about_02.jpg" alt="">
+                                    <img src="./images/1x/pc_about_02.jpg" alt="" class="grayscale">
                                 </div> 
                             </picture>
                             
@@ -161,15 +164,15 @@
 
                 <!--favorite thing-->
                 <section class="favoritething_wrap">
-                    <h3>好きなこと</h3>
-                    <div class="favoritething">
+                    <h3 class="grayscale">好きなこと</h3>
+                    <div class="favoritething grayscale">
                         <span>FAVORITE THING</span>
                     </div>
 
                     <!--slideshow-->
                     <!-- コンテナ追加 -->
                     <div class="slide_container">
-                        <div class="favoritething_img">
+                        <div class="favoritething_im grayscale">
                             <ul class="slideshow">
                                 <li class="content"><img src="./images/1x/pc_about_favorite_01.jpg" alt=""></li>
                                 <li class="content"><img src="./images/1x/pc_about_favorite_02.jpg" alt=""></li>
@@ -195,11 +198,11 @@
                     
                     <div class="favoritething_article">
                         <div class="favoritething_text">
-                            <h4>歩くこと</h4>
+                            <h4 class="grayscale">歩くこと</h4>
                             <p>今の家も、最寄駅から歩いて20分かかるところに住んでいます。歩くと、もやもやがすっきりしたり、新しいことを思いついたり、わくわくする想像が膨んだりします。歩くことはわたしにとって大切な時間です。</p>
                         </div>
                         <div class="favoritething_text">
-                            <h4>バドミントン</h4>
+                            <h4 class="grayscale">バドミントン</h4>
                             <p>中学生から始めたバドミントン。高校はスポーツ特待生として、部活に打ち込んできました。あのとき叩き込まれた、「忍耐力」、「継続力」、「礼儀」は今のわたしが出来上がる土台となったと行っても過言ではありません。</p>
                         </div>
                     </div>
@@ -207,7 +210,7 @@
 
                 <!--values-->
                 <section>
-                    <h3>大切にしていること</h3>
+                    <h3 class=".grayscale">大切にしていること</h3>
                     <div class="values">
                         <span>VALUES</span>
                     </div>
@@ -402,6 +405,26 @@
         $(cursor).removeClass("active");
         }
     });
+
+    // スクロールにより画面中央でカラーに変化
+    $(function () {
+        $(window).scroll(function () {
+            $('.grayscale').each(function () {
+            var elemPos = $(this).offset().top;
+            var elemHight =$(this).height();
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight / 2) {
+                $(this).addClass('active');
+                if (scroll > elemPos + elemHight - 200){
+                    $(this).removeClass('active')
+                }
+            } else {
+                $(this).removeClass('active');
+            }
+            });
+        });
+        });
 
     //慣性スクロール
     luxy.init({

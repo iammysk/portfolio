@@ -107,6 +107,7 @@
                 </nav>
             </div>
         </div>
+
         <div id="luxy">
             <div  class="fv">
                 <div class="wrap">
@@ -146,8 +147,8 @@
                         
                     </div>
                     <div class="concept_img luxy-el" data-speed-y="5" data-offset="-50">
-                        <img src="./images/1x/pc_concept_00.jpg" alt="" class="desktop_img">
-                        <img src="./images/2x/sp_consept_00@2x-80.jpg" alt="" class="mobile_img">
+                        <img src="./images/1x/pc_concept_00.jpg" alt="" class="desktop_img grayscale">
+                        <img src="./images/2x/sp_consept_00@2x-80.jpg" alt="" class="mobile_img grayscale">
                     </div>
                 </div>
 
@@ -359,6 +360,26 @@
         $(cursor).removeClass("colorChange");
         }
     });
+
+    // スクロールにより画面中央でカラーに変化
+    $(function () {
+        $(window).scroll(function () {
+            $('.grayscale').each(function () {
+            var elemPos = $(this).offset().top;
+            var elemHight =$(this).height();
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight / 2) {
+                $(this).addClass('active');
+                if (scroll > elemPos + elemHight - 200){
+                    $(this).removeClass('active')
+                }
+            } else {
+                $(this).removeClass('active');
+            }
+            });
+        });
+        });
 
     //慣性スクロール
     luxy.init({
