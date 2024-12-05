@@ -14,7 +14,7 @@ body{
     width: 20px;
     height: 20px;
     margin: -20px 0 0 -20px;/*真ん中にくるようにマイナスマージンで調整*/
-    z-index: 1000;/*一番手前に来るように*/
+    z-index: 100000;/*一番手前に来るように*/
     pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
     opacity: 0;
     transition: transform 0.5s;
@@ -34,6 +34,16 @@ body{
 }
 #cursor.active {
     transform: scale(3,3);
+}
+
+#cursor.colorChange {
+    background-color: rgba(255, 255, 255, 0.3)
+}
+
+/* モーダルリセット */
+
+.remodal-close:before {
+    cursor: none;
 }
 
 /* common */

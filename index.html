@@ -22,12 +22,6 @@
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
 
-    <!-- AOS.js（Animation On Scroll library）とは、「スクロールと連動したアニメーション」 -->
-    <!-- CSS読み込み -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-    <!-- js読み込み -->
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-
 </head>
 </head>
 <body>
@@ -49,11 +43,7 @@
     </div>
 
     <div id="cursor"></div>
-
-        <!-- AOS.js -->
-        <div data-aos="sample_amine2">
-
-            <!--FV-->
+            
             <div>
                 <!--nav-->
                 <div class="nav_wrap">
@@ -140,6 +130,7 @@
             </div>
 
             <div id="luxy">
+                <!--FV-->
                 <div class="fv">
                     <p class="copy_sub">Bringing words to life</p>
                     <p class="copy">ことばが、かたちに</p>
@@ -194,10 +185,10 @@
                             <h2 class="grayscale">わたしについて</h2>
                         </div>
                         
-                        <div class="about_img grayscale">
+                        <div class="about_img">
                             <picture>
                                 <source srcset="./images/2x/sp_home_about@2x-80.jpg" media="(max-width:767px)">
-                                <img src="./images/1x/pc_home_about.jpg" alt="">
+                                <img src="./images/1x/pc_home_about.jpg" alt="" class="grayscale">
                             </picture>
                             
                             <div class="about_lead grayscale">
@@ -241,9 +232,9 @@
                             </div>    
                         </div>
 
-                        <div class="swiper mobile-version grayscale">
+                        <div class="swiper mobile-version">
                             <!-- sp版 -->
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper grayscale">
                                 <div class="swiper-slide">
                                     <img src="./images/2x/sp_works_01@2x.png" alt="" class="works_content">
                                 </div>
@@ -271,8 +262,7 @@
                         </div>  
                     </section>
                 </main>
-
-
+                
                 <!--footer-->
                 <footer class="hidden-area grayscale">
                     <img src="./images/1x/pc_footer.jpg" alt="">
@@ -292,8 +282,6 @@
                     <p class="copyright">Copyright 2024 miyanishi saki </p>
                 </footer>
             </div>
-        </div>
-    </div>
 
     <!-- Swiper.js の JavaScript -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -350,6 +338,7 @@
             $('.sp_btn').on('click',function(){
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
+                $('#cursor').toggleClass('colorChange');
             })
         })
 

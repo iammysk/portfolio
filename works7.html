@@ -261,6 +261,7 @@
             $('.sp_btn').on('click',function(){
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
+                $('#cursor').toggleClass('colorChange');
             })
         })
 
@@ -297,6 +298,17 @@
 
         // sp_btnタグホバー
     $(".sp_btn").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+    });
+
+    // モーダルホバー
+    $(".remodal-close").on({
         "mouseenter": function() {
         //activeクラス付与
         $(cursor).addClass("active");

@@ -35,6 +35,10 @@ body{
     transform: scale(3,3);
 }
 
+#cursor.colorChange {
+    background-color: rgba(255, 255, 255, 0.3)
+}
+
 
 
 /* common */
