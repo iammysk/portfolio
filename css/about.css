@@ -708,23 +708,22 @@ body {
 }
 @media screen and (max-width: 767px) {
     
-    /* .values_article {
-        max-width: initial;
-        width: calc( 100% + ((100vw - 100%) / 2));
-        margin-right: 0;
-        margin: 0 calc((100% - 100vw) / 4);
-    } */
 
     .values_article{
         width: calc( 100% + ((100vw - 100%) / 2));
         flex-direction: column;
         margin: calc((100% - 100vw) / 4);
+        margin-top: 50px;
         align-items: center;
     }
 
     .values_img img {
         width: 100vw;
         min-width: 293px;
+    }
+
+    .values_text {
+        width: 100%;
     }
     
     }

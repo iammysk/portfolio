@@ -440,7 +440,6 @@ body {
         min-width: 293px;
     }
 
-    /* imgサイズ苦戦している箇所 */
     .concept_img img {
         object-fit: cover;
         width: 60%;
@@ -659,9 +658,8 @@ body {
 }
 
 @media screen and (max-width: 1232px) {
-   .change_color {
+   .nav_wrap {
     mix-blend-mode: difference;
-    color: #fff;
    }
     
 }
