@@ -186,37 +186,40 @@
                     </div>
                         
                 <!--about-->
-                    <section class="about grayscale">
-                        <div>
-                            <span>ABOUT</span>
+                    <section class="about">
+                        <div class="works_tittle grayscale">
+                            <div>
+                                <span>ABOUT</span>
+                            </div>
+                            <h2 class="grayscale">わたしについて</h2>
                         </div>
-                        <h2>わたしについて</h2>
-                        <div class="about_img">
+                        
+                        <div class="about_img grayscale">
                             <picture>
                                 <source srcset="./images/2x/sp_home_about@2x-80.jpg" media="(max-width:767px)">
                                 <img src="./images/1x/pc_home_about.jpg" alt="">
                             </picture>
                             
-                            <div class="about_lead">
+                            <div class="about_lead grayscale">
                                 <p>「実現したいこと」を叶えるデザインをこころがけてお作りします。聴く力でクライアント様自身も気付けていない「想い」を引き出し、発想力で抱えている課題を解決できる「デザイン」を導き出せるように努めさせていただきます。
                                 </p>
                             </div>
                         </div>
-                        <div class="about_btn">
+                        <div class="about_btn grayscale">
                             <a href="./about.html">詳しく見る</a>
                         </div>
                     </section>
 
                 <!--works-->
-                    <section class="works grayscale">
-                        <div class="works_tittle">                
+                    <section class="works">
+                        <div class="works_tittle grayscale">                
                             <div>
                                 <span>WORKS</span>
                             </div>
                             <h2>作品一覧</h2>
                         </div>
                         
-                        <div class="works_img_wrap desktop-version">
+                        <div class="works_img_wrap desktop-version grayscale">
                             <!-- pc版 -->
                             <div class="bg">
                                 <img src="./images/1x/pc_home_works_01.png" alt="" class="works_content">
@@ -238,7 +241,7 @@
                             </div>    
                         </div>
 
-                        <div class="swiper mobile-version">
+                        <div class="swiper mobile-version grayscale">
                             <!-- sp版 -->
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -416,10 +419,14 @@
         $(window).scroll(function () {
             $('.grayscale').each(function () {
             var elemPos = $(this).offset().top;
+            var elemHight =$(this).height();
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight+400) {
+            if (scroll > elemPos - windowHeight / 2) {
                 $(this).addClass('active');
+                if (scroll > elemPos + elemHight - 200){
+                    $(this).removeClass('active')
+                }
             } else {
                 $(this).removeClass('active');
             }
