@@ -246,6 +246,7 @@
         }
         });
 
+
         // sp_nav
 
         $(function(){
@@ -254,7 +255,26 @@
                 $('.sp_nav').fadeToggle();
                 $('#cursor').toggleClass('colorChange');
             })
+
+            // 追加した記述↓
+            // blend_modeの調整
+            if($('.sp_btn').hasClass('open')){
+                $('.nav_wrap').removeClass('blend_mode');
+                $('title').removeClass('blend_mode');
+
+            } else {
+                $('.nav_wrap').addClass('blend_mode');
+                $('title').addClass('blend_mode');
+            }
+
+            // ナビゲーションメニューの表示切り替え
+            $('.sp_nav').fadeToggle();
+
+            // カーソルのクラス変更
+            $('#cursor').toggleClass('colorChange');
         })
+
+
 
         // スクロール時背景に合わせて文字色が反転
 
@@ -285,57 +305,7 @@
         })
 
 
-        // $(function () {
-            // $(window).on('scroll', function () {
-                // $('.nav_wrap li').each(function () {
-                // let menuY = $(this).offset().top + $(this).height()
-                // if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
-                    // .blueと重なっている時
-                    // $(this).addClass('change_color');
-                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
-                    // .yellowと重なっている時
-                    // $(this).css('color', 'blue');
-                // } else {
-                    // 重なっていない時は色を戻す
-                    // $(this).removeClass('change_color');
-            //     }
-            //     })
-            // })
-            // })
-        // $(function () {
-        //     $(window).on('scroll', function () {
-        //         $('.title h1').each(function () {
-        //         let menuY = $(this).offset().top + $(this).height()
-        //         if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
-                    // .blueと重なっている時
-                    // $(this).css('color', 'white');
-                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
-                    // .yellowと重なっている時
-                    // $(this).css('color', 'blue');
-                // } else {
-                    // 重なっていない時は色を戻す
-                    // $(this).css('color', '#687e8d')
-        //         }
-        //         })
-        //     })
-        // })
-        // $(function () {
-        //     $(window).on('scroll', function () {
-        //         $('.title p').each(function () {
-        //         let menuY = $(this).offset().top + $(this).height()
-        //         if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
-                    // .blueと重なっている時
-                    // $(this).css('color', 'white');
-                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
-                    // .yellowと重なっている時
-                    // $(this).css('color', 'blue');
-                // } else {
-                    // 重なっていない時は色を戻す
-        //             $(this).css('color', '#687e8d')
-        //         }
-        //         })
-        //     })
-        // })
+
         // カーソル
         $(function(){
         

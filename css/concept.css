@@ -71,13 +71,19 @@ body {
     z-index: 999;
 }
 
+.title {
+    margin-left: 5%;
+    position: fixed;
+    z-index: 999;
+}
+
 .title h1 {
     font-size: 14px;
     color: #687e8d;
     margin-top: 56px;
 }
 
-.title  p {
+.title p {
     font-size: 9px;
     color: #687e8d;
     margin-top: 10px;
