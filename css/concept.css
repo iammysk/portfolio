@@ -282,7 +282,6 @@ body {
     font-size: 36px;
 }
 
-
 .concept {
     margin-top: 52px;
 }
@@ -316,13 +315,13 @@ body {
         font-size: 21px;
     }
 
-    span {
-        font-size: 36px;
-    }
-
     .about {
         margin-top: 26px;
-    }        
+    }    
+    
+    .concept span {
+        font-size: 36px;
+    }
 }
 
 /* main */
@@ -408,7 +407,7 @@ body {
     .concept_wrap {
         margin: 0 calc((100% - 100vw) / 4);
         margin-top: 85px;
-        padding: 66px 10%;
+        padding: 66px 5%;
     }
 
     .concept_wrap {
@@ -684,20 +683,13 @@ body {
 
 /* スクロールにより画面中央でカラーに変化 */
 
-/* img { */
-    /* -webkit-filter: grayscale(1); Webkit */
-    /* filter: gray; IE6-9 */
-    /* filter: grayscale(1); W3C */
-/* } */
-
-/* img:hover {
-    filter: none;
-} */
-
 .grayscale {
     /* opacity: 0; */
+    /*  Webkit */
     -webkit-filter: grayscale(1); 
+    /* IE6-9  */
     filter: gray; 
+    /* W3C */
     filter: grayscale(1); 
 }
 
@@ -706,7 +698,7 @@ body {
     filter: none;
   }
   
-  @keyframes fadeup {
+  /* @keyframes fadeup {
     0% {
       opacity: 0;
       transform: translateX(-50px);
@@ -717,4 +709,4 @@ body {
       transform: translateX(0);
     }
   }
-
+ */

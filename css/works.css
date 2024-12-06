@@ -529,3 +529,20 @@ h4 {
     color: #fff;
     font-size: 9px;
 }
+
+/* スクロールにより画面中央でカラーに変化 */
+
+.grayscale {
+    /* opacity: 0; */
+    /*  Webkit */
+    -webkit-filter: grayscale(1); 
+    /* IE6-9  */
+    filter: gray; 
+    /* W3C */
+    filter: grayscale(1); 
+}
+
+.grayscale.active {
+    /* animation: 2s fadeup ease-in-out forwards; */
+    filter: none;
+  }

@@ -153,9 +153,9 @@
                 </div>
 
                 <div class="concept2_wrap">
-                    <h3>空を見るということ</h3>
+                    <h3 class="grayscale">空を見上げる</h3>
                     <!--slideshow-->
-                    <div class="concept2_img">
+                    <div class="concept2_img grayscale">
                         <ul class="slideshow">
                             <li class="content"><img src="./images/1x/pc_concept_01.jpg" alt=""></li>
                             <li class="content"><img src="./images/1x/pc_concept_02.jpg" alt=""></li>
@@ -258,23 +258,21 @@
 
             // 追加した記述↓
             // blend_modeの調整
-            if($('.sp_btn').hasClass('open')){
-                $('.nav_wrap').removeClass('blend_mode');
-                $('title').removeClass('blend_mode');
+            // if($('.sp_btn').hasClass('open')){
+            //     $('.nav_wrap').removeClass('blend_mode');
+            //     $('title').removeClass('blend_mode');
 
-            } else {
-                $('.nav_wrap').addClass('blend_mode');
-                $('title').addClass('blend_mode');
-            }
+            // } else {
+            //     $('.nav_wrap').addClass('blend_mode');
+            //     $('title').addClass('blend_mode');
+            // }
 
             // ナビゲーションメニューの表示切り替え
-            $('.sp_nav').fadeToggle();
+            // $('.sp_nav').fadeToggle();
 
             // カーソルのクラス変更
-            $('#cursor').toggleClass('colorChange');
+            // $('#cursor').toggleClass('colorChange');
         })
-
-
 
         // スクロール時背景に合わせて文字色が反転
 
@@ -305,7 +303,6 @@
         })
 
 
-
         // カーソル
         $(function(){
         
@@ -323,6 +320,27 @@
                 "top":y+"px",
                 "left":x+"px"
                 });
+           
+
+            // concept_wrapの範囲を取得
+            let conceptWrap = $('.concept_wrap');
+                let conceptWrapOffset = conceptWrap.offset();
+                let conceptWrapLeft = conceptWrapOffset.left;
+                let conceptWrapRight = conceptWrapLeft + conceptWrap.outerWidth();
+                let conceptWrapTop = conceptWrapOffset.top;
+                let conceptWrapBottom = conceptWrapTop + conceptWrap.outerHeight();
+
+                // カーソル位置がconcept_wrap内にあるか判定
+                if (
+                    e.pageX >= conceptWrapLeft &&
+                    e.pageX <= conceptWrapRight &&
+                    e.pageY >= conceptWrapTop &&
+                    e.pageY <= conceptWrapBottom
+                ) {
+                    $('#cursor').addClass('colorChange');
+                } else {
+                    $('#cursor').removeClass('colorChange');
+                }
             });
             });
 
@@ -345,16 +363,6 @@
         },
         "mouseleave": function() {
         $(cursor).removeClass("active");
-        }
-    });
-
-    $(".concept_wrap").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("colorChange");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("colorChange");
         }
     });
 

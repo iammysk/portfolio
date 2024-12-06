@@ -120,7 +120,7 @@
         <!--main-->
         <main class="works_main">
             <section class="works_wrap">
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works7.html">
                             <img src="./images/1x/pc_works_01.png" alt="" class="desktop_img">
@@ -132,7 +132,7 @@
                         <p class="label_title">美容室「LIFE」 HP</p>
                     </div>
                 </div>
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works6.html">
                             <img src="./images/1x/pc_works_02.png" alt="" class="desktop_img">
@@ -144,7 +144,7 @@
                         <p class="label_title">デザインカフェ HP</p>
                     </div>
                 </div>
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works5.html">
                             <img src="./images/1x/pc_works_03.jpg" alt="" class="desktop_img">
@@ -156,7 +156,7 @@
                         <p class="label_title">新バーガー告知バナー</p>
                     </div>                             
                 </div>
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works4.html">
                             <img src="./images/1x/pc_works_04.jpg" alt="" class="desktop_img">
@@ -168,7 +168,7 @@
                         <p class="label_title">新バーガー告知バナー</p>
                     </div>
                 </div>
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works3.html">
                             <img src="./images/1x/pc_works_05.png" alt="" class="desktop_img">
@@ -180,7 +180,7 @@
                         <p class="label_title">コワーキングスペース「WORKERS」 HP</p>
                     </div>
                 </div>
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works2.html">
                             <img src="./images/1x/pc_works_06.jpg" alt="" class="desktop_img">
@@ -192,7 +192,7 @@
                         <p class="label_title">トラベルメディア「TRRRRIP」 バナー</p>
                     </div>
                 </div>
-                <div class="works_content luxy-el">
+                <div class="works_content luxy-el grayscale">
                     <div class="works_bg">
                         <a href="./works1.html">
                             <img src="./images/1x/pc_works_07.jpg" alt="" class="desktop_img">
@@ -311,6 +311,27 @@
         $(cursor).removeClass("active");
         }
     });
+
+    // スクロールにより画面中央でカラーに変化
+    $(function () {
+        $(window).scroll(function () {
+            $('.grayscale').each(function () {
+            var elemPos = $(this).offset().top;
+            var elemHight =$(this).height();
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight / 2) {
+                $(this).addClass('active');
+                if (scroll > elemPos + elemHight - 200){
+                    $(this).removeClass('active')
+                }
+            } else {
+                $(this).removeClass('active');
+            }
+            });
+        });
+        });
+
 
     //慣性スクロール
     luxy.init({

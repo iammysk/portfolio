@@ -45,15 +45,8 @@ body {
     background-color: rgb(216, 216, 204, 0.3);
 }
 
-.about span {
-    font-size: 56px;
-    color: rgb(104, 126, 141, 0.1);
-    text-align: center;
-}
-
-
 h3 {
-    font-size: 36px;
+    font-size: 21px;
     color: #3a5e73;
     text-align: center;
     margin-top: 313px;
@@ -61,7 +54,7 @@ h3 {
 
 h4 {
     color: #3a5e73;
-    font-size: 21px;
+    /* font-size: 21px; */
 }
 
 /* FV */
@@ -285,17 +278,18 @@ h4 {
 .secondary {
     color: #3a5e73;
     font-size: 36px;
-    margin-top: 52px;
 }
 
-/* .about {
+.about {
     margin-top: 52px;
-} */
+}
 
 .about span {
-    font-size: 14px;
-    color: #687e8d;
+    font-size: 56px;
+    color: rgb(104, 126, 141, 0.1);
+    text-align: center;
 }
+
 /* sp */
 
 @media screen and (max-width: 767px) {
@@ -325,12 +319,12 @@ h4 {
         font-size: 21px;
     }
 
-    span {
-        font-size: 36px;
-    }
-
     .about {
         margin-top: 26px;
+    }
+
+    .about span {
+        font-size: 36px;
     }
 
         
@@ -520,6 +514,11 @@ h4 {
     text-align: center;
 }
 
+.favoritething span {
+    font-size: 36px;
+    color: rgb(104, 126, 141, 0.1);
+}
+
 /* スクロールバー分はみ出るのを防ぐ */
 
 body {
@@ -572,12 +571,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
 }
 
 .favoritething_text {
     width: 60%;
-    margin-top: 109px;
+    margin-top: 50px;
 }
 
 .favoritething_article p {
@@ -606,14 +604,11 @@ body {
         flex-direction: column;
         margin: calc((100% - 100vw) / 4);
         align-items: center;
+        margin-top: 50px;
     }
 
     .favoritething_text {
         width: 100%;
-    }
-
-    .favoritething_article h4 {
-        margin-top: 109px;
     }
 
     .favoritething span {
@@ -690,8 +685,8 @@ body {
         max-width: 1000px;
         width: 100vw;
         width: 100cqw;
-        margin: 109px calc(50% - 50vw);
-        margin: 109px calc(50% - 50cqw);
+        margin: 50px calc(50% - 50vw);
+        margin: 50px calc(50% - 50cqw);
         display: flex;
         flex-direction: column;
         align-items: end;
