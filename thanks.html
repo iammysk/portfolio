@@ -6,11 +6,15 @@
     <title>Thank you</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/thanks.css">
 </head>
 <body>
+
+    <div id="cursor"></div>
+
     <div class="container">
         <div class="title">
             <h1>MIYANISHI SAKI</h1>
@@ -30,5 +34,37 @@
             <a href="./index.html">ホームへ戻る</a>
         </div>
     </div>
+    <script>
+        // カーソル
+    $(function(){
+  
+        // カーソル要素の指定
+        var cursor=$("#cursor");
+        
+        // mousemoveイベントでカーソル要素を移動させる
+        $(document).on("mousemove",function(e){
+                    // カーソルの座標位置を取得
+            var x=e.clientX;
+            var y=e.clientY;
+            // カーソル要素のcssを書き換える用
+            cursor.css({
+            "opacity":"1",
+            "top":y+"px",
+            "left":x+"px"
+            });
+        });
+        });
+
+        // カーソル aタグホバー
+        $("a").on({
+        "mouseenter": function() {
+        //activeクラス付与
+        $(cursor).addClass("active");
+        },
+        "mouseleave": function() {
+        $(cursor).removeClass("active");
+        }
+        });
+    </script>
 </body>
 </html>

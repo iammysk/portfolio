@@ -21,7 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Microsoft社のjQueryのCDN -->
-    <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script>
+    <!-- <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script> -->
 
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
@@ -450,12 +450,6 @@
     webStorage();
 });
 
-    //慣性スクロール
-    luxy.init({
-        wrapper:'#luxy',
-        wapperSpeed: 10,
-    });
-
     // 慣性スクロール スマホ・タブレット非表示
     var _ua = (function(u){
     return {
@@ -475,7 +469,12 @@
     }
         })(window.navigator.userAgent.toLowerCase());
         if(!_ua.Mobile&&!_ua.Tablet){
-        luxy.init();
+
+            //慣性スクロール 初期化
+            luxy.init({
+                wrapper:'#luxy',
+                wapperSpeed: 10,
+            });
         }
     </script>
     
