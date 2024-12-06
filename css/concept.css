@@ -105,7 +105,7 @@ body {
 /* ホバー時の変化をゆっくりに */
 .pc_nav span {
     font-size: 14px;
-    /* color: #687e8d; */
+    color: #687e8d;
     transition: 0.5s;
     text-align: left;
 }
@@ -658,11 +658,23 @@ body {
 }
 
 @media screen and (max-width: 1232px) {
+    /* クラス名を追加して調整 */
+   .blend_mode{
+        mix-blend-mode: difference;
+   }
+
+   .sp_nav {
+        mix-blend-mode: normal;
+   }
+    
+}
+
+/* @media screen and (max-width: 1232px) {
    .nav_wrap {
     mix-blend-mode: difference;
    }
     
-}
+} */
 
 /* スクロールにより画面中央でカラーに変化 */
 

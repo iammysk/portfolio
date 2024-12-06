@@ -24,14 +24,14 @@
 
         <!--FV-->
         <div>
+            
+            <div class="title">
+                <h1>MIYANISHI SAKI</h1>
+                <p>DESIGNER</p>
+            </div>
+            
             <!--nav-->
             <div class="nav_wrap">
-
-                <div class="title">
-                    <h1>MIYANISHI SAKI</h1>
-                    <p>DESIGNER</p>
-                </div>
-
                 <nav class="nav">
                     <ul>
                         <li>
@@ -120,7 +120,7 @@
             
             <!--main-->
             <main class="concept_main">
-                <div class="concept_wrap  luxy-el" data-speed-y="7" data-offset="-50">
+                <div class="concept_wrap luxy-el" data-speed-y="7" data-offset="-50">
                     <div class="concept_article">
                         <div class="concept_content">
                             <h3>ことばが、かたちに</h3>
@@ -260,55 +260,82 @@
 
         $(function () {
             $(window).on('scroll', function () {
-                $('.nav_wrap li').each(function () {
-                let menuY = $(this).offset().top + $(this).height()
-                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
-                    // .blueと重なっている時
-                    $(this).addClass('change_color');
-                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
-                    // .yellowと重なっている時
-                    // $(this).css('color', 'blue');
+                let menuY = $('.nav_wrap').offset().top + $('.nav_wrap').height()
+                if (menuY > $('.concept_wrap').offset().top && $('.nav_wrap').offset().top < $('.concept_wrap').offset().top + $('.concept_wrap').outerHeight()) {
+                    // 重なっている時はクラス追加
+                    $('.nav_wrap').addClass('blend_mode')
                 } else {
-                    // 重なっていない時は色を戻す
-                    $(this).removeClass('change_color');
+                    // 重なっていない時はクラスを外す
+                    $('.nav_wrap').removeClass('blend_mode')
                 }
-                })
-            })
-            })
-        $(function () {
-            $(window).on('scroll', function () {
-                $('.title h1').each(function () {
-                let menuY = $(this).offset().top + $(this).height()
-                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
-                    // .blueと重なっている時
-                    $(this).css('color', 'white');
-                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
-                    // .yellowと重なっている時
-                    // $(this).css('color', 'blue');
-                } else {
-                    // 重なっていない時は色を戻す
-                    $(this).css('color', '#687e8d')
-                }
-                })
             })
         })
         $(function () {
             $(window).on('scroll', function () {
-                $('.title p').each(function () {
-                let menuY = $(this).offset().top + $(this).height()
-                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
+                let menuY = $('.title').offset().top + $('.title').height()
+                if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').outerHeight()) {
+                    console.log('aa')
+                    // 重なっている時はクラス追加
+                    $('.title').addClass('blend_mode')
+                } else {
+                    // 重なっていない時はクラスを外す
+                    $('.title').removeClass('blend_mode')
+                }
+            })
+        })
+
+
+        // $(function () {
+            // $(window).on('scroll', function () {
+                // $('.nav_wrap li').each(function () {
+                // let menuY = $(this).offset().top + $(this).height()
+                // if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
                     // .blueと重なっている時
-                    $(this).css('color', 'white');
+                    // $(this).addClass('change_color');
                 // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
                     // .yellowと重なっている時
                     // $(this).css('color', 'blue');
-                } else {
+                // } else {
                     // 重なっていない時は色を戻す
-                    $(this).css('color', '#687e8d')
-                }
-                })
-            })
-        })
+                    // $(this).removeClass('change_color');
+            //     }
+            //     })
+            // })
+            // })
+        // $(function () {
+        //     $(window).on('scroll', function () {
+        //         $('.title h1').each(function () {
+        //         let menuY = $(this).offset().top + $(this).height()
+        //         if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
+                    // .blueと重なっている時
+                    // $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                // } else {
+                    // 重なっていない時は色を戻す
+                    // $(this).css('color', '#687e8d')
+        //         }
+        //         })
+        //     })
+        // })
+        // $(function () {
+        //     $(window).on('scroll', function () {
+        //         $('.title p').each(function () {
+        //         let menuY = $(this).offset().top + $(this).height()
+        //         if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').height()) {
+                    // .blueと重なっている時
+                    // $(this).css('color', 'white');
+                // } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
+                    // .yellowと重なっている時
+                    // $(this).css('color', 'blue');
+                // } else {
+                    // 重なっていない時は色を戻す
+        //             $(this).css('color', '#687e8d')
+        //         }
+        //         })
+        //     })
+        // })
         // カーソル
         $(function(){
         

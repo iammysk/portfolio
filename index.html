@@ -433,12 +433,48 @@
         $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
         });
 
+    // loading画面2回目以降非表示
+        $(function () {
+        var webStorage = function () {
+        if (sessionStorage.getItem('access')) {
+            $('.loading').fadeOut("slow");
+        } else {
+            sessionStorage.setItem('access', 'true');
+            setTimeout(function () {
+                $('.loading').fadeOut("slow");
+            }, 3000);
+        }
+    }
+    webStorage();
+});
+
     //慣性スクロール
     luxy.init({
         wrapper:'#luxy',
         wapperSpeed: 10,
     });
-    
+
+    // 慣性スクロール スマホ・タブレッっと非表示
+    var _ua = (function(u){
+    return {
+      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
+        || u.indexOf("ipad") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+        || u.indexOf("kindle") != -1
+        || u.indexOf("silk") != -1
+        || u.indexOf("playbook") != -1,
+      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+        || u.indexOf("iphone") != -1
+        || u.indexOf("ipod") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+        || u.indexOf("blackberry") != -1
+    }
+        })(window.navigator.userAgent.toLowerCase());
+        if(!_ua.Mobile&&!_ua.Tablet){
+        luxy.init();
+        }
     </script>
     
 </body>
