@@ -16,8 +16,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- スクロール時背景に合わせて色が反転 -->
+    <!-- カーソル -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Microsoft社のjQueryのCDN -->
@@ -308,6 +309,9 @@
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
 
+        const documentHight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
+
         // 固定要素の初期表示状態を設定
         let isHidden = false;
 
@@ -326,6 +330,12 @@
             fixedElement.classList.remove('visible'); // 固定要素を非表示にする
             fixedElement.classList.add('hidden'); // 固定要素を非表示にする
             isHidden = true; // 非表示フラグを設定
+            }
+        } else if (window.scrollY + windowHeight >= documentHight){
+            if (!isHidden) {
+                fixedElement.classList.remove('visible');// 固定要素を非表示にする
+                fixedElement.classList.add('hidden');// 固定要素を非表示にする
+                isHidden = true;// 非表示フラグを設定
             }
         } else {
             if (isHidden) {

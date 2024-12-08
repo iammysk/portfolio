@@ -668,10 +668,10 @@ body {
         mix-blend-mode: difference;
    }
 
-   .sp_nav {
+   /* .sp_nav {
         mix-blend-mode: normal;
    }
-    
+     */
 }
 
 /* @media screen and (max-width: 1232px) {

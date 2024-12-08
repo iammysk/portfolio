@@ -226,6 +226,9 @@
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
 
+        const documentHight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
+
         // 固定要素の初期表示状態を設定
         let isHidden = false;
 
@@ -244,6 +247,12 @@
             fixedElement.classList.remove('visible'); // 固定要素を非表示にする
             fixedElement.classList.add('hidden'); // 固定要素を非表示にする
             isHidden = true; // 非表示フラグを設定
+            }
+        } else if (window.scrollY + windowHeight >= documentHight){
+            if (!isHidden) {
+                fixedElement.classList.remove('visible');// 固定要素を非表示にする
+                fixedElement.classList.add('hidden');// 固定要素を非表示にする
+                isHidden = true;// 非表示フラグを設定
             }
         } else {
             if (isHidden) {
@@ -318,11 +327,32 @@
         }
     });
 
-        //慣性スクロール
-        luxy.init({
-            wrapper:'#luxy',
-            wapperSpeed: 10,
-        });
+    // 慣性スクロール スマホ・タブレット非表示
+    var _ua = (function(u){
+    return {
+      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
+        || u.indexOf("ipad") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+        || u.indexOf("kindle") != -1
+        || u.indexOf("silk") != -1
+        || u.indexOf("playbook") != -1,
+      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+        || u.indexOf("iphone") != -1
+        || u.indexOf("ipod") != -1
+        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+        || u.indexOf("blackberry") != -1
+    }
+        })(window.navigator.userAgent.toLowerCase());
+        if(!_ua.Mobile&&!_ua.Tablet){
+
+            //慣性スクロール 初期化
+            luxy.init({
+                wrapper:'#luxy',
+                wapperSpeed: 10,
+            });
+        }
 
     </script>
 </body>
