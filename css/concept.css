@@ -168,7 +168,6 @@ body {
     .nav_wrap {
         left: 0;
         width: 100%;
-        mix-blend-mode: normal;
     }
 
     .sp_btn {
@@ -667,19 +666,7 @@ body {
    .blend_mode{
         mix-blend-mode: difference;
    }
-
-   /* .sp_nav {
-        mix-blend-mode: normal;
-   }
-     */
 }
-
-/* @media screen and (max-width: 1232px) {
-   .nav_wrap {
-    mix-blend-mode: difference;
-   }
-    
-} */
 
 /* スクロールにより画面中央でカラーに変化 */
 

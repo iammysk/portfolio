@@ -261,23 +261,7 @@
         });
 
 
-        // sp_nav
-
-        $(function(){
-            $('.sp_btn').on('click',function(){
-                $('.sp_btn').toggleClass('open');
-                $('.sp_nav').fadeToggle();
-                $('#cursor').toggleClass('colorChange');
-
-                if($('.sp_btn').hasClass('open')){
-                    $('.nav_wrap').removeClass('blend_mode');
-                    $('.title').removeClass('blend_mode');
-                } else {
-                    $('.nav_wrap').addClass('blend_mode');
-                    $('.title').addClass('blend_mode');
-                }
-            })
-        })
+        
 
 
         // スクロール時背景に合わせて文字色が反転
@@ -308,7 +292,23 @@
             })
         })
 
-        
+        // sp_nav
+
+        $(function(){
+            $('.sp_btn').on('click',function(){
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+                $('#cursor').toggleClass('colorChange');
+
+                if($('.sp_btn').hasClass('open')){
+                    $('.nav_wrap').removeClass('blend_mode');
+                    $('.title').removeClass('blend_mode');
+                } else {
+                    $('.nav_wrap').addClass('blend_mode');
+                    $('.title').addClass('blend_mode');
+                }
+            })
+        })
 
         // カーソル
         $(function(){
