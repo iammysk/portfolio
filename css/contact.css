@@ -332,16 +332,18 @@ span {
     max-width: 875px;
     margin: 0 auto;
     background-color: #fff;
-    padding-top: 174px;
-    padding-bottom: 174px;
+    padding-top: 117px;
+    padding-bottom: 117px;
     margin-top: -20px;
     margin-bottom: 231px;
 }
 
 .contact_main p {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
+    font-size: 14px;
     line-height: 2;
+    margin-bottom: 100px;
 }
 
 h3 {

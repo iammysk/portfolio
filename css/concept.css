@@ -348,7 +348,7 @@ body {
 }
 
 .concept_article h3 {
-    font-size: 36px;
+    font-size: 21px;
     color: #fff;
     display: inline-block;
 }
@@ -358,7 +358,7 @@ body {
 }
 
 .secondary2 {
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
     margin-top: 21px;
     text-align:right;
@@ -488,7 +488,6 @@ body {
     }
     
     .secondary2 {
-        font-size: 12px;
         margin-top: 15px;
         text-align:right;
     }
@@ -519,13 +518,13 @@ body {
 }
 
 .concept2_wrap h3 {
-    font-size: 36px;
+    font-size: 21px;
     color: #3a5e73;
     text-align: center;
 }
 
 .concept2_img {
-    margin-top: 174px;
+    margin-top: 117px;
     display: flex;
     overflow: hidden;
     margin-left: 28%;
@@ -554,17 +553,13 @@ body {
 }
 
 .concept2_text {
-    margin-top: 174px;
+    margin-top: 117px;
     margin-left: 28%;
     line-height: 2.3;
     font-size: 14px;
 }
 
 @media screen and (max-width: 767px) {
-
-    .concept2_wrap {
-        margin-top: 143px;
-    }
     
     .concept2_wrap h3 {
         font-size: 21px;

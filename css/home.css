@@ -318,7 +318,7 @@ span {
 .scroll {
     font-size: 14px;
     position: absolute;
-    bottom: 60px;
+    bottom: 90px;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -534,7 +534,7 @@ span {
 
     .img_wrap {
         right: 0;
-        top: 48%;
+        top: 52%;
         transform: translateY(-50%);
         max-width: 1120.5px;
     }
@@ -589,7 +589,7 @@ span {
 
 .content p {
     font-size: 14px;
-    line-height: 2;
+    line-height: 2.3;
 }
 
 .top_space {
@@ -615,7 +615,7 @@ span {
     .content {
         text-align: center;
         margin: 0 auto;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         padding-top: 350px;
         
     }
