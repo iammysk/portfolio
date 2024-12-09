@@ -540,9 +540,11 @@ h4 {
     filter: gray; 
     /* W3C */
     filter: grayscale(1); 
+    transition: 1.4s;
 }
 
 .grayscale.active {
     /* animation: 2s fadeup ease-in-out forwards; */
     filter: none;
+    transition: 1.4s;
   }

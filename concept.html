@@ -274,7 +274,9 @@
                 let menuY = $('.nav_wrap').offset().top + $('.nav_wrap').height()
                 if (menuY > $('.concept_wrap').offset().top && $('.nav_wrap').offset().top < $('.concept_wrap').offset().top + $('.concept_wrap').outerHeight()) {
                     // 重なっている時はクラス追加
-                    $('.nav_wrap').addClass('blend_mode')
+                    if (!$('.sp_btn').hasClass('open')){
+                        $('.nav_wrap').addClass('blend_mode')
+                    }
                 } else {
                     // 重なっていない時はクラスを外す
                     $('.nav_wrap').removeClass('blend_mode')
@@ -287,7 +289,10 @@
                 if (menuY > $('.concept_wrap').offset().top && menuY < $('.concept_wrap').offset().top + $('.concept_wrap').outerHeight()) {
                     console.log('aa')
                     // 重なっている時はクラス追加
-                    $('.title').addClass('blend_mode')
+                    if (!$('.sp_btn').hasClass('open')){
+                        $('.title').addClass('blend_mode')
+                    }
+                    
                 } else {
                     // 重なっていない時はクラスを外す
                     $('.title').removeClass('blend_mode')

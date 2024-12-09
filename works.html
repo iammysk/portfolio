@@ -247,6 +247,7 @@
         const fixedElementRect = fixedElement.getBoundingClientRect();
         const targetElementRect = targetElement.getBoundingClientRect();
 
+        console.log(documentHight)
         // 固定要素が対象要素に差し掛かった場合、非表示にする
         if (
             fixedElementRect.bottom >= targetElementRect.top &&
@@ -257,7 +258,7 @@
             fixedElement.classList.add('hidden'); // 固定要素を非表示にする
             isHidden = true; // 非表示フラグを設定
             }
-        } else if (window.scrollY + windowHeight >= documentHight){
+        } else if (window.scrollY + windowHeight + 2 >= documentHight){
             if (!isHidden) {
                 fixedElement.classList.remove('visible');// 固定要素を非表示にする
                 fixedElement.classList.add('hidden');// 固定要素を非表示にする
