@@ -258,7 +258,7 @@
             fixedElement.classList.add('hidden'); // 固定要素を非表示にする
             isHidden = true; // 非表示フラグを設定
             }
-        } else if (window.scrollY + windowHeight + 2 >= documentHight){
+        } else if (window.scrollY + windowHeight + 8 >= documentHight){
             if (!isHidden) {
                 fixedElement.classList.remove('visible');// 固定要素を非表示にする
                 fixedElement.classList.add('hidden');// 固定要素を非表示にする
