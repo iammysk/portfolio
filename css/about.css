@@ -606,6 +606,10 @@ body {
 
 @media screen and (max-width: 767px) {
 
+    .label {
+        margin: calc((100% - 100vw) / 4);
+    }
+
     .favoritething_article{
         width: calc( 100% + ((100vw - 100%) / 2));
         flex-direction: column;
@@ -616,12 +620,12 @@ body {
 
     .favoritething {
         text-align: left;
-        margin-left: 3%;
     }
 
     h3 {
         text-align: left;
-        margin-left: 3%;
+        margin: calc((100% - 100vw) / 4);
+        margin-top: 21px;
     }
 
     .favoritething_text {
@@ -629,6 +633,10 @@ body {
     }
     
     .slide_container {
+        margin-top: 50px;
+    }
+
+    .favoritething_img {
         margin-top: 50px;
     }
 
@@ -716,7 +724,6 @@ body {
 
     .values {
         text-align: left;
-        margin-left: 3%;
     }
     
     .values_article{
@@ -727,6 +734,9 @@ body {
         align-items: center;
     }
 
+    .values_img {
+        margin-top: 50px;
+    }
     .values_img img {
         width: 100vw;
         min-width: 293px;
