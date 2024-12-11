@@ -523,9 +523,9 @@ h4 {
 
 /* スクロールバー分はみ出るのを防ぐ */
 
-body {
+/* body {
     container-type: inline-size;
-}
+} */
 
 .slide_container {
     position: relative;
