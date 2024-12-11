@@ -1015,22 +1015,15 @@ span {
 
 /* スクロールにより画面中央でカラーに変化 */
 
-/* img { */
-    /* -webkit-filter: grayscale(1); Webkit */
-    /* filter: gray; IE6-9 */
-    /* filter: grayscale(1); W3C */
-/* } */
-
-/* img:hover {
-    filter: none;
-} */
-
 .grayscale {
     /* opacity: 0; */
+    /* Webkit */
     -webkit-filter: grayscale(1); 
+    /* IE6-9 */
     filter: gray; 
+    /* W3C */
     filter: grayscale(1); 
-    transition: 1.4s;
+    transition: 1.2s;
 }
 
 .grayscale.active {
@@ -1039,7 +1032,7 @@ span {
     transition: 1.4s;
   }
   
-  @keyframes fadeup {
+  /* @keyframes fadeup {
     0% {
       opacity: 0;
       transform: translateX(-50px);
@@ -1049,4 +1042,4 @@ span {
       opacity: 1;
       transform: translateX(0);
     }
-  }
+  } */

@@ -351,19 +351,27 @@ body {
 .concept_article h3 {
     font-size: 21px;
     color: #fff;
-    display: inline-block;
+    margin-top: 21px;
 }
 
 .concept_content {
     display: inline-block;
 }
 
-.secondary2 {
+.label {
+    display: inline-block;
+    border-left: 1px solid #fff;
+    padding-left: 14px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* .secondary2 {
     font-size: 12px;
     color: #fff;
     margin-top: 21px;
     text-align:right;
-}
+} */
     
 .concept_text {
     color: #fff;
@@ -400,7 +408,7 @@ body {
     .concept_article {
         margin-left: 0;
         margin-right: 0;
-        text-align: center;
+        /* text-align: center; */
         margin-top: 380px;
     }
 
@@ -416,7 +424,8 @@ body {
 
     .concept_content {
         justify-content: center;
-        margin-top: 117px;
+        margin-top: 198px;
+        margin-left: 3%;
     }
 
     .center_box {
