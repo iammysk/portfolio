@@ -535,12 +535,12 @@ body {
 
 /* スクロールバー分はみ出るのを防ぐ */
 
-body {
+/* body {
     container-type: inline-size;
-}
+} */
 
 .slide_container {
-    /* position: relative; */
+    position: relative;
     height: 181px;
     width: 100vw;
     width: 100cqw;
@@ -550,11 +550,13 @@ body {
 }
 
 .concept2_img {
-    margin-top: 117px;
     display: flex;
     overflow: hidden;
-    margin-left: 28%;
-    width: calc(72% + (100vw - 100%) / 2);
+    width: calc(77% + (100vw - 100%) / 2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 700px;
 }
 
 
