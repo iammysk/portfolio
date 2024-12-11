@@ -553,12 +553,11 @@ body {
     display: flex;
     overflow: hidden;
     width: calc(72% + (100vw - 100%) / 2);
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     min-width: 700px;
 }
-
 
 .slideshow {
     display: flex;
@@ -602,8 +601,6 @@ body {
     .slide_container {
         margin-top: 50px;
     }
-
-
 } 
 
 
