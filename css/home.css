@@ -176,6 +176,15 @@ h2 {
     margin-top: 19px;
 }
 
+.label {
+    display: inline-block;
+    margin-top: 20px;
+    border-left: 1px solid rgba(58, 94, 115, 0.5);
+    padding-left: 14px;
+    font-size: 12px;
+    color: rgba(58, 94, 115, 0.5);
+}
+
 span {
     font-size: 36px;
     color: rgb(104, 126, 141, 0.3);

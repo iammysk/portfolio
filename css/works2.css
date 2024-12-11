@@ -379,8 +379,8 @@ span {
 .label {
     display: inline-block;
     margin-top: 20px;
-    border-right: 1px solid rgba(58, 94, 115, 0.5);
-    padding-right: 14px;
+    border-left: 1px solid rgba(58, 94, 115, 0.5);
+    padding-left: 14px;
     font-size: 12px;
     color: rgba(58, 94, 115, 0.5);
 }
@@ -395,7 +395,6 @@ span {
     width: 685px;
     margin-top: 109px; 
     margin-left: calc(315px - (1000px - 100%) / 2);
-    
 }
 
 
