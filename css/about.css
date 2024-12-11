@@ -530,7 +530,7 @@ body {
 }
 
 .slide_container {
-    position: relative;
+    /* position: relative; */
     height: 181px;
     width: 100vw;
     width: 100cqw;
