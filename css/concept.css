@@ -533,12 +533,30 @@ body {
     text-align: center;
 }
 
-.concept2_img {
+/* スクロールバー分はみ出るのを防ぐ */
+
+body {
+    container-type: inline-size;
+}
+
+.slide_container {
+    position: relative;
+    height: 181px;
+    width: 100vw;
+    width: 100cqw;
+    margin: 0 calc(50% - 50vw);
+    margin: 0 calc(50% - 50cqw);
     margin-top: 117px;
+}
+
+.concept2_img {
     display: flex;
     overflow: hidden;
-    margin-left: 28%;
     width: calc(72% + (100vw - 100%) / 2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 700px;
 }
 
 
@@ -575,14 +593,14 @@ body {
         font-size: 21px;
     }
 
-    .concept2_img {
-        margin-top: 117px;
-    }
-
     .concept2_text {
         margin: 0 auto;
         margin-top: 70px;
         width: 92%;
+    }
+
+    .slide_container {
+        margin-top: 50px;
     }
 
 
