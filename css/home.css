@@ -534,10 +534,6 @@ span {
         margin-left: 19px;
     }
 
-    /* .fv_img {
-        min-width: 293px;
-    } */
-
     .img_wrap {
         right: 0;
         top: 52%;
@@ -574,6 +570,11 @@ span {
         
 }
 
+@media screen and (max-width: 500px) {
+    .img_wrap {
+        top: 47%;
+    }
+}
     
 
 /* main */
