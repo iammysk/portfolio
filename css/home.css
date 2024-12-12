@@ -785,7 +785,7 @@ span {
     margin-top: 231px;
 }
 
-.works h2 {
+.works_tittle {
     margin-left: 28%;
 }
 
@@ -915,9 +915,9 @@ span {
         margin-bottom: 26px;
     }  
 
-    .works_tittle span {
+    /* .works_tittle span {
         margin: 0 auto;
-    }
+    } */
 
     .desktop-version {
         display: none;

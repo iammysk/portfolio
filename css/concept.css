@@ -493,6 +493,10 @@ body {
         margin-top: 200px;
     }
 
+    .concept_content {
+        margin-top: 117px;
+    }
+
     .concept_article h3 {
         font-size: 21px;
     }
@@ -546,7 +550,7 @@ body {
     width: 100cqw;
     margin: 0 calc(50% - 50vw);
     margin: 0 calc(50% - 50cqw);
-    margin-top: 117px;
+    margin-top: 50px;
 }
 
 .concept2_img {
@@ -595,8 +599,13 @@ body {
 
     .concept2_text {
         margin: 0 auto;
-        margin-top: 70px;
+        margin-top: 100px;
         width: 92%;
+    }
+
+    .concept2_wrap h3 {
+       text-align: left;
+       margin-left: 3%;
     }
 
 
