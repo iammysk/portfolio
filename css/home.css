@@ -228,9 +228,9 @@ span {
 .pc_nav {
     text-decoration: none;
     color: inherit;
-    line-height: 1.5em;
+    line-height: 2.5em;
      /* 高さをline-heightと一緒に */
-    height: 1.5em;
+    height: 2.5em;
     /* 縦並び */
     display: flex;
     flex-direction: column;
@@ -269,7 +269,7 @@ span {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-top: 36px;
+    padding-top: 30px;
 }
 
 .nav li:has(a:hover)::before {

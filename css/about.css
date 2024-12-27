@@ -93,9 +93,9 @@ h4 {
 .pc_nav {
     text-decoration: none;
     color: inherit;
-    line-height: 1.5em;
+    line-height: 2.5em;
      /* 高さをline-heightと一緒に */
-    height: 1.5em;
+    height: 2.5em;
     /* 縦並び */
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@ h4 {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-top: 36px;
+    padding-top: 30px;
 }
 
 .nav li:has(a:hover)::before {
@@ -356,7 +356,18 @@ h4 {
 
 .about_wrap2 {
     max-width: 355px;
+    width: 100%;
     margin-right: calc((100% - 1000px) / 2);
+}
+
+.about_wrap2 h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.text {
+    margin-right: 40px;
 }
 
 .article {
