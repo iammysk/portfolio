@@ -21,8 +21,6 @@
     <script src="./js/luxy.min.js"></script>
     <!-- スライダー（Swiper.js） -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- ローディング -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -430,6 +428,7 @@
             var webStorage = function () {
             if (sessionStorage.getItem('access')) {
                 console.log('2回目以降')
+                // $('.loading').css('display','none');
                 $('.loading').hide("slow");
             } else {
             sessionStorage.setItem('access', 'true');
