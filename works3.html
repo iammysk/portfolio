@@ -13,38 +13,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css" integrity="sha512-nF9G9AnUEVv+zx285OqwGE8c1gmkys3qV6iuDK5rVG/UuZLWRgGBy/tN5WzSXXuZDZ1YvwhJ9+a/DTj71L8Lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.css" integrity="sha512-LVOzFPLcBUppn3NOx8FXJkh2TawWu/jk9ynbntKID6cjynQsfqmHlUbH72mjAwZXsu0LOLw26JoiC0qHJde70Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!------------------------->
-
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/works3.css">
-
     <!-- favicon -->
     <link rel="icon" href="./icon/favicon.ico">
-
     <!-- ハンバーガーメニューのCDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/micromodal/0.4.10/micromodal.min.js" integrity="sha512-qcwcAul7d7yUcoz3MmQABiaGDa+gVkaDWgZX6wEd/z3I6z62nQCDW3EqioQG+O+QlGCpxmJLdH5snh4IaDPiPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
     <!-- jQueryのCDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <!-- RemodalのCDN（JS） -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- スクロール時背景に合わせて色が反転 -->
+    <!-- カーソル -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
 </head>
 
 <body>
-
+    <!-- cursor -->
     <div id="cursor"></div>
 
-    <!--FV-->
+    <!-- nav -->
     <div>
-
-        <!--nav-->
         <div class="nav_wrap">
 
             <div class="title">
@@ -128,7 +120,9 @@
         </div>
     </div>    
 
+    <!-- works3 -->
     <div id="luxy">
+        <!--FV-->
         <div class="wrap">
             <h2 class="secondary">作品一覧</h2>
             <div class="works">
@@ -209,6 +203,7 @@
             </div>
             
         </main>
+
         <!--footer-->
         <footer class="hidden-area">
             <img src="./images/1x/pc_footer.jpg" alt="">
@@ -229,8 +224,10 @@
         </footer>
     </div>
     <script>
-        const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
-        const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
+        // 非表示にしたい固定要素
+        const fixedElement = document.querySelector('.nav_wrap'); 
+         // 固定要素が差し掛かる対象の要素
+        const targetElement = document.querySelector('.hidden-area');
 
         const documentHight = document.documentElement.scrollHeight;
         const windowHeight = window.innerHeight;
@@ -271,94 +268,90 @@
         });
 
         // sp_nav
-
         $(function(){
             $('.sp_btn').on('click',function(){
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
                 $('#cursor').toggleClass('colorChange');
             })
-    })
-    // カーソル
-    $(function(){
-  
-        // カーソル要素の指定
-        var cursor=$("#cursor");
-        
-        // mousemoveイベントでカーソル要素を移動させる
-        $(document).on("mousemove",function(e){
-                    // カーソルの座標位置を取得
-            var x=e.clientX;
-            var y=e.clientY;
-            // カーソル要素のcssを書き換える用
-            cursor.css({
-            "opacity":"1",
-            "top":y+"px",
-            "left":x+"px"
+        })
+        // カーソル
+        $(function(){
+            // カーソル要素の指定
+            var cursor=$("#cursor");
+            // mousemoveイベントでカーソル要素を移動させる
+            $(document).on("mousemove",function(e){
+                // カーソルの座標位置を取得
+                var x=e.clientX;
+                var y=e.clientY;
+                // カーソル要素のcssを書き換える用
+                cursor.css({
+                "opacity":"1",
+                "top":y+"px",
+                "left":x+"px"
+                });
             });
-        });
         });
 
         // aタグホバー
         $("a").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
+
+        // sp_btnタグホバー
+        $(".sp_btn").on({
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
+
+        // モーダルホバー
+        $(".remodal-close").on({
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
+
+        // 慣性スクロール スマホ・タブレット非表示
+        var _ua = (function(u){
+        return {
+        Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
+            || u.indexOf("ipad") != -1
+            || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+            || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+            || u.indexOf("kindle") != -1
+            || u.indexOf("silk") != -1
+            || u.indexOf("playbook") != -1,
+        Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+            || u.indexOf("iphone") != -1
+            || u.indexOf("ipod") != -1
+            || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+            || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+            || u.indexOf("blackberry") != -1
         }
-    });
+            })(window.navigator.userAgent.toLowerCase());
+            if(!_ua.Mobile&&!_ua.Tablet){
 
-    // sp_btnタグホバー
-    $(".sp_btn").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
-        }
-    });
-
-    // モーダルホバー
-    $(".remodal-close").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
-        }
-    });
-
-    // 慣性スクロール スマホ・タブレット非表示
-    var _ua = (function(u){
-    return {
-      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
-        || u.indexOf("ipad") != -1
-        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
-        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
-        || u.indexOf("kindle") != -1
-        || u.indexOf("silk") != -1
-        || u.indexOf("playbook") != -1,
-      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
-        || u.indexOf("iphone") != -1
-        || u.indexOf("ipod") != -1
-        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
-        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
-        || u.indexOf("blackberry") != -1
-    }
-        })(window.navigator.userAgent.toLowerCase());
-        if(!_ua.Mobile&&!_ua.Tablet){
-
-            //慣性スクロール 初期化
-            luxy.init({
-                wrapper:'#luxy',
-                wapperSpeed: 10,
-            });
-        }
-
+                //慣性スクロール 初期化
+                luxy.init({
+                    wrapper:'#luxy',
+                    wapperSpeed: 10,
+                });
+            }
     </script>
 </body>
 </html>

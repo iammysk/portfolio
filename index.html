@@ -13,24 +13,18 @@
 
     <!-- favicon -->
     <link rel="icon" href="./icon/favicon.ico">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <!-- カーソル -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <!-- Microsoft社のjQueryのCDN -->
-    <!-- <script src=”https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js”></script> -->
-
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
+    <!-- スライダー（Swiper.js） -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
 
-</head>
-</head>
 <body>
-    <!-- ローディング -->
+    <!-- loading -->
     <div id="splash">
         <div id="splash_logo">
             <p>Bringing words to life</p>
@@ -44,20 +38,18 @@
             <span>ち</span>
             <span>に</span>
         </div>
-        <!--/splash-->
     </div>
 
+    <!-- cursor -->
     <div id="cursor"></div>
-            
-            <div>
-                <!--nav-->
-                <div class="nav_wrap">
 
+    <!-- nav -->
+            <div>
+                <div class="nav_wrap">
                     <div class="title">
                         <h1>MIYANISHI SAKI</h1>
                         <p>DESIGNER</p>
                     </div>
-
                     <nav class="nav">
                         <ul>
                             <li>
@@ -134,8 +126,9 @@
                 </div>
             </div>
 
+    <!-- home -->
             <div id="luxy">
-                <!--FV-->
+        <!--FV-->
                 <div class="fv">
                     <p class="copy_sub">Bringing words to life</p>
                     <p class="copy">ことばが、かたちに</p>
@@ -165,11 +158,8 @@
                         </div>
                     </a>
                 </div>
-                <!--↑nav-->
-
-                <!--main-->
+        <!--main-->
                 <main class="home_main">
-
                 <!--content-->
                     <div id="content" class="content grayscale luxy-el" data-speed-y="5" data-offset="-20">
                         <p>言葉には大きな力がある<br class="mobile-break">とわたしは思います。<br>
@@ -179,8 +169,7 @@
                             <p >みなさまの想いと実直に向き合い、<br>
                             想いを実現するお手伝いをしたい<br class="mobile-break">と考えております。<br></p>
                         </div>
-                    </div>
-                        
+                    </div>    
                 <!--about-->
                     <section class="about">
                         <div class="about_tittle grayscale">
@@ -205,7 +194,6 @@
                             <a href="./about.html">詳しく見る</a>
                         </div>
                     </section>
-
                 <!--works-->
                     <section class="works">
                         <div class="works_tittle grayscale">                
@@ -213,10 +201,9 @@
                                 <p class="label">WORKS</p>
                             </div>
                             <h2>作品一覧</h2>
-                        </div>
-                        
+                        </div>                       
                         <div class="works_img_wrap desktop-version grayscale">
-                            <!-- pc版 -->
+                    <!-- pc版 -->
                             <div class="bg">
                                 <img src="./images/1x/pc_home_works_01.png" alt="" class="works_content">
                             </div>
@@ -236,9 +223,8 @@
                                 <img src="./images/1x/pc_home_works_06.jpg" alt="" class="works_content">
                             </div>    
                         </div>
-
+                    <!-- sp版 -->
                         <div class="swiper mobile-version">
-                            <!-- sp版 -->
                             <div class="swiper-wrapper grayscale">
                                 <div class="swiper-slide">
                                     <img src="./images/2x/sp_works_01@2x.png" alt="" class="works_content">
@@ -258,17 +244,15 @@
                                 <div class="swiper-slide">
                                     <img src="./images/2x/sp_works_06@2x-80.jpg" alt="" class="works_content">
                                 </div>    
-                            </div>
-                            
+                            </div>    
                         </div>
 
                         <div class="works_btn">
                             <a href="./works.html">詳しく見る</a>
                         </div>  
                     </section>
-                </main>
-                
-                <!--footer-->
+                </main>          
+        <!--footer-->
                 <footer class="hidden-area grayscale">
                     <img src="./images/1x/pc_footer.jpg" alt="">
                     <div class="footer_wrap">
@@ -288,8 +272,6 @@
                 </footer>
             </div>
 
-    <!-- Swiper.js の JavaScript -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // Swiper 初期化
         const swiper = new Swiper('.swiper', {
@@ -303,9 +285,9 @@
             },
             slidesPerView: 1, // 表示するスライド数
         });
-    </script>
 
-    <script>
+
+        // footer到達時にnavを非表示
         const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
         const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
 
@@ -346,8 +328,8 @@
         }
         });
 
-        // sp_nav
 
+        // sp_nav
         $(function(){
             $('.sp_btn').on('click',function(){
                 $('.sp_btn').toggleClass('open');
@@ -358,108 +340,105 @@
 
         // スクロールイベントに応じて文字色が反転
         $(function () {
-      $(window).on('scroll', function () {
-        $('.nav_wrap').each(function () {
-          let menuY = $(this).offset().top + $(this).height()
-          if (menuY > $('.desktop-version').offset().top && menuY < $('.desktop-version').offset().top + $('.desktop-version').height()) {
-            // .blueと重なっている時
-            $(this).css('color', 'white');
-        //   } else if (menuY > $('.yellow').offset().top && menuY < $('.yellow').offset().top + $('.yellow').height()) {
-            // .yellowと重なっている時
-            $(this).css('color', 'blue');
-          } else {
-            // 重なっていない時は色を戻す
-            $(this).css('color', 'gray')
-          }
-        })
-      })
-    })
-
-    // カーソル
-    $(function(){
-  
-        // カーソル要素の指定
-        var cursor=$("#cursor");
-        
-        // mousemoveイベントでカーソル要素を移動させる
-        $(document).on("mousemove",function(e){
-                    // カーソルの座標位置を取得
-            var x=e.clientX;
-            var y=e.clientY;
-            // カーソル要素のcssを書き換える用
-            cursor.css({
-            "opacity":"1",
-            "top":y+"px",
-            "left":x+"px"
-            });
-        });
-        });
-
-    // カーソル aタグホバー
-    $("a").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
-        }
-    });
-
-    // カーソル aタグホバー
-    $(".sp_btn").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
-        }
-    });
-
-    // スクロールにより画面中央でカラーに変化
-    $(function () {
-        $(window).scroll(function () {
-            $('.grayscale').each(function () {
-            var elemPos = $(this).offset().top;
-            var elemHight =$(this).height();
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight / 2) {
-                $(this).addClass('active');
-                if (scroll > elemPos + elemHight - 200){
-                    $(this).removeClass('active')
+            $(window).on('scroll', function () {
+                $('.nav_wrap').each(function () {
+                let menuY = $(this).offset().top + $(this).height()
+                if (menuY > $('.desktop-version').offset().top && menuY < $('.desktop-version').offset().top + $('.desktop-version').height()) {
+                // .blueと重なっている時
+                $(this).css('color', 'white');
+                $(this).css('color', 'blue');
+                } else {
+                // 重なっていない時は色を戻す
+                $(this).css('color', 'gray')
                 }
-            } else {
-                $(this).removeClass('active');
-            }
+                })
+            })
+        })
+
+        // カーソル
+        $(function(){
+            // カーソル要素の指定
+            var cursor=$("#cursor");
+            // mousemoveイベントでカーソル要素を移動させる
+            $(document).on("mousemove",function(e){
+                // カーソルの座標位置を取得
+                var x=e.clientX;
+                var y=e.clientY;
+                // カーソル要素のcssを書き換える用
+                cursor.css({
+                "opacity":"1",
+                "top":y+"px",
+                "left":x+"px"
+                });
             });
         });
+
+        // カーソル aタグホバー
+        $("a").on({
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
+
+        // カーソル aタグホバー
+        $(".sp_btn").on({
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
+
+        // スクロールにより画面中央でカラーに変化
+        $(function () {
+            $(window).scroll(function () {
+                $('.grayscale').each(function () {
+                var elemPos = $(this).offset().top;
+                var elemHight =$(this).height();
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight / 2) {
+                    $(this).addClass('active');
+                    if (scroll > elemPos + elemHight - 200){
+                        $(this).removeClass('active')
+                    }
+                } else {
+                    $(this).removeClass('active');
+                }
+                });
+            });
         });
     
     //loading画面
         $(window).on('load',function(){
-        $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-        $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+            //ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+            $("#splash").delay(1500).fadeOut('slow');
+            //ロゴを1.2秒（1200ms）待機してからフェードアウト
+            $("#splash_logo").delay(1200).fadeOut('slow');
         });
 
     // loading画面2回目以降非表示
         $(function () {
-        var webStorage = function () {
-        if (sessionStorage.getItem('access')) {
-            console.log('2回目以降')
-            $('.loading').css('display','none');
-            // $('.loading').hide("slow");
-        } else {
+            var webStorage = function () {
+            if (sessionStorage.getItem('access')) {
+                console.log('2回目以降')
+                $('.loading').fadeOut("slow");
+                // $('.loading').hide("slow");
+            } else {
             sessionStorage.setItem('access', 'true');
             console.log('初回')
             setTimeout(function () {
                 $('.loading').fadeOut("slow");
             }, 1500);
-        }
-    }
-    webStorage();
-});
+        }}
+        webStorage();
+        });
 
     // 慣性スクロール スマホ・タブレット非表示
     var _ua = (function(u){
@@ -488,6 +467,5 @@
             });
         }
     </script>
-    
 </body>
 </html>

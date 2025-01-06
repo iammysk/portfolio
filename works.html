@@ -13,22 +13,19 @@
 
     <!-- favicon -->
     <link rel="icon" href="./icon/favicon.ico">
-
-    <!-- スクロール時背景に合わせて色が反転 -->
+    <!-- カーソル -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- スクロール時背景に合わせて色が反転 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.0.2/midnight.jquery.min.js" integrity="sha512-6/yILnI0X1SecP+TvnY0kDYHwZ6XTkprNAjtvDAnFZ2iJcf9Kyjrzc5OwBxREjlIAI/ckD5yHSxGnhfirWwfJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <!-- 慣性スクロール -->
     <script src="./js/luxy.min.js"></script>
-
 </head>
 <body>
-
+    <!-- cursor -->
     <div id="cursor"></div>
 
-    <!--FV-->
+    <!-- nav -->
     <div>
-        <!--nav-->
         <div class="nav_wrap">
 
             <div class="title">
@@ -112,7 +109,9 @@
         </div>
     </div>   
        
+    <!-- works -->
     <div  id="luxy">
+        <!--FV-->
         <div class="wrap">
             <h2 class="secondary">作品一覧</h2>
             <div class="works">
@@ -210,7 +209,6 @@
             </section>
         </main>
 
-
         <!--footer-->
         <footer class="hidden-area">
             <img src="./images/1x/pc_footer.jpg" alt="">
@@ -232,8 +230,10 @@
     </div>
 
     <script>
-        const fixedElement = document.querySelector('.nav_wrap'); // 非表示にしたい固定要素
-        const targetElement = document.querySelector('.hidden-area'); // 固定要素が差し掛かる対象の要素
+        // 非表示にしたい固定要素
+        const fixedElement = document.querySelector('.nav_wrap'); 
+        // 固定要素が差し掛かる対象の要素
+        const targetElement = document.querySelector('.hidden-area'); 
 
         const documentHight = document.documentElement.scrollHeight;
         const windowHeight = window.innerHeight;
@@ -274,7 +274,6 @@
         });
 
         // sp_nav
-
         $(function(){
             $('.sp_btn').on('click',function(){
                 $('.sp_btn').toggleClass('open');
@@ -285,93 +284,91 @@
 
         // カーソル
         $(function(){
-        
-        // カーソル要素の指定
-        var cursor=$("#cursor");
-        
-        // mousemoveイベントでカーソル要素を移動させる
-        $(document).on("mousemove",function(e){
-                    // カーソルの座標位置を取得
-            var x=e.clientX;
-            var y=e.clientY;
-            // カーソル要素のcssを書き換える用
-            cursor.css({
-            "opacity":"1",
-            "top":y+"px",
-            "left":x+"px"
+            // カーソル要素の指定
+            var cursor=$("#cursor");
+            // mousemoveイベントでカーソル要素を移動させる
+            $(document).on("mousemove",function(e){
+                // カーソルの座標位置を取得
+                var x=e.clientX;
+                var y=e.clientY;
+                // カーソル要素のcssを書き換える用
+                cursor.css({
+                "opacity":"1",
+                "top":y+"px",
+                "left":x+"px"
+                });
             });
-        });
         });
 
         // aタグホバー
         $("a").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
-        }
-    });
-
-    // sp_btnタグホバー
-    $(".sp_btn").on({
-        "mouseenter": function() {
-        //activeクラス付与
-        $(cursor).addClass("active");
-        },
-        "mouseleave": function() {
-        $(cursor).removeClass("active");
-        }
-    });
-
-    // スクロールにより画面中央でカラーに変化
-    $(function () {
-        $(window).scroll(function () {
-            $('.grayscale').each(function () {
-            var elemPos = $(this).offset().top;
-            var elemHight =$(this).height();
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight / 2) {
-                $(this).addClass('active');
-                if (scroll > elemPos + elemHight - 200){
-                    $(this).removeClass('active')
-                }
-            } else {
-                $(this).removeClass('active');
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
             }
-            });
-        });
         });
 
+        // sp_btnタグホバー
+        $(".sp_btn").on({
+            "mouseenter": function() {
+            //activeクラス付与
+            $(cursor).addClass("active");
+            },
+            "mouseleave": function() {
+            $(cursor).removeClass("active");
+            }
+        });
 
-    // 慣性スクロール スマホ・タブレット非表示
-    var _ua = (function(u){
-    return {
-      Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
-        || u.indexOf("ipad") != -1
-        || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
-        || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
-        || u.indexOf("kindle") != -1
-        || u.indexOf("silk") != -1
-        || u.indexOf("playbook") != -1,
-      Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
-        || u.indexOf("iphone") != -1
-        || u.indexOf("ipod") != -1
-        || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
-        || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
-        || u.indexOf("blackberry") != -1
-    }
-        })(window.navigator.userAgent.toLowerCase());
-        if(!_ua.Mobile&&!_ua.Tablet){
-
-            //慣性スクロール 初期化
-            luxy.init({
-                wrapper:'#luxy',
-                wapperSpeed: 10,
+        // スクロールにより画面中央でカラーに変化
+        $(function () {
+            $(window).scroll(function () {
+                $('.grayscale').each(function () {
+                var elemPos = $(this).offset().top;
+                var elemHight =$(this).height();
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight / 2) {
+                    $(this).addClass('active');
+                    if (scroll > elemPos + elemHight - 200){
+                        $(this).removeClass('active')
+                    }
+                } else {
+                    $(this).removeClass('active');
+                }
+                });
             });
+        });
+
+
+        // 慣性スクロール スマホ・タブレット非表示
+        var _ua = (function(u){
+        return {
+        Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
+            || u.indexOf("ipad") != -1
+            || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+            || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+            || u.indexOf("kindle") != -1
+            || u.indexOf("silk") != -1
+            || u.indexOf("playbook") != -1,
+        Mobile:(u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+            || u.indexOf("iphone") != -1
+            || u.indexOf("ipod") != -1
+            || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+            || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+            || u.indexOf("blackberry") != -1
         }
+            })(window.navigator.userAgent.toLowerCase());
+            if(!_ua.Mobile&&!_ua.Tablet){
+
+                //慣性スクロール 初期化
+                luxy.init({
+                    wrapper:'#luxy',
+                    wapperSpeed: 10,
+                });
+            }
     </script>
 </body>
 </html>

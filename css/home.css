@@ -88,11 +88,6 @@
 }
 
     
-    /* Loading アイコンの大きさ設定*/
-/* #splash_logo img {
-    width:260px;
-} */
-    
     /* fadeUpをするアイコンの動き */
 .fadeUp{
     animation-name: fadeUpAnime;
