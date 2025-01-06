@@ -428,8 +428,7 @@
             var webStorage = function () {
             if (sessionStorage.getItem('access')) {
                 console.log('2回目以降')
-                // $('.loading').css('display','none');
-                $('.loading').hide("slow");
+                $('.loading').hide();
             } else {
             sessionStorage.setItem('access', 'true');
             console.log('初回')
